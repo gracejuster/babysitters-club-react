@@ -11,7 +11,6 @@ import { Router, browserHistory } from 'react-router'
 import Routes from './routes'
 import ReduxPromise from 'redux-promise'
 
-
 const reducer = combineReducers({
   users: users, //* login form
   parents: parents,
