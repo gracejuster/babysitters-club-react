@@ -1,3 +1,3 @@
-export function editUser() {
-  return null
+export default function editUser() {
+  console.log('editing the user')
 }

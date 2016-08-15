@@ -4,11 +4,17 @@ import {Link} from 'react-router'
 import editUser from '../../actions/editUser'
 
 const EditProfilePage = class extends Component {
+
+  onSubmit(props){
+    debugger
+    this.props.editUser()
+  }
+
   render(){
-     const { fields: {name, email, kid_name, kid_age, address, specific_needs, extra_requests }, handleSubmit } = this.props;
+     const { fields: {name, email, kid_name, kid_age, address, specific_needs, extra_requests }, onSubmit } = this.props;
     return(
       <div className='EditProfilePage'>
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={this.onSubmit.bind(this)}>
           <label>Name: </label>
           <input type='text' placeholder='name' className="form-control" {...name}/>
           <label>Email: </label>
@@ -37,4 +43,4 @@ export default reduxForm({
     'password',
     'user_type'
   ],
-})(EditProfilePage);
+}, null, { editUser })(EditProfilePage);
