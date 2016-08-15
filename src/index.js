@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
 import './index.css';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux'
@@ -8,7 +7,8 @@ import { combineReducers } from 'redux'
 import users from './reducers/users'
 import parents from './reducers/parents'
 import babysitters from './reducers/babysitters'
-
+import Routes from './routes'
+import { Router, browserHistory } from 'react-router'
 
 
 const reducer = combineReducers({
@@ -22,7 +22,7 @@ const store = createStore(reducer)
 
 ReactDOM.render(
   <Provider store={store}>
-    <App/>
+    <Router history={browserHistory} routes={Routes}/>
   </Provider>,
   document.getElementById('root')
 );
