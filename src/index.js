@@ -11,7 +11,7 @@ import { Router, browserHistory } from 'react-router'
 import Routes from './routes'
 
 const reducer = combineReducers({
-  users: users,
+  users: users, //* login form
   parents: parents,
   babysitters: babysitters,
   form: formReducer

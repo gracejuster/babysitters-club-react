@@ -1,22 +1,32 @@
 import React, { Component } from 'react';
-
+import { reduxForm } from 'redux-form'
+import {Link} from 'react-router'
 const CreateAccountForm = class extends Component {
   render(){
+     const { fields: {name, email, password, user_type }, handleSubmit } = this.props;
     return(
       <div className='CreateAccountForm'>
-        <form onSubmit={this.props.handleSubmit}>
-          <input type='text' placeholder='name'/>
-          <input type='text' placeholder='email'/>
-          <input type='text' placeholder='password'/>
+        <form onSubmit={handleSubmit(createUser)}>
+          <input type='text' placeholder='name' className="form-control" {...name}/>
+          <input type='text' placeholder='email' className="form-control" {...email}/>
+          <input type='text' placeholder='password' className="form-control" {...password}/>
           <label>Parent</label>
-          <input type='radio' name='user_type' value='parent'/>
+          <input type='radio' value='parent' className="form-control" {...user_type}/>
           <label>Babysitter</label>
-          <input type='radio' name='user_type' value='babysitter'/>
-          <input type='submit' value='log in'/>
+          <input type='radio' value='babysitter' className="form-control" {...user_type}/>
+          <button type='submit' className="btn btn-primary"> Create Account </button>
         </form>
       </div>
     )
   }
 }
 
-export default CreateAccountForm
+export default reduxForm({
+  form: 'CreateAccountFormForm',
+  fields: [
+    'name',
+    'email',
+    'password',
+    'user_type'
+  ],
+}, null, { createUser })(CreateAccountForm);
