@@ -6,7 +6,6 @@ import editUser from '../../actions/editUser'
 const EditProfilePage = class extends Component {
 
   onSubmit(props){
-    debugger
     this.props.editUser()
   }
 
