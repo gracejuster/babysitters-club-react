@@ -6,6 +6,7 @@ const SearchBar = ({}) => {
     <div className='SearchBar'>
       <form>
         <input type='text' placeholder='search'/>
+        <input type='submit' value='submit' />
       </form>
     </div>
   )
