@@ -7,8 +7,8 @@ import { combineReducers } from 'redux'
 import users from './reducers/users'
 import parents from './reducers/parents'
 import babysitters from './reducers/babysitters'
-import Routes from './routes'
 import { Router, browserHistory } from 'react-router'
+import Routes from './routes'
 
 
 const reducer = combineReducers({

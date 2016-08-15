@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router'
+import Bookings from './Bookings'
 
-const Profile = ({}) => {
+const Profile = ({params}) => {
+  console.log(params)
   return(
     <div className='profile'>
-      <SearchBarContainer/>
-      <BookingsContainer/>
-      <NetWorkContainer/>
+      {/* <SearchBarContainer/> */}
+      <Bookings/>
+      {/* <NetWorkContainer/> */}
     </div>
 
   )}
