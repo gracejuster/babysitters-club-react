@@ -5,11 +5,17 @@ import loginUser from '../../actions/loginUser'
 
 
 const LogInForm = class extends Component {
+
+  pressButton(props){
+    debugger
+    this.props.loginUser()
+  }
+
   render(){
-    const { fields: { email, password }, handleSubmit} = this.props;
+    const { fields: { email, password }, pressButton} = this.props;
     return(
       <div className='LogInForm'>
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={this.pressButton.bind(this)}>
           <input type='text' placeholder='email' className="form-control" {...email}/>
           <input type='text' placeholder='password' className="form-control" {...password}/>
           <button type='submit' className="btn btn-primary"> Login </button>
@@ -26,4 +32,4 @@ export default reduxForm({
     'email',
     'password',
   ],
-})(LogInForm);
+}, null, { loginUser })(LogInForm);

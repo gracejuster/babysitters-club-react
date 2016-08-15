@@ -1,3 +1,3 @@
-export function loginUser() {
-  return null
+export default function loginUser() {
+  console.log('hi')
 }
