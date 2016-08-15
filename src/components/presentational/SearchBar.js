@@ -1,14 +1,26 @@
 import React, { Component } from 'react';
-import {Link} from 'react-router'
+import { reduxForm } from 'redux-form'
+export const fields = [ 'searchValue' ]
 
-const SearchBar = ({}) => {
-  return(
-    <div className='SearchBar'>
-      <form>
-        <input type='text' placeholder='search'/>
-      </form>
-    </div>
-  )
+class SearchBar extends Component {
+  render() {
+    console.log(this.props)
+    const {
+      fields: { searchValue }
+      // handleSubmit,
+      // resetForm,
+      // submitting
+      } = this.props
+    return(
+        <form>
+          <input type='text' placeholder='search' {...searchValue}/>
+          <input type='submit' value='submit' />
+        </form>
+    )
+  }
 }
 
-export default SearchBar
+export default reduxForm({
+  form: 'search',
+  fields: ['searchValue']
+})(SearchBar)

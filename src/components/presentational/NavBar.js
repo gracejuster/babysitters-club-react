@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router'
 
-const NavBar = ({}) => {
+const NavBar = ({params}) => {
   return(
     <div className='NavBar'>
-      <h2>{this.props.userName}</h2>
-      <Link to='/profile'>Profile</Link>
-      <Link to='/logout'>Log Out</Link>
+      <h2>{params.username}</h2>
+      <Link to= {`/user/${params.username}`}>Homepage</Link>
+      <Link to='/'>Log Out</Link>
     </div>
   )
 }
