@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 import { reduxForm } from 'redux-form'
 import {Link} from 'react-router'
+import createUser from '../../actions/createUser'
+
 const CreateAccountForm = class extends Component {
   render(){
      const { fields: {name, email, password, user_type }, handleSubmit } = this.props;
     return(
       <div className='CreateAccountForm'>
-        <form onSubmit={handleSubmit(createUser)}>
+        <form onSubmit={handleSubmit}>
           <input type='text' placeholder='name' className="form-control" {...name}/>
           <input type='text' placeholder='email' className="form-control" {...email}/>
           <input type='text' placeholder='password' className="form-control" {...password}/>
@@ -29,4 +31,4 @@ export default reduxForm({
     'password',
     'user_type'
   ],
-}, null, { createUser })(CreateAccountForm);
+})(CreateAccountForm);
