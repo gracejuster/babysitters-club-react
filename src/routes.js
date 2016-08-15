@@ -13,6 +13,7 @@ export default (
     <Route path="login" component={LogInForm}/>
     <Route path="newuser" component={CreateAccount}/>
     <Route path="user/:username" component={Profile}/>
+
     {/* becomes a prop in profile - this.props.params --> :username */}
   </Route>
 )

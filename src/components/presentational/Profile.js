@@ -7,6 +7,7 @@ const Profile = ({params}) => {
   console.log(params)
   return(
     <div className='profile'>
+      <h1>{params.username}</h1>
       <SearchBar/>
       <Bookings/>
       {/* <NetWorkContainer/> */}
