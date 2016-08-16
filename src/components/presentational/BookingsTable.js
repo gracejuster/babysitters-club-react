@@ -4,7 +4,7 @@ import {Link} from 'react-router'
 const BookingsTable = ({title}) => {
   return(
     <div className="BookingsTable">
-      <h1>{title}</h1>
+      <h6>{title}</h6>
       <table>
         <thead>
           <tr>
