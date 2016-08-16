@@ -1,18 +1,18 @@
 import React, { Component } from 'react';
 import { Route } from 'react-router'
 import App from './App'
-import CreateAccount from './components/presentational/CreateAccountForm'
-import LogInForm from './components/presentational/LogInForm'
-import LogOut from './components/container/LogOut'
+import CreateAccountForm from './components/container/CreateAccountForm'
+import LogInForm from './components/container/LogInForm'
+import LogOut from './components/presentational/LogOut'
 import Dashboard from './components/presentational/Dashboard'
-import EditProfilePage from './components/presentational/EditProfilePage'
+import EditProfilePage from './components/container/EditProfilePage'
 
 export default (
   <Route path="/" component={App} >
     {/* <Route path="logout" component={LogOut}/> */}
     {/* put this back soon! */}
     <Route path="login" component={LogInForm}/>
-    <Route path="newuser" component={CreateAccount}/>
+    <Route path="newuser" component={CreateAccountForm}/>
     <Route path="user/:username" component={Dashboard}/>
     <Route path="user/edit/:username" component={EditProfilePage}/>
     {/* becomes a prop in profile - this.props.params --> :username */}
