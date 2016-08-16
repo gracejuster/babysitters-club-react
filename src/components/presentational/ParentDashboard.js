@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import SearchBar from '../container/SearchBar'
 import BookingsTable from './BookingsTable'
 import Network from './Network'
-import Requests from './Requests'
 
 const ParentDashboard = class extends Component{
   render() {

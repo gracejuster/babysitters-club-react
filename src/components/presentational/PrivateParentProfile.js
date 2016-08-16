@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
-import Network from './Network';
+import ParentProfileCard from './ParentProfileCard';
 
 const PrivateParentProfile = class extends Component{
   render() {
     return(
-    	<div className="PublicParentProfile">
-    		<img src=""/>
-    		<p>{name}</p>
-    		<p>{kids}</p>
-    		<p>{location}</p>
+    	<div className="PrivateParentProfile">
+            <ParentProfileCard img="" name="Grace" kid_count="16" location= "OH"/>
+            <p>{this.props.specific_needs}</p>
+            <p>{this.props.extra_requests}</p>
     	</div>
     	)
 	}

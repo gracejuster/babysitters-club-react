@@ -4,25 +4,42 @@ import './App.css';
 import Routes from './routes'
 import LogInForm from './components/container/LogInForm'
 import NavBar from './components/presentational/NavBar'
-import Dashboard from './components/presentational/Dashboard'
 import PublicBabysitterProfile from './components/presentational/PublicBabysitterProfile'
-
-
-
+import PrivateBabysitterProfile from './components/presentational/PrivateBabysitterProfile'
+import EditBabysitterProfileForm from './components/container/EditBabysitterProfileForm'
+import BabysitterDashboard from './components/presentational/BabysitterDashboard'
+import ParentDashboard from './components/presentational/ParentDashboard'
+import PublicParentProfile from './components/presentational/PublicParentProfile'
+import PrivateParentProfile from './components/presentational/PrivateParentProfile'
+import EditParentProfileForm from './components/container/EditParentProfileForm'
 
 class App extends Component {
   render() {
     return (
       <div className="App">
       <h1>Login</h1>
-      <LogInForm />
-      {/* only show navbar when logged in */}
+        <LogInForm />
       <h1>NavBar</h1>
-      <NavBar params={{username: "current user"}}/>
+        <NavBar params={{username: "current user"}}/>
+      <h1>ParentDashboard</h1>
+        <ParentDashboard />
+      <h1>Public Parent Profile </h1>
+        <PublicParentProfile/>
+      <h1>Private Parent Profile </h1>
+        <PrivateParentProfile specific_needs="" extra_requests=""/>
+      <h1>Edit Parent Profile </h1>
+        <EditParentProfileForm />
+        <br/>
+        <br/>
+        <br/>
+      <h1>BabysitterDashboard</h1>
+        <BabysitterDashboard />
       <h1>Public Babysitter Profile </h1>
-      <PublicBabysitterProfile name="Gina" age="45" location="CO" rating="5" />
-      <h1>Dashboard</h1>
-      <Dashboard />
+        <PublicBabysitterProfile/>
+      <h1>Private Babysitter Profile </h1>
+        <PrivateBabysitterProfile />
+      <h1>Edit Babysitter Profile </h1>
+        <EditBabysitterProfileForm />
       {this.props.children}
       </div>
     );
