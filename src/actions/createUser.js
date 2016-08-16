@@ -12,7 +12,7 @@ export default function createUser(props) {
      data: JSON.stringify({user: props}),
      contentType:"application/json; charset=utf-8",
      dataType:"json",
-    context: this
+     context: this
    })
 
    return {

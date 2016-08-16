@@ -3,24 +3,23 @@ import { reduxForm } from 'redux-form'
 import {Link} from 'react-router'
 import editUser from '../../actions/editUser'
 
-const EditProfilePage = class extends Component {
+const EditParentsProfilePage = class extends Component {
 
   onSubmit(props){
     this.props.editUser()
   }
 
   render(){
-     const { fields: {name, email, kid_name, kid_age, address, specific_needs, extra_requests }, onSubmit } = this.props;
+     const { fields: {name, email, kid_count, address, specific_needs, extra_requests }, onSubmit } = this.props;
     return(
-      <div className='EditProfilePage'>
+      <div className='EditParentsProfilePage'>
         <form onSubmit={this.onSubmit.bind(this)}>
           <label>Name: </label>
           <input type='text' placeholder='name' className="form-control" {...name}/>
           <label>Email: </label>
           <input type='text' placeholder='email' className="form-control" {...email}/>
-          <label>Kid's Information: </label>
-          <input type='text' placeholder='kid_name' className="form-control" {...kid_name}/>
-          <input type='text' placeholder='kid_age' className="form-control" {...kid_age}/>
+          <label>Kid's Count: </label>
+          <input type='text' placeholder='kid_name' className="form-control" {...kid_count}/>
           <label>Address: </label>
           <input type='text' placeholder='address' className="form-control" {...address}/>
           <label>Specific Needs: </label>
@@ -35,11 +34,13 @@ const EditProfilePage = class extends Component {
 }
 
 export default reduxForm({
-  form: 'EditProfilePage',
+  form: 'EditParentsProfilePage',
   fields: [
     'name',
     'email',
-    'password',
-    'user_type'
+    'kid_count',
+    'address',
+    'specific_needs',
+    'extra_requests'
   ],
-}, null, { editUser })(EditProfilePage);
+}, null, { editUser })(EditParentsProfilePage);

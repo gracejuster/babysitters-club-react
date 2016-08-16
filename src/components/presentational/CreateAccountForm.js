@@ -6,7 +6,6 @@ import createUser from '../../actions/createUser'
 const CreateAccountForm = class extends Component {
 
   handleFormSubmit(props) {
-    debugger
     this.props.createUser(props)
   }
 
