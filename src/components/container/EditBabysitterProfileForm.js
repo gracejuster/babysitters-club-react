@@ -10,7 +10,7 @@ const EditBabysitterProfilePage = class extends Component {
   }
 
   render(){
-     const { fields: {name, email, kid_count, address, specific_needs, extra_requests }, handleSubmit } = this.props;
+     const { fields: {name, email, age, location, bio, skills}, handleSubmit } = this.props;
     return(
       <div className='EditBabysitterProfilePage'>
         <form onSubmit={handleSubmit(this.handleEditFormSubmit.bind(this))}>

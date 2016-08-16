@@ -4,7 +4,7 @@ import Review from './Review.js'
 const ReviewHolder = () => {
   return(
     <div className="ReviewHolder">
-      <h1>Reviews</h1>
+    	"These are my reviews"
       <Review />
     </div>
   )
