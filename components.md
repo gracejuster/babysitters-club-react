@@ -72,9 +72,13 @@ Unique NavBars:
 - DashboardNavBar: displayUserName, Link:Edit Profile, Link:Logout
 
 Unique Page Components for Main
-- LoginForm
-- CreateNewUserForm
+- LoginForm (exists)
+- CreateNewUserForm (exists)
 - PublicParentProfile
 - PublicBabysitterProfile
 - PrivateParentProfile
 - PrivateBabysitter
+- ParentDashboard
+- BabysitterDashboard
+- EditBabySitterForm (exists)
+- EditParentForm (exists)
