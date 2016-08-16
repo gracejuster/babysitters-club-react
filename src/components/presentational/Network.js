@@ -1,6 +1,6 @@
-
 import React, { Component } from 'react';
 import Thumbnail from './Thumbnail'
+
 const Network = class extends Component {
 	  render(){
   		return(
@@ -13,4 +13,3 @@ const Network = class extends Component {
 
 
 export default Network
-
