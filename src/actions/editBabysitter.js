@@ -5,7 +5,6 @@ export default function editBabysitter(props) {
    const URL = 'http://localhost:3000/api/v1/babysitters/21'
   // console.log('we are creating a user!')
 
-  debugger
   const request = $.ajax({
      url:URL,
      type:"PATCH",

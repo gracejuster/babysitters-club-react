@@ -7,6 +7,9 @@ import { reducer as formReducer } from 'redux-form';
 import users from './reducers/users'
 import parents from './reducers/parents'
 import babysitters from './reducers/babysitters'
+import currentUser from './reducers/currentUser'
+import booking from './reducers/booking'
+import review from './reducers/review'
 import { Router, browserHistory } from 'react-router'
 import Routes from './routes'
 import ReduxPromise from 'redux-promise'
@@ -15,6 +18,9 @@ const reducer = combineReducers({
   users: users, //* login form
   parents: parents,
   babysitters: babysitters,
+  currentUser: currentUser,
+  booking: booking,
+  review: review,
   form: formReducer
 })
 

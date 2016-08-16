@@ -1,9 +1,12 @@
-const CurrentUser = (state = {}, action) => {
+const INITIAL_STATE = {jwt: "", currentUser: {}}
+
+const CurrentUser = (state = INITIAL_STATE, action) => {
   switch(action.type){
     case 'LOG_IN':
-      return {action.payload.data}
+    debugger
+      return Object.assign({}, state, {jwt: action.payload.jwt, currentUser: action.payload.current_user})
     case 'LOG_OUT':
-      return {}
+      return INITIAL_STATE
     default:
       return state
   }

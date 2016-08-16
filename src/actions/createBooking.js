@@ -4,7 +4,6 @@ import $ from 'jquery'
 export default function createBooking(props) {
    const URL = 'http://localhost:3000/api/v1/bookings'
 
-  debugger
   const request = $.ajax({
      url:URL,
      type:"POST",
