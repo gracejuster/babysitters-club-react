@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import {Link} from 'react-router'
 import './App.css';
 import Routes from './routes'
-import LogInForm from './components/presentational/LogInForm'
+import LogInForm from './components/container/LogInForm'
 import NavBar from './components/presentational/NavBar'
 import Dashboard from './components/presentational/Dashboard'
 
@@ -29,5 +29,5 @@ class App extends Component {
 
 export default App;
 // App
-//   Login Form 
-//     Create Account 
+//   Login Form
+//     Create Account
