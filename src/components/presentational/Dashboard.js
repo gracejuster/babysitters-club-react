@@ -7,7 +7,7 @@ import Requests from './Requests'
 const Dashboard = class extends Component{
   render() {
     return(
-      <div className='profile'>
+      <div className='Dashboard'>
         <SearchBar/>  
         <BookingsTable title="Confirmed Bookings"/>
         <BookingsTable title="Pending Bookings"/>

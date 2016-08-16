@@ -1,10 +1,14 @@
 import React, { Component } from 'react';
-const Network = () => {
-  return(
-    <div className='Network'>
-      <h6>network</h6>
-    </div>
+import Thumbnail from './Thumbnail'
+const Network = class extends Component {
+	  render(){
+  		return(
+    		<div className='Network'>
+      			<Thumbnail />
+    		</div>
   )
 }
+}
+
 
 export default Network

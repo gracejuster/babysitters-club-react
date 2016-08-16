@@ -1,10 +1,14 @@
 import React, { Component } from 'react';
-const Requests = () => {
+import Thumbnail from './Thumbnail'
+
+const Requests = class extends Component {
+	render(){
   return(
     <div className='Requests'>
-      <h6>requests</h6>
+      <Thumbnail />
     </div>
-  )
+    )}
 }
 
 export default Requests
+
