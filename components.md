@@ -11,15 +11,15 @@ Pages:
 3. Public Parent Profile
 - navbar: NavBar .
 - main:
-  - PublicParentProfile ?
+  - PublicParentProfile .
     - ParentProfileCard(image/avatar/something, basicinfo, babysitternetwork)
     - POSSIBLY accept request if babysitter is viewing
 
 4. Private Parent Profile
 - navbar: NavBar .
 - main:
-  - PrivateParentProfileCard ?
-    - image 
+  - PrivateParentProfileCard .
+    - image
     - information
     - specific needs
     - extra requests
@@ -27,7 +27,7 @@ Pages:
 7. Parent Dashboard
 - navbar: DashboardNavBar ?
 - main:
-  - ParentDashboard
+  - ParentDashboard .
     - SearchBar .
     - Bookings (contains BookingsTable) .
     - Network(of babysitters) ..
@@ -48,7 +48,7 @@ Pages:
 6. Private Babysitter Profile
 - navbar: NavBar
 - main:
-  - PrivateBabysitterProfile 
+  - PrivateBabysitterProfile
     - BabySitterProfileCard ?
     - BookingRequestForm .
     - ReviewForm .
