@@ -3,8 +3,6 @@ import $ from 'jquery'
 
 export default function createReview(props) {
    const URL = 'http://localhost:3000/api/v1/reviews'
-
-  debugger
   const request = $.ajax({
      url:URL,
      type:"POST",

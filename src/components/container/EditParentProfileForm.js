@@ -6,7 +6,9 @@ import editParent from '../../actions/editParent'
 const EditParentsProfilePage = class extends Component {
 
   handleEditFormSubmit(props){
-    this.props.editParent(props)
+    debugger
+    let currentUser = this.props.currentUser
+    this.props.editParent(props, currentUser)
   }
 
   render(){
@@ -32,6 +34,12 @@ const EditParentsProfilePage = class extends Component {
     )
   }
 }
+function mapStateToProps(state){
+  return{
+    currentUser: state.currentUser
+  }
+}
+
 
 export default reduxForm({
   form: 'EditParentsProfilePage',
@@ -43,4 +51,4 @@ export default reduxForm({
     'specific_needs',
     'extra_requests'
   ],
-}, null, { editParent })(EditParentsProfilePage);
+}, mapStateToProps, { editParent })(EditParentsProfilePage);

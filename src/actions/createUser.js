@@ -4,8 +4,6 @@ import $ from 'jquery'
 export default function createUser(props) {
    const URL = 'http://localhost:3000/api/v1/users'
   // console.log('we are creating a user!')
-
-  debugger
   const request = $.ajax({
      url:URL,
      type:"POST",
