@@ -7,10 +7,6 @@ const Users = (state = {users: []}, action) => {
       return Object.assign({}, state, {
         users: [...state.users, {users: action.payload.data}]
       })
-    case 'EDIT_USER':
-      return Object.assign({}, state, {
-        users: [...state.users, {users: action.payload.data}]
-      })
     default:
       return state
   }
