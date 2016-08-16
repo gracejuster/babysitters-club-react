@@ -21,3 +21,5 @@ const PublicParentProfile = class extends Component{
     	)
 	}
 }
+
+export default PublicParentProfile
