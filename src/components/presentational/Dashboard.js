@@ -1,19 +1,21 @@
 import React, { Component } from 'react';
-import {Link} from 'react-router'
-import Bookings from './Bookings'
 import SearchBar from './SearchBar'
+import BookingsTable from './BookingsTable'
+import Network from './Network'
+import Requests from './Requests'
 
-const Dashboard = ({params}) => {
-  console.log(params)
-  return(
-    <div className='profile'>
-      <h1>{params.username}</h1>
-      <SearchBar/>
-      <Bookings/>
-      <Link to='/user/edit/:username'>Edit Profile Page</Link>
-      {/* <NetWorkContainer/> */}
-    </div>
-
-  )}
+const Dashboard = class extends Component{
+  render() {
+    return(
+      <div className='Dashboard'>
+        <SearchBar/>  
+        <BookingsTable title="Confirmed Bookings"/>
+        <BookingsTable title="Pending Bookings"/>
+        <Requests /> 
+        <Network /> 
+      </div>
+      );
+    }
+  }
 
 export default Dashboard
