@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
-import Thumbnail from './Thumbnail'
 
 const Network = class extends Component {
 	  render(){
   		return(
     		<div className='Network'>
-      			<Thumbnail />
+      			"This is my network"
     		</div>
   )
 }
