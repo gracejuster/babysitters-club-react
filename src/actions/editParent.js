@@ -1,13 +1,15 @@
 import $ from 'jquery'
 
 
-export default function editParent(props) {
-   const URL = 'http://localhost:3000/api/v1/parents/21'
+export default function editParent(props, currentUser) {
+  debugger
+   const URL = `http://localhost:3000/api/v1/parents/${currentUser.currentUser.id}`
   // console.log('we are creating a user!')
   const request = $.ajax({
      url:URL,
+     headers: {HTTP_AUTHORIZATION: currentUser.jwt}
      type:"PATCH",
-     data: JSON.stringify({user: props, user_id: 21}),
+     data: JSON.stringify({user: props}),
      contentType:"application/json; charset=utf-8",
      dataType:"json",
      context: this
