@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 const Thumbnail = () => {
   return(
     <div className='Thumbnail'>
-      <Image />
+      <img />
       <p>{name}</p>
     </div>
   )
