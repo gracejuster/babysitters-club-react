@@ -2,13 +2,16 @@ import React, { Component } from 'react';
 import {Link} from 'react-router'
 import { reduxForm } from 'redux-form'
 import loginUser from '../../actions/loginUser'
+import { browserHistory } from 'react-router'
 
 
 const LogInForm = class extends Component {
 
   pressButton(props){
-    event.preventDefault(props)
-    this.props.loginUser(props)
+    this.props.loginUser(props).then((resp)=>{
+      debugger
+      browserHistory.push(`/${resp.payload.type}/${resp.payload.current_user.username}`)
+    })
   }
 
   render(){
