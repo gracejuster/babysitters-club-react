@@ -22,9 +22,9 @@ const CreateAccountForm = class extends Component {
           <input type='text' placeholder='PASSWORD' className="form-control" {...password}/>
             <div className="check" >
               <label className="radioLabel">PARENT</label>
-              <input type='radio' {...user_type} value='PARENT' checked={user_type.value === 'parent'}/>
+              <input type='radio' {...user_type} value='PARENT' checked={user_type.value === 'PARENT'}/>
               <label className="radioLabel">BABYSITTER</label>
-              <input type='radio' {...user_type} value='BABYSITTER' checked={user_type.value === 'babysitter'}/>
+              <input type='radio' {...user_type} value='BABYSITTER' checked={user_type.value === 'BABYSITTER'}/>
             </div>
           <input id='submit' type='submit' className="btn btn-primary" value="CREATE ACCOUNT"/>
         </form>
