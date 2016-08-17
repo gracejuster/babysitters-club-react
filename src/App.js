@@ -18,6 +18,7 @@ class App extends Component {
     const {main, navbar, footer} = this.props
     return (
       <div className="App">
+
         <div className="top">
           {navbar}
         </div>
@@ -27,29 +28,7 @@ class App extends Component {
         <div className="bottom">
           {footer}
         </div>
-      {/* <h1>Login</h1>
-        <LogInForm />
-      <h1>NavBar</h1>
-        <NavBar params={{username: "current user"}}/>
-      <h1>ParentDashboard</h1>
-        <ParentDashboard />
-      <h1>Public Parent Profile </h1>
-        <PublicParentProfile/>
-      <h1>Private Parent Profile </h1>
-        <PrivateParentProfile specific_needs="" extra_requests=""/>
-      <h1>Edit Parent Profile </h1>
-        <EditParentProfileForm />
-        <br/>
-        <br/>
-        <br/>
-      <h1>BabysitterDashboard</h1>
-        <BabysitterDashboard />
-      <h1>Public Babysitter Profile </h1>
-        <PublicBabysitterProfile/>
-      <h1>Private Babysitter Profile </h1>
-        <PrivateBabysitterProfile />
-      <h1>Edit Babysitter Profile </h1>
-        <EditBabysitterProfileForm /> */}
+
       </div>
     );
   }

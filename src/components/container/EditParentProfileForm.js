@@ -14,20 +14,20 @@ const EditParentsProfilePage = class extends Component {
      const { fields: {name, email, kid_count, address, specific_needs, extra_requests }, handleSubmit } = this.props;
     return(
       <div className='EditParentsProfilePage'>
-        <form onSubmit={handleSubmit(this.handleEditFormSubmit.bind(this))}>
-          <label>Name: </label>
-          <input type='text' placeholder='name' className="form-control" {...name}/>
-          <label>Email: </label>
-          <input type='text' placeholder='email' className="form-control" {...email}/>
-          <label>Kid's Count: </label>
-          <input type='text' placeholder='kid_name' className="form-control" {...kid_count}/>
-          <label>Address: </label>
-          <input type='text' placeholder='address' className="form-control" {...address}/>
-          <label>Specific Needs: </label>
-          <input type='textarea' placeholder='specific_needs' className="form-control" {...specific_needs}/>
-          <label>Extra Requests: </label>
-          <input type='textarea' placeholder='extra_requests' className="form-control" {...extra_requests}/>
-          <button type='submit' className="btn btn-primary"> Save Changes </button>
+        <form id="form" onSubmit={handleSubmit(this.handleEditFormSubmit.bind(this))}>
+          {/* <label>Name: </label> */}
+          <input type='text' placeholder='NAME' className="form-control" {...name}/>
+          {/* <label>Email: </label> */}
+          <input type='text' placeholder='E-MAIL' className="form-control" {...email}/>
+          {/* <label>Kid's Count: </label> */}
+          <input type='text' placeholder='KID COUNT' className="form-control" {...kid_count}/>
+          {/* <label>Address: </label> */}
+          <input type='text' placeholder='ADDRESS' className="form-control" {...address}/>
+          {/* <label>Specific Needs: </label> */}
+          <input type='textarea' placeholder='SPECIFIC NEEDS' className="form-control" {...specific_needs}/>
+          {/* <label>Extra Requests: </label> */}
+          <input type='textarea' placeholder='EXTRA REQUESTS' className="form-control" {...extra_requests}/>
+          <input id='submit' type='submit' className="btn btn-primary" value="SAVE CHANGES" />
         </form>
       </div>
     )

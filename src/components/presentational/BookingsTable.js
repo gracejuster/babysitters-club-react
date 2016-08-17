@@ -3,9 +3,9 @@ import React from 'react';
 
 const BookingsTable = ({title}) => {
   return(
-    <div className="BookingsTable">
+    <div id="form" className="BookingsTable">
       <h6>{title}</h6>
-      <table>
+      <table className="BookingsTable">
         <thead>
           <tr>
             <th>When:</th>

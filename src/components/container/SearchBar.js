@@ -12,9 +12,9 @@ class SearchBar extends Component {
       // submitting
       } = this.props
     return(
-        <form>
-          <input type='text' placeholder='search' {...searchValue}/>
-          <input type='submit' value='submit' />
+        <form id='form'>
+          <input type='text' placeholder='SEARCH' {...searchValue}/>
+          <input id="submit" type='submit' value='SUBMIT' />
         </form>
     )
   }
