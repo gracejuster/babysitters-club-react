@@ -7,7 +7,7 @@ import { reducer as formReducer } from 'redux-form';
 import users from './reducers/users'
 import parents from './reducers/parents'
 import babysitters from './reducers/babysitters'
-import currentUser from './reducers/currentUser'
+import currentUser from './reducers/currentuser'
 import booking from './reducers/booking'
 import review from './reducers/review'
 import { Router, browserHistory } from 'react-router'

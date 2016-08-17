@@ -7,7 +7,9 @@ export default function editParent(props, currentUser) {
   // console.log('we are creating a user!')
   const request = $.ajax({
      url:URL,
-    //  headers: {HTTP_AUTHORIZATION: currentUser.jwt}
+
+     headers: {HTTP_AUTHORIZATION: currentUser.jwt},
+
      type:"PATCH",
      data: JSON.stringify({user: props}),
      contentType:"application/json; charset=utf-8",
