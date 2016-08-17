@@ -6,7 +6,6 @@ export default function editParent(props, currentUser) {
    const URL = `http://localhost:3000/api/v1/parents/${currentUser.account.id}`
   // console.log('we are creating a user!')
   const request = $.ajax({
-
      url:URL,
      headers: {'AUTHORIZATION': "Bearer" + currentUser.jwt},
      type:"PATCH",

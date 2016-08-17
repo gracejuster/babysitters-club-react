@@ -15,16 +15,23 @@ const LogInForm = class extends Component {
     const { fields: { email, password }, handleSubmit} = this.props;
     return(
       <div className='LogInForm'>
-        <form onSubmit={handleSubmit(this.pressButton.bind(this))}>
-          <input type='text' placeholder='email' className="form-control" {...email}/>
-          <input type='text' placeholder='password' className="form-control" {...password}/>
-          <button type='submit' className="btn btn-primary"> Login </button>
+      <header>WELCOME BACK</header>
+        <form id="form" onSubmit={handleSubmit(this.pressButton.bind(this))}>
+          <input id="name" type='text' placeholder='E-MAIL' className="form-control" {...email}/>
+          <input id="email" type='text' placeholder='PASSWORD' className="form-control" {...password}/>
+          <input id="submit" type='submit' className="btn btn-primary" value="GO!" />
         </form>
-        <Link to='/newuser'>Create New Account</Link>
+        <form id="form" action="/newuser">
+          <input id="submit" type="submit" className="btn btn-primary" value="Create New Account" />
+        </form>
+        {/* <Link to='/newuser'>Create New Account</Link> */}
       </div>
     )
   }
 }
+
+
+
 
 export default reduxForm({
   form: 'LogInForm',

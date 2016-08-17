@@ -4,7 +4,7 @@ import BookingsTable from './BookingsTable'
 
 const Bookings = ({}) => {
   return(
-    <div>
+    <div className="Bookings">
       <BookingsTable title='Pending'/>
       <BookingsTable title='Confirmed'/>
     </div>

@@ -1,8 +1,8 @@
-import React, { Component } from 'react';	
+import React, { Component } from 'react';
 
 const ParentProfileCard = ({image, name, kid_count, location}) => {
   return(
-  	<div>
+  	<div className="ProfileCard">
 	<img src={image}/>
     <p>{name}</p>
     <p>{kid_count}</p>
