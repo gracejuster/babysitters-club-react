@@ -11,10 +11,9 @@ let ParentDashboard = class extends Component{
         <BookingsTable title="Confirmed Bookings"/>
         <BookingsTable title="Pending Bookings"/>
       </div>
-      );
-    }
+    );
   }
-
+}
 
 ParentDashboard = auth(ParentDashboard)
 
