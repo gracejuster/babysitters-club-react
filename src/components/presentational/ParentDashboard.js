@@ -2,8 +2,9 @@ import React, { Component } from 'react';
 import SearchBar from '../container/SearchBar'
 import BookingsTable from './BookingsTable'
 import Network from './Network'
+import auth from '../container/AuthenticationResource'
 
-const ParentDashboard = class extends Component{
+let ParentDashboard = class extends Component{
   render() {
     return(
       <div className='Dashboard'>
@@ -15,4 +16,7 @@ const ParentDashboard = class extends Component{
     }
   }
 
-export default ParentDashboard
+ 
+ParentDashboard = auth(ParentDashboard)
+
+export default ParentDashboard;

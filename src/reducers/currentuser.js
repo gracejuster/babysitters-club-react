@@ -1,10 +1,17 @@
-const INITIAL_STATE = {jwt: "", currentUser: {}}
+import { browserHistory } from 'react-router'
+const INITIAL_STATE = {jwt: "", currentUser: {}, account: {}, type: "", authentication: false}
 
 const CurrentUser = (state = INITIAL_STATE, action) => {
   switch(action.type){
     case 'LOG_IN':
-    debugger
-      return Object.assign({}, state, {jwt: action.payload.jwt, currentUser: action.payload.current_user, type: action.payload.type, account: action.payload.account})
+      return Object.assign({}, state, {
+      	jwt: action.payload.jwt, 
+      	currentUser: action.payload.current_user, 
+      	account: action.payload.account, 
+      	type: action.payload.type, 
+      	authentication: true
+      }
+    )
     case 'LOG_OUT':
       return INITIAL_STATE
     default:
