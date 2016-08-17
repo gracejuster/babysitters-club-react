@@ -15,9 +15,16 @@ import EditParentProfileForm from './components/container/EditParentProfileForm'
 
 class App extends Component {
   render() {
+    const {main, navbar} = this.props
     return (
       <div className="App">
-      <h1>Login</h1>
+        <div className="top">
+          {navbar}
+        </div>
+        <div>
+          {main}
+        </div>
+      {/* <h1>Login</h1>
         <LogInForm />
       <h1>NavBar</h1>
         <NavBar params={{username: "current user"}}/>
@@ -39,7 +46,7 @@ class App extends Component {
       <h1>Private Babysitter Profile </h1>
         <PrivateBabysitterProfile />
       <h1>Edit Babysitter Profile </h1>
-        <EditBabysitterProfileForm />
+        <EditBabysitterProfileForm /> */}
       {this.props.children}
       </div>
     );
