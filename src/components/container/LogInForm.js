@@ -1,16 +1,13 @@
 import React, { Component } from 'react';
-import {Link} from 'react-router'
 import { reduxForm } from 'redux-form'
 import loginUser from '../../actions/loginUser'
 
 
 const LogInForm = class extends Component {
-
   pressButton(props){
     event.preventDefault(props)
     this.props.loginUser(props)
   }
-
   render(){
     const { fields: { email, password }, handleSubmit} = this.props;
     return(
@@ -29,9 +26,6 @@ const LogInForm = class extends Component {
     )
   }
 }
-
-
-
 
 export default reduxForm({
   form: 'LogInForm',

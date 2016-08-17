@@ -1,11 +1,8 @@
 import React from 'react'
-import {Link} from 'react-router'
 
 const NavBar = ({params}) => {
   return(
     <div className='NavBar'>
-
-
       <form id="form" action={`/${params.type}/${params.username}`}>
         <input id="submit" type="submit" className="btn btn-primary" value="DASHBOARD" />
       </form>
@@ -21,7 +18,6 @@ const NavBar = ({params}) => {
       <Link to={`/user/${params.username}`}>Homepage</Link>
       <Link to={`/user/edit/${params.username}`}> Edit Profile </Link>
       <Link to='/'>Log Out</Link> */}
-
     </div>
   )
 }
