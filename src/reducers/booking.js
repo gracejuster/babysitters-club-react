@@ -1,4 +1,4 @@
-var bookingCounter = 0
+// var bookingCounter = 0
 
 const Bookings = (state = {bookings: []}, action) => {
   switch(action.type){

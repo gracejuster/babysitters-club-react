@@ -1,4 +1,4 @@
-var usersCounter = 0
+// var usersCounter = 0
 
 const Users = (state = {users: []}, action) => {
   switch(action.type){

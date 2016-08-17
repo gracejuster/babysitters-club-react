@@ -10,7 +10,6 @@ const ParentDashboard = class extends Component{
         <SearchBar/>
         <BookingsTable title="Confirmed Bookings"/>
         <BookingsTable title="Pending Bookings"/>
-        <Network />
       </div>
       );
     }
