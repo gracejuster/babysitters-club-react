@@ -6,10 +6,9 @@ import { browserHistory } from 'react-router'
 const CreateAccountForm = class extends Component {
 
   handleFormSubmit(props) {
-    this.props.createUser(props).then((resp)=>{
-      debugger
-      browserHistory.push(`/${resp.payload.data.type}/${resp.payload.data.attributes.name}`)
-    })
+    this.props.createUser(props).then(() => {
+      browserHistory.push('/login')
+  })
   }
 
   render(){
