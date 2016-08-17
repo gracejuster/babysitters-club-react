@@ -4,7 +4,7 @@ const CurrentUser = (state = INITIAL_STATE, action) => {
   switch(action.type){
     case 'LOG_IN':
     debugger
-      return Object.assign({}, state, {jwt: action.payload.jwt, currentUser: action.payload.current_user})
+      return Object.assign({}, state, {jwt: action.payload.jwt, currentUser: action.payload.current_user, type: action.payload.type, account: action.payload.account})
     case 'LOG_OUT':
       return INITIAL_STATE
     default:
