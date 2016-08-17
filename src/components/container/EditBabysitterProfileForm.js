@@ -5,18 +5,15 @@ import editBabysitter from '../../actions/editBabysitter'
 const EditBabysitterProfilePage = class extends Component {
 
   handleEditFormSubmit(props){
+    let currentUser = this.props.currentUser
     this.props.editBabysitter(props)
   }
 
   render(){
-     const { fields: {name, email, age, location, bio, skills}, handleSubmit } = this.props;
+     const { fields: {age, location, bio, skills}, handleSubmit } = this.props;
     return(
       <div className='EditBabysitterProfilePage'>
         <form id='form' onSubmit={handleSubmit(this.handleEditFormSubmit.bind(this))}>
-          {/* <label>Name: </label> */}
-          <input type='text' placeholder='NAME' className="form-control" {...name}/>
-          {/* <label>Email: </label> */}
-          <input type='text' placeholder='E-MAIL' className="form-control" {...email}/>
           {/* <label>Age: </label> */}
           <input type='text' placeholder='AGE' className="form-control" {...age}/>
           {/* <label>Location: </label> */}
@@ -32,14 +29,18 @@ const EditBabysitterProfilePage = class extends Component {
   }
 }
 
+function mapStateToProps(state){
+  return{
+    currentUser: state.currentUser
+  }
+}
+
 export default reduxForm({
   form: 'EditBabysitterProfilePage',
   fields: [
-    'name',
-    'email',
     'age',
     'location',
     'bio',
     'skills'
   ],
-}, null, { editBabysitter })(EditBabysitterProfilePage);
+}, mapStateToProps, { editBabysitter })(EditBabysitterProfilePage);
