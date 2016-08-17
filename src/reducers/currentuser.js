@@ -18,7 +18,7 @@ const CurrentUser = (state = INITIAL_STATE, action) => {
     return Object.assign({}, state, {
       jwt: state.jwt,
       currentUser: state.currentUser,
-      account: action.payload,
+      account: action.payload.data,
       type: state.type,
       authentication: true
     })
