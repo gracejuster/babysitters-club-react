@@ -1,17 +1,17 @@
 import React, { Component } from 'react';
 // import {Link} from 'react-router'
 import './App.css';
-// import Routes from './routes'
-// import LogInForm from './components/container/LogInForm'
-// import NavBar from './components/presentational/NavBar'
-// import PublicBabysitterProfile from './components/presentational/PublicBabysitterProfile'
-// import PrivateBabysitterProfile from './components/presentational/PrivateBabysitterProfile'
-// import EditBabysitterProfileForm from './components/container/EditBabysitterProfileForm'
-// import BabysitterDashboard from './components/presentational/BabysitterDashboard'
-// import ParentDashboard from './components/presentational/ParentDashboard'
-// import PublicParentProfile from './components/presentational/PublicParentProfile'
-// import PrivateParentProfile from './components/presentational/PrivateParentProfile'
-// import EditParentProfileForm from './components/container/EditParentProfileForm'
+import Routes from './routes'
+import LogInForm from './components/container/LogInForm'
+import NavBar from './components/presentational/NavBar'
+import PublicBabysitterProfile from './components/presentational/PublicBabysitterProfile'
+import PrivateBabysitterProfile from './components/presentational/PrivateBabysitterProfile'
+import EditBabysitterProfileForm from './components/container/EditBabysitterProfileForm'
+import BabysitterDashboard from './components/presentational/BabysitterDashboard'
+import ParentDashboard from './components/presentational/ParentDashboard'
+import PublicParentProfile from './components/presentational/PublicParentProfile'
+import PrivateParentProfile from './components/presentational/PrivateParentProfile'
+import EditParentProfileForm from './components/container/EditParentProfileForm'
 
 class App extends Component {
   render() {
@@ -19,6 +19,9 @@ class App extends Component {
     return (
       <div className="App">
 
+        <LogInForm />
+        <EditBabysitterProfileForm/>
+        <EditParentProfileForm/>
         <div className="top">
           {navbar}
         </div>

@@ -16,7 +16,7 @@ export default function editParent(props, currentUser) {
    })
 
    return {
-     type: 'EDIT_PARENT',
+     type: 'EDIT_ACCOUNT',
      payload: request
    }
 }
