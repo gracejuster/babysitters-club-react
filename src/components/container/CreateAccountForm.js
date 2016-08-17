@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { reduxForm } from 'redux-form'
-import {Link} from 'react-router'
 import createUser from '../../actions/createUser'
 
 const CreateAccountForm = class extends Component {
