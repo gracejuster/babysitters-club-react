@@ -6,9 +6,12 @@ import BabysitterProfileCard from './BabysitterProfileCard'
 const PublicBabysitterProfile = class extends Component{
   render() {
     return(
-    	<div className="PublicBabysitterProfile"> 
+    	<div className="ProfileCard">
             <BabysitterProfileCard img="" name="Gina" age="45" location="CO" rating="5" />
+            <header>REQUEST BOOKING</header>
             <CreateBookingForm />
+            <br />
+            <header>LEAVE A REVIEW</header>
             <CreateReviewForm />
     	</div>
     	)

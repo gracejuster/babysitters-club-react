@@ -17,28 +17,27 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-      <h1>Login</h1>
         <LogInForm />
-      <h1>NavBar</h1>
+      <header>NAV BAR</header>
         <NavBar params={{username: "current user"}}/>
-      <h1>ParentDashboard</h1>
+      <header>PARENT DASHBOARD</header>
         <ParentDashboard />
-      <h1>Public Parent Profile </h1>
+      <header>PUBLIC PARENT PROFILE</header>
         <PublicParentProfile/>
-      <h1>Private Parent Profile </h1>
+      <header>PRIVATE PARENT PROFILE</header>
         <PrivateParentProfile specific_needs="" extra_requests=""/>
-      <h1>Edit Parent Profile </h1>
+      <header>EDIT PARENT PROFILE FORM</header>
         <EditParentProfileForm />
         <br/>
         <br/>
         <br/>
-      <h1>BabysitterDashboard</h1>
+      <header>BABYSITTER DASHBOARD</header>
         <BabysitterDashboard />
-      <h1>Public Babysitter Profile </h1>
+      <header>PUBLIC BABYSITTER PROFILE</header>
         <PublicBabysitterProfile/>
-      <h1>Private Babysitter Profile </h1>
+      <header>PRIVATE BABYSITTER PROFILE</header>
         <PrivateBabysitterProfile />
-      <h1>Edit Babysitter Profile </h1>
+      <header>EDIT BABYSITTER PROFILE FORM</header>
         <EditBabysitterProfileForm />
       {this.props.children}
       </div>
