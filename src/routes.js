@@ -17,7 +17,7 @@ export default (
     {/* put this back soon! */}
     <Route path="login" component={{main: LogInForm}}/>
     <Route path="newuser" component={{main: CreateAccountForm}}/>
-    <Route path="babysitter/:username" component={{main: BabysitterDashboard, navbar: NavBar, footer: Network}}/>
+    <Route path="babysitters/:username" component={{main: BabysitterDashboard, navbar: NavBar, footer: Network}}/>
     <Route path="parent/:username" component={{main: ParentDashboard, navbar: NavBar, footer: Network}}/>
     <Route path="user/edit/parent/:username" component={{main: EditParentProfileForm, navbar: NavBar}}/>
     <Route path="user/edit/babysitter/:username" component={{main: EditBabysitterProfileForm, navbar: NavBar}}/>

@@ -1,11 +1,15 @@
 import React, { Component } from 'react';
 import { reduxForm } from 'redux-form'
 import createUser from '../../actions/createUser'
+import { browserHistory } from 'react-router'
 
 const CreateAccountForm = class extends Component {
 
   handleFormSubmit(props) {
-    this.props.createUser(props)
+    this.props.createUser(props).then((resp)=>{
+      debugger
+      browserHistory.push(`/${resp.payload.data.type}/${resp.payload.data.attributes.name}`)
+    })
   }
 
   render(){
