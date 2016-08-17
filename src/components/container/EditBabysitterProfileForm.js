@@ -6,7 +6,7 @@ const EditBabysitterProfilePage = class extends Component {
 
   handleEditFormSubmit(props){
     let currentUser = this.props.currentUser
-    this.props.editBabysitter(props)
+    this.props.editBabysitter(props, currentUser)
   }
 
   render(){

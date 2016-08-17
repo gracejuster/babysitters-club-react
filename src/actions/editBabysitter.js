@@ -1,7 +1,7 @@
 import $ from 'jquery'
 
 
-export default function editBabysitter(props) {
+export default function editBabysitter(props, currentUser) {
    const URL = `http://localhost:3000/api/v1/babysitters/${currentUser.account.id}`
 
   const request = $.ajax({
@@ -15,7 +15,7 @@ export default function editBabysitter(props) {
    })
 
    return {
-     type: 'EDIT_BABYSITTER',
+     type: 'EDIT_ACCOUNT',
      payload: request
    }
 }
