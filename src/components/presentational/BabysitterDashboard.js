@@ -10,7 +10,6 @@ const BabysitterDashboard = class extends Component{
         <BookingsTable title="Bookings"/>
         <BookingsTable title="Pending Bookings"/>
         <Requests />
-        <Network />
       </div>
       );
     }
