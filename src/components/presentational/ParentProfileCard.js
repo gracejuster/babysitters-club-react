@@ -14,7 +14,7 @@ const ParentProfileCard = ({name, kid_count, location}) => {
 
 ParentProfileCard.propTypes = {
   name: PropTypes.string.isRequired,
-  kid_count: PropTypes.integer.isRequired,
+  kid_count: PropTypes.string.isRequired,
   location: PropTypes.string.isRequired
 }
 

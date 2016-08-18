@@ -3,6 +3,7 @@ import { Route, IndexRedirect } from 'react-router'
 import App from './App'
 import NavBar from './components/presentational/NavBar'
 import NetworkContainer from './components/container/NetworkContainer'
+import SearchResultsContainer from './components/container/SearchResultsContainer'
 // import Network from './components/presentational/Network'
 import CreateAccountForm from './components/container/CreateAccountForm'
 import LogInForm from './components/container/LogInForm'
@@ -11,7 +12,7 @@ import ParentDashboard from './components/presentational/ParentDashboard'
 import EditParentProfileForm from './components/container/EditParentProfileForm'
 import EditBabysitterProfileForm from './components/container/EditBabysitterProfileForm'
 import CreateBookingForm from './components/container/CreateBookingForm'
-import ParentProfileCard from './components/presentational/ParentProfileCard'
+
 
 export default (
   <Route path="/" component={App} >
@@ -25,7 +26,7 @@ export default (
     <Route path="bookings/:username" component={{main: CreateBookingForm, navbar: NavBar}}/>
     <Route path="edit/parent/:username" component={{main: EditParentProfileForm, navbar: NavBar}}/>
     <Route path="edit/babysitter/:username" component={{main: EditBabysitterProfileForm, navbar: NavBar}}/>
-    <Route path="parents" component={{main: ParentProfileCard, navbar: NavBar}} />
+    <Route path="parents" component={{main: SearchResultsContainer, navbar: NavBar}} />
     {/* becomes a prop in profile - this.props.params --> :username */}
   </Route>
 )
