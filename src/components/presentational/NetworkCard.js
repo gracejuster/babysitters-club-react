@@ -8,4 +8,8 @@ const NetworkCard = ({}) => {
   )
 }
 
+NetworkCard.propTypes = {
+  //
+}
+
 export default NetworkCard
