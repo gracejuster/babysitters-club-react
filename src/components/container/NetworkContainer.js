@@ -3,7 +3,7 @@ import Network from '../presentational/Network'
 
 const mapStateToProps = (state) => {
 	return {
-		networksObject: state.currentUser.account.network
+		networksArray: state.currentUser.account.network
 	}
 }
 
@@ -13,8 +13,6 @@ const mapStateToProps = (state) => {
 // 	}
 // }
 
-const NetworkContainer = connect(
-	mapStateToProps
-)(Network)
+const NetworkContainer = connect(mapStateToProps)(Network)
 
 export default NetworkContainer
