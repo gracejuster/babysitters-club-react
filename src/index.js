@@ -6,6 +6,7 @@ import { createStore, combineReducers, applyMiddleware } from 'redux'
 import { reducer as formReducer } from 'redux-form';
 import users from './reducers/users'
 import parents from './reducers/parents'
+import search from './reducers/search'
 import babysitters from './reducers/babysitters'
 import currentUser from './reducers/currentuser'
 import booking from './reducers/booking'
@@ -22,7 +23,8 @@ const reducer = combineReducers({
   currentUser: currentUser,
   booking: booking,
   review: review,
-  form: formReducer
+  form: formReducer,
+  search: search
 })
 
 const createStoreWithMiddleware = applyMiddleware(ReduxThunk, ReduxPromise)(createStore)

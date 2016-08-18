@@ -2,12 +2,15 @@ import React, { Component } from 'react';
 import { reduxForm } from 'redux-form'
 export const fields = [ 'searchValue' ]
 import { browserHistory } from 'react-router'
+import search from '../../actions/search'
+
 
 class SearchBar extends Component {
   SearchFormSubmit(props){
-    // this.props.search(props).then((resp)=>{
-    //   browserHistory.push(`/${resp.payload.type.toLowerCase()}/${resp.payload.current_user.username}`)
-    // })
+    let currentUser = this.props.currentUser
+    this.props.search(props, currentUser).then(()=>{
+      browserHistory.push(`/parents`)
+    })
   }
   render() {
     const { fields: { searchValue }, handleSubmit} = this.props
@@ -20,7 +23,13 @@ class SearchBar extends Component {
   }
 }
 
+function mapStateToProps(state){
+  return{
+    currentUser: state.currentUser
+  }
+}
+
 export default reduxForm({
   form: 'search',
   fields: ['searchValue']
-})(SearchBar)
+}, mapStateToProps, {search})(SearchBar);
