@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Route } from 'react-router'
 import App from './App'
 import NavBar from './components/presentational/NavBar'
@@ -19,8 +19,8 @@ export default (
     <Route path="newuser" component={{main: CreateAccountForm}}/>
     <Route path="babysitter/:username" component={{main: BabysitterDashboard, navbar: NavBar, footer: Network}}/>
     <Route path="parent/:username" component={{main: ParentDashboard, navbar: NavBar, footer: Network}}/>
-    <Route path="user/edit/parent/:username" component={{main: EditParentProfileForm, navbar: NavBar}}/>
-    <Route path="user/edit/babysitter/:username" component={{main: EditBabysitterProfileForm, navbar: NavBar}}/>
+    <Route path="edit/parent/:username" component={{main: EditParentProfileForm, navbar: NavBar}}/>
+    <Route path="edit/babysitter/:username" component={{main: EditBabysitterProfileForm, navbar: NavBar}}/>
     <Route path="parents" component={{navbar: NavBar}} />
     {/* becomes a prop in profile - this.props.params --> :username */}
   </Route>

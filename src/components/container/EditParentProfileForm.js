@@ -5,20 +5,18 @@ import editParent from '../../actions/editParent'
 const EditParentsProfilePage = class extends Component {
 
   handleEditFormSubmit(props){
-    debugger
     let currentUser = this.props.currentUser
-    this.props.editParent(props, currentUser)
+    this.props.editParent(props, currentUser).then((resp)=>{
+      debugger
+      browserHistory.push(`/${resp.payload.type}/${resp.payload.current_user.username}`)
+    })
   }
 
   render(){
-     const { fields: {name, email, kid_count, address, specific_needs, extra_requests }, handleSubmit } = this.props;
+     const { fields: {kid_count, address, specific_needs, extra_requests }, handleSubmit } = this.props;
     return(
       <div className='EditParentsProfilePage'>
         <form id="form" onSubmit={handleSubmit(this.handleEditFormSubmit.bind(this))}>
-          {/* <label>Name: </label> */}
-          <input type='text' placeholder='NAME' className="form-control" {...name}/>
-          {/* <label>Email: </label> */}
-          <input type='text' placeholder='E-MAIL' className="form-control" {...email}/>
           {/* <label>Kid's Count: </label> */}
           <input type='text' placeholder='KID COUNT' className="form-control" {...kid_count}/>
           {/* <label>Address: </label> */}
@@ -43,8 +41,6 @@ function mapStateToProps(state){
 export default reduxForm({
   form: 'EditParentsProfilePage',
   fields: [
-    'name',
-    'email',
     'kid_count',
     'address',
     'specific_needs',
