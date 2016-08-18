@@ -2,9 +2,9 @@ import React, { PropTypes } from 'react';
 import ParentProfileCard from './ParentProfileCard'
 
 let SearchResults = ({searchResultsObject}) => {
+	debugger
 	let SearchResultsList = searchResultsObject.map((searchResultItem) => {
-		debugger
-		return <ParentProfileCard name={searchResultItem.name} kid_count={searchResultItem.kid_count} address={searchResultItem.address} />
+		return <ParentProfileCard name={searchResultItem.attributes.name} kid_count={searchResultItem.attributes["associated-user"].kid_count} address={searchResultItem.attributes["associated-user"].address} />
 	})
 	return (
 		<div className='SearchResults'>
