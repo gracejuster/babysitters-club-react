@@ -3,10 +3,10 @@ import { reduxForm } from 'redux-form'
 import createBooking from '../../actions/createBooking'
 
 const CreateBookingForm = class extends Component {
-
   handleCreateBookingSubmit(props) {
     let currentUser = this.props.currentUser
     this.props.createBooking(props, currentUser)
+
   }
 
   render(){
@@ -25,6 +25,11 @@ const CreateBookingForm = class extends Component {
   }
 }
 
+function mapStateToProps(state){
+  return{
+    currentUser: state.currentUser
+  }
+}
 
 export default reduxForm({
   form: 'CreateBookingForm',
@@ -32,4 +37,4 @@ export default reduxForm({
     'duration',
     'desired_time'
   ],
-}, null, { createBooking })(CreateBookingForm);
+}, mapStateToProps, { createBooking })(CreateBookingForm);
