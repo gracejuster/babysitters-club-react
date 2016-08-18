@@ -11,4 +11,4 @@ const ParentProfileCard = ({image, name, kid_count, location}) => {
   )
 }
 
-export default ParentProfileCard
+

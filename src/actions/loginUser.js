@@ -1,7 +1,6 @@
 import $ from 'jquery'
 
 export default function loginUser(props) {
-  debugger
   const URL = 'http://localhost:3000/api/v1/login'
 
  const request = $.ajax({
