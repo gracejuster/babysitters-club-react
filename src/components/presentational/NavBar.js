@@ -1,6 +1,5 @@
 import React from 'react'
 import { connect } from 'react-redux'
-
 let NavBar = ({type, username}) => {
   return(
     <div className='NavBar'>
@@ -17,14 +16,11 @@ let NavBar = ({type, username}) => {
     </div>
   )
 }
-
 function mapStateToProps(state) {
   return {
     type: state.currentUser.type,
     username: state.currentUser.currentUser.username
   }
 }
-
 NavBar = connect(mapStateToProps)(NavBar)
-
 export default NavBar
