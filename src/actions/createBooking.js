@@ -1,6 +1,7 @@
 import $ from 'jquery'
 
 
+
 export default function createBooking(props, currentUser) {
   debugger
    const URL = `http://localhost:3000/api/v1/bookings/${currentUser.username}`

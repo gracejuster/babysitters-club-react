@@ -1,12 +1,15 @@
 import React, { Component } from 'react';
 import { reduxForm } from 'redux-form'
 import editParent from '../../actions/editParent'
+import { browserHistory } from 'react-router'
 
 const EditParentsProfilePage = class extends Component {
 
   handleEditFormSubmit(props){
     let currentUser = this.props.currentUser
-    this.props.editParent(props, currentUser)
+    this.props.editParent(props, currentUser).then((resp)=>{
+      browserHistory.push(`/${resp.payload.type}/${resp.payload.current_user.username}`)
+    })
   }
 
   render(){
@@ -28,12 +31,12 @@ const EditParentsProfilePage = class extends Component {
     )
   }
 }
+
 function mapStateToProps(state){
   return{
     currentUser: state.currentUser
   }
 }
-
 
 export default reduxForm({
   form: 'EditParentsProfilePage',
