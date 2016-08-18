@@ -5,7 +5,8 @@ import createBooking from '../../actions/createBooking'
 const CreateBookingForm = class extends Component {
 
   handleCreateBookingSubmit(props) {
-    this.props.createBooking(props)
+    let currentUser = this.props.currentUser
+    this.props.createBooking(props, currentUser)
   }
 
   render(){
@@ -17,7 +18,7 @@ const CreateBookingForm = class extends Component {
         <input type='text' placeholder='DURATION' className="form-control" {...duration}/>
         {/* <label>Desired Time: </label> */}
         <input type='text' placeholder='DESIRED TIME' className="form-control" {...desired_time}/>
-        <input id='submit' type='submit' className="btn btn-primary" value='REQUEST BOOKING' /> 
+        <input id='submit' type='submit' className="btn btn-primary" value='REQUEST BOOKING' />
       </form>
       </div>
     )
