@@ -13,6 +13,7 @@ import review from './reducers/review'
 import { Router, browserHistory } from 'react-router'
 import Routes from './routes'
 import ReduxPromise from 'redux-promise'
+import ReduxThunk from 'redux-thunk';
 
 const reducer = combineReducers({
   users: users, //* login form
@@ -24,7 +25,7 @@ const reducer = combineReducers({
   form: formReducer
 })
 
-const createStoreWithMiddleware = applyMiddleware(ReduxPromise)(createStore)
+const createStoreWithMiddleware = applyMiddleware(ReduxThunk, ReduxPromise)(createStore)
 const store = createStoreWithMiddleware(reducer)
 
 ReactDOM.render(
