@@ -2,8 +2,9 @@ import { connect } from 'react-redux';
 import Network from '../presentational/Network'
 
 const mapStateToProps = (state) => {
+  //debugger
 	return {
-		networkArray: state.currentUser.account.network
+		networksObject: state.currentUser.account.network
 	}
 }
 
@@ -13,7 +14,7 @@ const mapStateToProps = (state) => {
 // 	}
 // }
 
-NetworkContainer = connect(
+const NetworkContainer = connect(
 	mapStateToProps
 )(Network)
 

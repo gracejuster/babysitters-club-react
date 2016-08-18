@@ -1,6 +1,7 @@
 import React, { PropTypes } from 'react';
 
 const NetworkCard = ({name, location}) => {
+  //debugger
   return (
     <div className="NetworkCard">
       <img />
@@ -11,9 +12,9 @@ const NetworkCard = ({name, location}) => {
   )
 }
 
-NetworkCard.propTypes = {
-  name: PropTypes.string.isRequired,
-  location: PropTypes.string.isRequired
-}
+// NetworkCard.propTypes = {
+//   name: PropTypes.string.isRequired,
+//   location: PropTypes.string.isRequired
+// }
 
 export default NetworkCard

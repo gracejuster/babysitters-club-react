@@ -1,11 +1,11 @@
 import React from 'react';
-import { Route } from 'react-router'
+import { Route, IndexRedirect } from 'react-router'
 import App from './App'
 import NavBar from './components/presentational/NavBar'
 import NetworkContainer from './components/container/NetworkContainer'
+// import Network from './components/presentational/Network'
 import CreateAccountForm from './components/container/CreateAccountForm'
 import LogInForm from './components/container/LogInForm'
-// import LogOut from './components/presentational/LogOut'
 import BabysitterDashboard from './components/presentational/BabysitterDashboard'
 import ParentDashboard from './components/presentational/ParentDashboard'
 import EditParentProfileForm from './components/container/EditParentProfileForm'
@@ -16,7 +16,8 @@ export default (
   <Route path="/" component={App} >
     {/* <Route path="logout" component={LogOut}/> */}
     {/* put this back soon! */}
-    <IndexRoute component={{main: LogInForm}}/>
+    <IndexRedirect to="/login" />
+    <Route path="login" component={{main: LogInForm}}/>
     <Route path="newuser" component={{main: CreateAccountForm}}/>
     <Route path="babysitter/:username" component={{main: BabysitterDashboard, navbar: NavBar, footer: NetworkContainer}}/>
     <Route path="parent/:username" component={{main: ParentDashboard, navbar: NavBar, footer: NetworkContainer}}/>
