@@ -4,6 +4,7 @@ const INITIAL_STATE = {jwt: "", currentUser: {}, account: {}, type: "", authenti
 const CurrentUser = (state = INITIAL_STATE, action) => {
   switch(action.type){
     case 'LOG_IN':
+    debugger
       return Object.assign({}, state, {
       	jwt: action.payload.jwt,
       	currentUser: action.payload.current_user,
@@ -14,7 +15,7 @@ const CurrentUser = (state = INITIAL_STATE, action) => {
     )
 
     case 'EDIT_ACCOUNT':
-    debugger
+    
     return Object.assign({}, state, {
       jwt: state.jwt,
       currentUser: state.currentUser,
