@@ -13,8 +13,8 @@ let Network = ({networksObject}) => {
 	)
 }
 
-// Network.propTypes = {
-// 	array: PropTypes.array.isRequired
-// }
+Network.propTypes = {
+	array: PropTypes.object.isRequired
+}
 
 export default Network

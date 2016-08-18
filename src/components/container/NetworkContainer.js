@@ -2,7 +2,6 @@ import { connect } from 'react-redux';
 import Network from '../presentational/Network'
 
 const mapStateToProps = (state) => {
-  //debugger
 	return {
 		networksObject: state.currentUser.account.network
 	}
