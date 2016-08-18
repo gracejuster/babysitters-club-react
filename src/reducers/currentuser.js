@@ -14,7 +14,7 @@ const CurrentUser = (state = INITIAL_STATE, action) => {
     )
 
     case 'EDIT_ACCOUNT':
-    debugger
+    
     return Object.assign({}, state, {
       jwt: state.jwt,
       currentUser: state.currentUser,

@@ -3,7 +3,6 @@
 const Bookings = (state = {bookings: {}, currentUser: {}}, action) => {
   switch(action.type){
     case 'CREATE_BOOKING':
-    debugger
       return Object.assign({}, state, {
         bookings: action.payload.data,
         currentUser: action.payload.current_user
