@@ -1,8 +1,8 @@
 import $ from 'jquery'
 
-
 export default function editBabysitter(props, currentUser) {
-   const URL = `http://localhost:3000/api/v1/babysitters/${currentUser.account.id}`
+  debugger
+  const URL = `http://localhost:3000/api/v1/babysitters/${currentUser.currentUser.username}`
 
   const request = $.ajax({
      url:URL,
