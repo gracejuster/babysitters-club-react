@@ -10,7 +10,7 @@ const PublicBabysitterProfile = class extends Component{
             <BabysitterProfileCard img="" name="Gina" age="45" location="CO" rating="5" />
             <ReviewHolder />
             <Requests />
-            <CreateBookingForm />
+          
     	</div>
     	)
 	}
