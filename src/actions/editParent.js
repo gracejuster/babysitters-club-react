@@ -1,6 +1,5 @@
 import $ from 'jquery'
 
-
 export default function editParent(props, currentUser) {
   debugger
    const URL = `http://localhost:3000/api/v1/parents/${currentUser.account.id}`
@@ -16,7 +15,7 @@ export default function editParent(props, currentUser) {
    })
 
    return {
-     type: 'EDIT_PARENT',
+     type: 'EDIT_ACCOUNT',
      payload: request
    }
 }

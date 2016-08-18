@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import SearchBar from '../container/SearchBar'
 import BookingsTable from './BookingsTable'
 import auth from '../container/AuthenticationResource'
+import {connect} from 'react-redux'
 
 let ParentDashboard = class extends Component{
   render() {
@@ -15,6 +16,10 @@ let ParentDashboard = class extends Component{
   }
 }
 
-ParentDashboard = auth(ParentDashboard)
+function mapStateToProps(state){
+  return {
+    currentUser: state.currentUser
+  }
+}
 
-export default ParentDashboard;
+export default connect(mapStateToProps)(ParentDashboard)
