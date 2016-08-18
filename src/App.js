@@ -28,7 +28,6 @@ class App extends Component {
         <div className="bottom">
           {footer}
         </div>
-
       </div>
     );
   }
