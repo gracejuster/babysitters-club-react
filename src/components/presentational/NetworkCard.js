@@ -3,7 +3,7 @@ import React, { PropTypes } from 'react';
 const NetworkCard = ({name, location}) => {
   return (
     <div className="NetworkCard">
-      <img />
+      <img src=""/>
       <br />
       <p>{name}</p>
       <p>{location}</p>

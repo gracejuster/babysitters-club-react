@@ -13,8 +13,6 @@ const mapStateToProps = (state) => {
 // 	}
 // }
 
-const NetworkContainer = connect(
-	mapStateToProps
-)(Network)
+const NetworkContainer = connect(mapStateToProps)(Network)
 
 export default NetworkContainer
