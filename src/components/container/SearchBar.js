@@ -10,8 +10,7 @@ class SearchBar extends Component {
     // })
   }
   render() {
-    console.log(this.props)
-    const { fields: { searchValue } handleSubmit} = this.props
+    const { fields: { searchValue }, handleSubmit} = this.props
     return(
         <form id='form' onSubmit={handleSubmit(this.SearchFormSubmit.bind(this))}>
           <input type='text' placeholder='SEARCH' {...searchValue}/>

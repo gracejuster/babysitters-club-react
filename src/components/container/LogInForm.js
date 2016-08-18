@@ -5,9 +5,9 @@ import { browserHistory } from 'react-router'
 
 const LogInForm = class extends Component {
   pressButton(props){
-    // this.props.loginUser(props).then((resp)=>{
-    //   browserHistory.push(`/${resp.payload.type.toLowerCase()}/${resp.payload.current_user.username}`)
-    // })
+    this.props.loginUser(props).then((resp)=>{
+      browserHistory.push(`/${resp.payload.type.toLowerCase()}/${resp.payload.current_user.username}`)
+    })
   }
   render(){
     const { fields: { email, password }, handleSubmit} = this.props;
