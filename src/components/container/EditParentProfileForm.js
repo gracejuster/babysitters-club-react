@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { reduxForm } from 'redux-form'
 import editParent from '../../actions/editParent'
+import { browserHistory } from 'react-router'
 
 const EditParentsProfilePage = class extends Component {
 
