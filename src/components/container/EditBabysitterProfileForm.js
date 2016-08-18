@@ -1,12 +1,15 @@
 import React, { Component } from 'react';
 import { reduxForm } from 'redux-form'
 import editBabysitter from '../../actions/editBabysitter'
+import { browserHistory } from 'react-router'
 
 const EditBabysitterProfilePage = class extends Component {
 
   handleEditFormSubmit(props){
     let currentUser = this.props.currentUser
-    this.props.editBabysitter(props, currentUser)
+    this.props.editBabysitter(props, currentUser).then((resp)=>{
+      browserHistory.push(`/${resp.payload.type}/${resp.payload.current_user.username}`)
+    })
   }
 
   render(){
