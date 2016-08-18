@@ -2,7 +2,7 @@ import React from 'react';
 import { Route } from 'react-router'
 import App from './App'
 import NavBar from './components/presentational/NavBar'
-import Network from './components/presentational/Network'
+import NetworkContainer from './components/container/NetworkContainer'
 import CreateAccountForm from './components/container/CreateAccountForm'
 import LogInForm from './components/container/LogInForm'
 // import LogOut from './components/presentational/LogOut'
@@ -18,8 +18,8 @@ export default (
     {/* put this back soon! */}
     <IndexRoute component={{main: LogInForm}}/>
     <Route path="newuser" component={{main: CreateAccountForm}}/>
-    <Route path="babysitter/:username" component={{main: BabysitterDashboard, navbar: NavBar, footer: Network}}/>
-    <Route path="parent/:username" component={{main: ParentDashboard, navbar: NavBar, footer: Network}}/>
+    <Route path="babysitter/:username" component={{main: BabysitterDashboard, navbar: NavBar, footer: NetworkContainer}}/>
+    <Route path="parent/:username" component={{main: ParentDashboard, navbar: NavBar, footer: NetworkContainer}}/>
     <Route path="bookings/:username" component={{main: CreateBookingForm, navbar: NavBar}}/>
     <Route path="edit/parent/:username" component={{main: EditParentProfileForm, navbar: NavBar}}/>
     <Route path="edit/babysitter/:username" component={{main: EditBabysitterProfileForm, navbar: NavBar}}/>
