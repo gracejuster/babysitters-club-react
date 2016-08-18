@@ -19,7 +19,7 @@ class App extends Component {
     const {main, navbar, footer} = this.props
     return (
       <div className="App">
-        <LogInForm />
+  
 
         <CreateBookingForm />
 
