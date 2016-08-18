@@ -9,7 +9,6 @@ const LogInForm = class extends Component {
 
   pressButton(props){
     this.props.loginUser(props).then((resp)=>{
-      debugger
       browserHistory.push(`/${resp.payload.type}/${resp.payload.current_user.username}`)
     })
   }

@@ -7,7 +7,6 @@ import {connect} from 'react-redux'
 
 let ParentDashboard = class extends Component{
   render() {
-    debugger
     return(
       <div className='Dashboard'>
         <SearchBar/>
