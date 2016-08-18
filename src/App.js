@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 // import {Link} from 'react-router'
 import './App.css';
 // import Routes from './routes'
-// import LogInForm from './components/container/LogInForm'
+import LogInForm from './components/container/LogInForm'
 // import NavBar from './components/presentational/NavBar'
 // import PublicBabysitterProfile from './components/presentational/PublicBabysitterProfile'
 // import PrivateBabysitterProfile from './components/presentational/PrivateBabysitterProfile'
@@ -12,12 +12,16 @@ import './App.css';
 // import PublicParentProfile from './components/presentational/PublicParentProfile'
 // import PrivateParentProfile from './components/presentational/PrivateParentProfile'
 // import EditParentProfileForm from './components/container/EditParentProfileForm'
+import CreateBookingForm from './components/container/CreateBookingForm'
 
 class App extends Component {
   render() {
     const {main, navbar, footer} = this.props
     return (
       <div className="App">
+        <LogInForm />
+
+        <CreateBookingForm />
 
         <div className="top">
           {navbar}
