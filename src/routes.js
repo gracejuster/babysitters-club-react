@@ -16,7 +16,7 @@ export default (
   <Route path="/" component={App} >
     {/* <Route path="logout" component={LogOut}/> */}
     {/* put this back soon! */}
-    <Route path="login" component={{main: LogInForm}}/>
+    <IndexRoute component={{main: LogInForm}}/>
     <Route path="newuser" component={{main: CreateAccountForm}}/>
     <Route path="babysitter/:username" component={{main: BabysitterDashboard, navbar: NavBar, footer: Network}}/>
     <Route path="parent/:username" component={{main: ParentDashboard, navbar: NavBar, footer: Network}}/>
