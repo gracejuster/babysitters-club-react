@@ -1,18 +1,15 @@
 import React, { Component } from 'react';
-import {Link} from 'react-router'
 import { reduxForm } from 'redux-form'
 import loginUser from '../../actions/loginUser'
 import { browserHistory } from 'react-router'
 
 
 const LogInForm = class extends Component {
-
   pressButton(props){
     this.props.loginUser(props).then((resp)=>{
-      browserHistory.push(`/${resp.payload.type}/${resp.payload.current_user.username}`)
+      browserHistory.push(`/${resp.payload.type.toLowerCase()}/${resp.payload.current_user.username}`)
     })
   }
-
   render(){
     const { fields: { email, password }, handleSubmit} = this.props;
     return(
@@ -31,9 +28,6 @@ const LogInForm = class extends Component {
     )
   }
 }
-
-
-
 
 export default reduxForm({
   form: 'LogInForm',

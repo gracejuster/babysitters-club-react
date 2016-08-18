@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import BookingsTable from './BookingsTable'
-import Network from './Network'
 import Requests from './Requests'
 
 const BabysitterDashboard = class extends Component{
@@ -10,7 +9,6 @@ const BabysitterDashboard = class extends Component{
         <BookingsTable title="Bookings"/>
         <BookingsTable title="Pending Bookings"/>
         <Requests />
-        <Network />
       </div>
       );
     }
