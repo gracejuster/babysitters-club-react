@@ -1,8 +1,11 @@
 import React, { PropTypes } from 'react';
-import { connect } from 'react-redux'
+import { connect } from 'react-redux';
+import NetworkCard from './NetworkCard'
 
-let Network = ({name, }) => {
-
+let Network = ({array}) => {
+	network_list = array.map((network_item) => {
+		return <NetworkCard />
+	})
 	return (
 		<div className='Network'>
   			"This is my network"
@@ -11,7 +14,7 @@ let Network = ({name, }) => {
 }
 
 Network.propTypes = {
-	name: PropTypes.string.isRequired
+	array: PropTypes.array.isRequired
 }
 
 // Everything below here should probably be in a NetworkContainer component
