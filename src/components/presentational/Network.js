@@ -1,13 +1,19 @@
-import React, { Component } from 'react';
+import React, { PropTypes } from 'react';
+import NetworkCard from './NetworkCard'
 
-const Network = class extends Component {
-	render(){
-		return (
-  		<div className='Network'>
-    			"This is my network"
-  		</div>
-  	)
-	}
+let Network = ({networksObject}) => {
+	let networksList = networksObject.map((networkItem) => {
+		return <NetworkCard name={networkItem.name} location={networkItem.location} />
+	})
+	return (
+		<div className='Network'>
+  		{networksList}
+		</div>
+	)
+}
+
+Network.propTypes = {
+	array: PropTypes.object.isRequired
 }
 
 export default Network

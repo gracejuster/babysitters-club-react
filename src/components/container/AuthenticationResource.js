@@ -3,7 +3,7 @@ import { browserHistory } from 'react-router'
 import { connect } from 'react-redux'
 
 function auth(ComposedComponent){
-  
+
   class Authorized extends Component {
     componentWillMount(){
       if(!this.props.authenticated){
@@ -12,18 +12,10 @@ function auth(ComposedComponent){
     }
     componentWillUpdate(newProps){
       if(!newProps.authenticated){
-        browserHistory.push('/login') 
+        browserHistory.push('/login')
       }
     }
-    render(){
-
-      return (
-        // obj {className: red, }
-        // className = "red"
-      <ComposedComponent  {...this.props}/> 
-
-      ) 
-    }
+    render(){ return <ComposedComponent  {...this.props}/> }
   }
 
   function mapStateToProps(state){

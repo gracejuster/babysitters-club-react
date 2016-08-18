@@ -19,8 +19,6 @@ class App extends Component {
     const {main, navbar, footer} = this.props
     return (
       <div className="App">
-
-
         <div className="top">
           {navbar}
         </div>
@@ -30,7 +28,6 @@ class App extends Component {
         <div className="bottom">
           {footer}
         </div>
-
       </div>
     );
   }
