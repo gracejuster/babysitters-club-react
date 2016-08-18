@@ -1,7 +1,6 @@
 import React, { PropTypes } from 'react';
 
 const NetworkCard = ({name, location}) => {
-  //debugger
   return (
     <div className="NetworkCard">
       <img />
