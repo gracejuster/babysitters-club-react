@@ -1,7 +1,6 @@
 import $ from 'jquery'
 
 export default function editParent(props, currentUser) {
-  //debugger
    const URL = `http://localhost:3000/api/v1/parents/${currentUser.account.id}`
   // console.log('we are creating a user!')
   const request = $.ajax({
