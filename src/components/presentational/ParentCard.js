@@ -4,13 +4,13 @@ import { connect } from 'react-redux';
 import { browserHistory } from 'react-router'
 
 
-let ParentProfileCard = class extends Component  {
+let ParentCard = class extends Component  {
   handleClick(){
     this.props.dispatch(getPublicViewableProfile(
       this.props.userId,
       this.props.currentUser)).then((resp) => {
         let type = resp.payload.type.toLowerCase()
-        let username = resp.payload.current_user.username.toLowerCase()
+        let username = resp.payload.viewable_user.username.toLowerCase()
         browserHistory.push(`/user/${type}/${username}`)
     })
   }
@@ -31,7 +31,7 @@ let ParentProfileCard = class extends Component  {
 }
 
 
-ParentProfileCard = connect()(ParentProfileCard)
+ParentCard = connect()(ParentCard)
 
 
-export default ParentProfileCard
+export default ParentCard
