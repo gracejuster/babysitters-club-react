@@ -11,6 +11,7 @@ let NetworkCard = class extends Component {
       this.props.currentUser)).then((resp) => {
         let type = resp.payload.type.toLowerCase()
         let username = resp.payload.viewable_user.username.toLowerCase()
+        debugger
         browserHistory.push(`/user/${type}/${username}`)
     })
   }

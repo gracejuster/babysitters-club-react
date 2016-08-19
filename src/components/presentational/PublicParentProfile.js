@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ParentProfileCard from './ParentProfileCard';
+import ParentCard from './ParentCard';
 import Network from './Network';
 import {connect} from 'react-redux'
 
@@ -7,13 +7,13 @@ let PublicParentProfile = class extends Component{
   render() {
     return(
     	<div className="PublicParentProfile">
-          <ParentProfileCard img="" name={this.props.name} kid_count={this.props.kid_count} location={this.props.location}/>
+          <ParentCard img="" name={this.props.name} kid_count={this.props.kid_count} location={this.props.location}/>
     	</div>
     	)
 	}
 }
 
-const mapStateToProps = ({state}) => {
+const mapStateToProps = (state) => {
 	return(
 		name: state.viewableUser.viewableUser.name,
 		kid_count: state.viewableUser.account.kid_count,
