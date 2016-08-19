@@ -10,8 +10,6 @@ const Search = (state = {parents: {}}, action) => {
     default:
       return state
   }
-
-
 }
 
 export default Search
