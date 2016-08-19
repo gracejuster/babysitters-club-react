@@ -1,9 +1,9 @@
 import React, { PropTypes } from 'react';
 import NetworkCard from './NetworkCard'
 
-let Network = ({networksArray, onClick, currentUser}) => {
+let Network = ({networksArray, currentUser}) => {
 	let networksList = networksArray.map((networkItem) => {
-		return <NetworkCard onClick={() => onClick} currentUser={currentUser} user_id={networkItem.id} name={networkItem.name} location={networkItem.location} />
+		return <NetworkCard currentUser={currentUser} user_id={networkItem.id} name={networkItem.name} location={networkItem.location} />
 	})
 	return (
 		<div className='Network'>
