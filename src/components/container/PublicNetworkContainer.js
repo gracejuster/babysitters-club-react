@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import Network from '../presentational/Network'
-import getPublicUser from '../../actions/getPublicViewableProfile'
+import GetPublicUser from '../../actions/getPublicViewableProfile'
 
 const mapStateToProps = (state) => {
 	return {
@@ -10,10 +10,10 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
 	return {
-		clickOnName: (userId) => { dispatch(getPublicUser(userId))}
+		clickOnName: (userId) => { dispatch(GetPublicUser(userId))}
 	}
 }
 
-const NetworkContainer = connect(mapStateToProps)(Network)
+const NetworkContainer = connect(mapStateToProps, mapDispatchToProps)(Network)
 
 export default NetworkContainer
