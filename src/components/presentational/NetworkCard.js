@@ -1,10 +1,11 @@
 import React, { PropTypes, Component } from 'react';
 import getPublicViewableProfile from '../../actions/getPublicViewableProfile'
+import { connect } from 'react-redux';
 
-const NetworkCard = class extends Component {
+let NetworkCard = class extends Component {
 
   handleClick(){
-    getPublicViewableProfile(this.props.user_id, this.props.currentUser)
+    this.props.dispatch(getPublicViewableProfile(this.props.user_id, this.props.currentUser))
   }
 
   render(){
@@ -20,10 +21,8 @@ const NetworkCard = class extends Component {
   }
 }
 
-//
-// NetworkCard.propTypes = {
-//   name: PropTypes.string.isRequired,
-//   location: PropTypes.string.isRequired
-// }
+
+ NetworkCard = connect()(NetworkCard)
+
 
 export default NetworkCard
