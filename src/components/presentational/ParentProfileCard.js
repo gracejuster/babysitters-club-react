@@ -3,6 +3,7 @@ import React, { PropTypes } from 'react';
 const ParentProfileCard = ({name, kid_count, location}) => {
   return(
   	<div className="ProfileCard">
+    <h6>Parent Profile Card </h6>
 	<img />
 	<br/>
     <p>{name}</p>
