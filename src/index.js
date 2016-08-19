@@ -26,7 +26,8 @@ const reducer = combineReducers({
   //review: review,
   viewableUser: viewableUser,
   form: formReducer,
-  search: search
+  search: search,
+  review: review
 })
 
 const createStoreWithMiddleware = applyMiddleware(ReduxThunk, ReduxPromise)(createStore)
