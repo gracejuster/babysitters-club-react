@@ -15,6 +15,7 @@ import { Router, browserHistory } from 'react-router'
 import Routes from './routes'
 import ReduxPromise from 'redux-promise'
 import ReduxThunk from 'redux-thunk';
+import viewableUser from './reducers/viewableUser'
 
 const reducer = combineReducers({
   //users: users, //* login form
@@ -23,6 +24,7 @@ const reducer = combineReducers({
   currentUser: currentUser,
   //booking: booking,
   //review: review,
+  viewableUser: viewableUser,
   form: formReducer,
   search: search
 })
