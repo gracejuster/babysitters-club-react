@@ -4,7 +4,8 @@ import getPublicUser from '../../actions/getPublicViewableProfile'
 
 const mapStateToProps = (state) => {
 	return {
-		networksArray: state.viewableUser.account.network
+		networksArray: state.viewableUser.account.network,
+		currentUser: state.currentUser
 	}
 }
 

@@ -2,7 +2,6 @@ import $ from 'jquery'
 
 export default function loginUser(props) {
   const URL = 'http://localhost:3000/api/v1/login'
-
  const request = $.ajax({
     url:URL,
     type:"POST",
