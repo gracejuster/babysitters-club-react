@@ -10,4 +10,3 @@ const mapStateToProps = (state) => {
 const SearchResultsContainer = connect(mapStateToProps)(SearchResults)
 
 export default SearchResultsContainer
-
