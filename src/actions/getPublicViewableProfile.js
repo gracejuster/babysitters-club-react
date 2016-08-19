@@ -1,6 +1,7 @@
 import $ from 'jquery'
 
-export default function createUser(props) {
+export default function getPublicUser(e, userId, currentUser) {
+  debugger
    const URL = `http://localhost:3000/api/v1/users/${props.id}`
   // console.log('we are creating a user!')
   const request = $.ajax({

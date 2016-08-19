@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react';
 
-const NetworkCard = ({name, location, onClick}) => {
+const NetworkCard = ({name, location, onClick, currentUser, user_id}) => {
 debugger
   return (
     <div className="NetworkCard">
@@ -8,6 +8,7 @@ debugger
       <br />
       <p>{name}</p>
       <p>{location}</p>
+      <button onClick={onClick(user_id, currentUser)}>Get Full Profile</button>
     </div>
   )
 }
