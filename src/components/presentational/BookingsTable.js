@@ -2,7 +2,7 @@ import React from 'react';
 // import {Link} from 'react-router'
 
 const BookingsTable = ({title, bookings}) => {
-  debugger
+
   let bookingsList = bookings.map((booking) => {
     return <tr><td>{booking.name}</td><td>{booking.time}</td><td>{booking.duration}</td></tr>
   })
