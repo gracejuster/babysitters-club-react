@@ -13,7 +13,7 @@ let PublicParentProfile = class extends Component{
 	}
 }
 
-const mapStateToProps = ({state}) => {
+const mapStateToProps = (state) => {
 	return(
 		name: state.viewableUser.viewableUser.name,
 		kid_count: state.viewableUser.account.kid_count,

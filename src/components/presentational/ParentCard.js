@@ -16,11 +16,12 @@ let ParentCard = class extends Component  {
   }
 
   render() {
+    debugger
     return(
       <div className="ProfileCard">
       <h6>Parent Profile Card </h6>
-    <img />
-    <br/>
+      <img />
+      <br/>
       <p>Name: {this.props.name}</p>
       <p>Kids: {this.props.kid_count}</p>
       <p>Email: {this.props.email}</p>
