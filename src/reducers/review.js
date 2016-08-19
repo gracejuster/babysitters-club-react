@@ -3,7 +3,7 @@
 const Reviews = (state = {reviews: []}, action) => {
   switch(action.type){
     case 'CREATE_REVIEW':
-    debugger
+    //debugger
       return Object.assign({}, state, {
         reviews: [...state.users, {reviews: action.payload.data}]
       })

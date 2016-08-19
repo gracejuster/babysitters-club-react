@@ -14,6 +14,6 @@ const mapDispatchToProps = (dispatch) => {
 	}
 }
 
-const NetworkContainer = connect(mapStateToProps)(Network)
+const NetworkContainer = connect(mapStateToProps, mapDispatchToProps)(Network)
 
 export default NetworkContainer

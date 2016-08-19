@@ -3,7 +3,7 @@ import ParentProfileCard from './ParentProfileCard'
 
 let SearchResults = ({searchResultsObject}) => {
 	let SearchResultsList = searchResultsObject.map((searchResultItem) => {
-		debugger
+		//debugger
 		return <ParentProfileCard name={searchResultItem.name} kid_count={searchResultItem.kid_count} address={searchResultItem.address} />
 	})
 	return (
