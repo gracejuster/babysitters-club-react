@@ -3,7 +3,8 @@ import SearchResults from '../presentational/SearchResults'
 
 const mapStateToProps = (state) => {
 	return {
-		searchResultsObject: state.search.parents
+		searchResultsObject: state.search.parents,
+	  currentUser: state.currentUser
 	}
 }
 

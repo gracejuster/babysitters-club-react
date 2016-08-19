@@ -1,25 +1,40 @@
-import React, { PropTypes } from 'react';
+import React, { PropTypes, Component } from 'react';
+import getPublicViewableProfile from '../../actions/getPublicViewableProfile'
+import { connect } from 'react-redux';
+import { browserHistory } from 'react-router'
 
-const ParentProfileCard = ({name, kid_count, email, userId}) => {
-  debugger
+
+let ParentProfileCard = class extends Component  {
+  handleClick(){
+
+    debugger
+    this.props.dispatch(getPublicViewableProfile(
+      this.props.userId,
+      this.props.currentUser)).then((resp) => {
+
+        let type = resp.payload.type.toLowerCase()
+        let username = resp.payload.current_user.username.toLowerCase()
+        browserHistory.push(`/user/${type}/${username}`)
+    })
+  }
+
+  render() {
     return(
-    	<div className="ProfileCard">
+      <div className="ProfileCard">
       <h6>Parent Profile Card </h6>
-  	<img />
-  	<br/>
-      <p>Name: {name}</p>
-      <p>Kids: {kid_count}</p>
-      <p>Email: {email}</p>
+    <img />
+    <br/>
+      <p>Name: {this.props.name}</p>
+      <p>Kids: {this.props.kid_count}</p>
+      <p>Email: {this.props.email}</p>
+      <button onClick={this.handleClick.bind(this)}>Get Full Profile</button>
       </div>
     )
+  }
 }
 
-ParentProfileCard.propTypes = {
-  name: PropTypes.string.isRequired,
-  kid_count: PropTypes.string.isRequired,
-  email: PropTypes.string.isRequired
-}
+
+ParentProfileCard = connect()(ParentProfileCard)
+
 
 export default ParentProfileCard
-
-//connect to store and get current user so actions can be performed 
