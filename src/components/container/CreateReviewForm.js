@@ -1,11 +1,15 @@
 import React, { Component } from 'react';
 import { reduxForm } from 'redux-form'
 import createReview from '../../actions/createReview'
+export const fields = [ 'title', 'description', 'rating' ]
+
+// import { browserHistory } from 'react-router'
 
 const CreateReviewForm = class extends Component {
 
   handleCreateReviewSubmit(props) {
-    this.props.createReview(props)
+    let currentUser = this.props.currentUser
+    this.props.createReview(props, currentUser)
   }
 
   render(){
@@ -13,19 +17,21 @@ const CreateReviewForm = class extends Component {
     return(
       <div className='CreateReviewForm'>
       <form id='form' onSubmit={handleSubmit(this.handleCreateReviewSubmit.bind(this))}>
-        {/* <label>Title: </label> */}
         <input type='text' placeholder='TITLE' className="form-control" {...title}/>
-        {/* <label>Description: </label> */}
         <input type='text' placeholder='DESCRIPTION' className="form-control" {...description}/>
-        {/* <label>Rating: </label> */}
         <input type='text' placeholder='RATING' className="form-control" {...rating}/>
-        <input id='submit' type='submit' className="btn btn-primary" value="CREATE REVIEW" /> 
+        <input id='submit' type='submit' className="btn btn-primary" value="CREATE REVIEW" />
       </form>
       </div>
     )
   }
 }
 
+function mapStateToProps(state){
+  return{
+    currentUser: state.currentUser
+  }
+}
 
 export default reduxForm({
   form: 'CreateReviewForm',
@@ -34,4 +40,4 @@ export default reduxForm({
     'description',
     'rating'
   ],
-}, null, { createReview })(CreateReviewForm);
+}, mapStateToProps, { createReview })(CreateReviewForm);
