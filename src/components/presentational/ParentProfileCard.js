@@ -6,12 +6,9 @@ import { browserHistory } from 'react-router'
 
 let ParentProfileCard = class extends Component  {
   handleClick(){
-
-    debugger
     this.props.dispatch(getPublicViewableProfile(
       this.props.userId,
       this.props.currentUser)).then((resp) => {
-
         let type = resp.payload.type.toLowerCase()
         let username = resp.payload.current_user.username.toLowerCase()
         browserHistory.push(`/user/${type}/${username}`)

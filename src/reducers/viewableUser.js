@@ -4,6 +4,7 @@ const ViewableUser = (state = INITIAL_STATE, action) => {
 
   switch(action.type){
     case 'GET_VIEWABLE_USER':
+      
       console.log(action.payload)
       return Object.assign({}, {
       	viewableUser: action.payload.viewable_user,
