@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { reduxForm } from 'redux-form'
 import createReview from '../../actions/createReview'
+import { browserHistory } from 'react-router'
 
 const CreateReviewForm = class extends Component {
 
@@ -19,7 +20,7 @@ const CreateReviewForm = class extends Component {
         <input type='text' placeholder='DESCRIPTION' className="form-control" {...description}/>
         {/* <label>Rating: </label> */}
         <input type='text' placeholder='RATING' className="form-control" {...rating}/>
-        <input id='submit' type='submit' className="btn btn-primary" value="CREATE REVIEW" /> 
+        <input id='submit' type='submit' className="btn btn-primary" value="CREATE REVIEW" />
       </form>
       </div>
     )

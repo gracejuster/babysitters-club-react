@@ -11,7 +11,7 @@ import ParentDashboard from './components/presentational/ParentDashboard'
 import EditParentProfileForm from './components/container/EditParentProfileForm'
 import EditBabysitterProfileForm from './components/container/EditBabysitterProfileForm'
 import CreateBookingForm from './components/container/CreateBookingForm'
-
+import PrivateBabySitterProfile from './components/presentational/PrivateBabySitterProfile'
 
 export default (
   <Route path="/" component={App} >
@@ -26,6 +26,7 @@ export default (
     <Route path="edit/parent/:username" component={{main: EditParentProfileForm, navbar: NavBar}}/>
     <Route path="edit/babysitter/:username" component={{main: EditBabysitterProfileForm, navbar: NavBar}}/>
     <Route path="parents" component={{main: SearchResultsContainer, navbar: NavBar}} />
+    <Route path="privatebabysitter" component={{main: PrivateBabySitterProfile}}
     {/* becomes a prop in profile - this.props.params --> :username */}
   </Route>
 )

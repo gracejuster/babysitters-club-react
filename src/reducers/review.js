@@ -1,4 +1,3 @@
-// var bookingCounter = 0
 
 const Reviews = (state = {reviews: []}, action) => {
   switch(action.type){
@@ -10,8 +9,6 @@ const Reviews = (state = {reviews: []}, action) => {
     default:
       return state
   }
-
-
 }
 
 export default Reviews
