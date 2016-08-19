@@ -3,7 +3,7 @@ import CreateBookingForm from '../container/CreateBookingForm';
 import CreateReviewForm from '../container/CreateReviewForm';
 import BabysitterProfileCard from './BabysitterProfileCard'
 
-const PublicBabysitterProfile = class extends Component{
+const PrivateBabysitterProfile = class extends Component{
   render() {
     return(
     	<div className="ProfileCard">
@@ -18,4 +18,4 @@ const PublicBabysitterProfile = class extends Component{
 	}
 }
 
-export default PublicBabysitterProfile
+export default PrivateBabysitterProfile

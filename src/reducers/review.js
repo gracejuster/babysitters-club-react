@@ -1,17 +1,14 @@
-// var bookingCounter = 0
 
-const Reviews = (state = {reviews: []}, action) => {
+const Review = (state = {reviews: {}}, action) => {
   switch(action.type){
     case 'CREATE_REVIEW':
-    debugger
       return Object.assign({}, state, {
-        reviews: [...state.users, {reviews: action.payload.data}]
+        reviews: action.payload.data.attributes,
+        // currentUser: action.payload.current_user
       })
     default:
       return state
   }
-
-
 }
 
-export default Reviews
+export default Review
