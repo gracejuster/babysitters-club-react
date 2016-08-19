@@ -10,7 +10,7 @@ let NetworkCard = class extends Component {
       this.props.user_id, 
       this.props.currentUser)).then((resp) => {
         let type = resp.payload.type.toLowerCase()
-        let username = resp.payload.current_user.username.toLowerCase()
+        let username = resp.payload.viewable_user.username.toLowerCase()
         browserHistory.push(`/user/${type}/${username}`)
     })
   }

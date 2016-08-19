@@ -21,3 +21,5 @@ ParentProfileCard.propTypes = {
 }
 
 export default ParentProfileCard
+
+//connect to store and get current user so actions can be performed 
