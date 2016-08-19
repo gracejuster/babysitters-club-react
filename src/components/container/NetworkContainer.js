@@ -4,16 +4,17 @@ import getPublicUser from '../../actions/getPublicViewableProfile'
 
 const mapStateToProps = (state) => {
 	return {
-		networksArray: state.currentUser.account.network
+		networksArray: state.currentUser.account.network,
+		currentUser: state.currentUser
 	}
 }
 
 const mapDispatchToProps = (dispatch) => {
 	return {
-		clickOnName: (userId) => { dispatch(getPublicUser(userId))}
+		onClick: (userId, currentUser) => { dispatch(getPublicUser(userId, currentUser))}
 	}
 }
 
-const NetworkContainer = connect(mapStateToProps)(Network)
+const NetworkContainer = connect(mapStateToProps, mapDispatchToProps)(Network)
 
 export default NetworkContainer

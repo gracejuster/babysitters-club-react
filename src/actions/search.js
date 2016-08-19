@@ -1,7 +1,7 @@
 import $ from 'jquery'
 
 export default function search(props, currentUser) {
-  debugger
+  //debugger
    const URL = `http://localhost:3000/api/v1/users/`
   // console.log('we are creating a user!')
   const request = $.ajax({

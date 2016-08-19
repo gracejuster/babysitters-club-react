@@ -1,9 +1,10 @@
 import React, { PropTypes } from 'react';
 import NetworkCard from './NetworkCard'
 
-let Network = ({networksArray}) => {
+let Network = ({networksArray, currentUser}) => {
 	let networksList = networksArray.map((networkItem) => {
-		return <NetworkCard name={networkItem.name} location={networkItem.location} />
+		
+		return <NetworkCard currentUser={currentUser} user_id={networkItem.user_id} name={networkItem.name} location={networkItem.location} />
 	})
 	return (
 		<div className='Network'>
@@ -13,8 +14,9 @@ let Network = ({networksArray}) => {
 }
 
 Network.propTypes = {
-	networksArray: PropTypes.array.isRequired
+	networksArray: PropTypes.array.isRequired,
+	onClick: PropTypes.func.isRequired
+
 }
 
 export default Network
-
