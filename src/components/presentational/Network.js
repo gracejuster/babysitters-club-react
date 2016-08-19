@@ -3,7 +3,6 @@ import NetworkCard from './NetworkCard'
 
 let Network = ({networksArray, currentUser}) => {
 	let networksList = networksArray.map((networkItem) => {
-		
 		return <NetworkCard currentUser={currentUser} user_id={networkItem.user_id} name={networkItem.name} location={networkItem.location} />
 	})
 	return (
