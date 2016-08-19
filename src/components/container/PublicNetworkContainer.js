@@ -1,16 +1,16 @@
 import { connect } from 'react-redux';
 import Network from '../presentational/Network'
-import GetPublicUser from '../../actions/getPublicViewableProfile'
+import getPublicUser from '../../actions/getPublicViewableProfile'
 
 const mapStateToProps = (state) => {
 	return {
-		networksArray: state.currentUser.account.network
+		networksArray: state.viewableUser.account.network
 	}
 }
 
 const mapDispatchToProps = (dispatch) => {
 	return {
-		clickOnName: (userId) => { dispatch(GetPublicUser(userId))}
+		clickOnName: (userId) => { dispatch(getPublicUser(userId))}
 	}
 }
 
