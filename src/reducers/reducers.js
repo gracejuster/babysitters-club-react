@@ -1,11 +1,11 @@
 import { combineReducers } from 'redux'
-import users from './reducers/users'
-import parents from './reducers/parents'
-import search from './reducers/search'
-import babysitters from './reducers/babysitters'
-import currentUser from './reducers/currentuser'
-import booking from './reducers/booking'
-import review from './reducers/review'
+import users from './users'
+import parents from './parents'
+import search from './search'
+import babysitters from './babysitters'
+import currentUser from './currentuser'
+import booking from './booking'
+import review from './review'
 
 export default const reducer = combineReducers({
   currentUser: currentUser,
