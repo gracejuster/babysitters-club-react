@@ -6,8 +6,6 @@ import { browserHistory } from 'react-router'
 
 let ParentProfileCard = class extends Component  {
   handleClick(){
-
-    debugger
     this.props.dispatch(getPublicViewableProfile(
       this.props.userId,
       this.props.currentUser)).then((resp) => {
