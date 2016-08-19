@@ -7,7 +7,7 @@ let NetworkCard = class extends Component {
 
   handleClick(){
     this.props.dispatch(getPublicViewableProfile(
-      this.props.user_id, 
+      this.props.user_id,
       this.props.currentUser)).then((resp) => {
         let type = resp.payload.type.toLowerCase()
         let username = resp.payload.viewable_user.username.toLowerCase()
