@@ -4,7 +4,6 @@ export const fields = [ 'searchValue' ]
 import { browserHistory } from 'react-router'
 import search from '../../actions/search'
 
-
 class SearchBar extends Component {
   SearchFormSubmit(props){
     let currentUser = this.props.currentUser

@@ -17,12 +17,12 @@ import ReduxPromise from 'redux-promise'
 import ReduxThunk from 'redux-thunk';
 
 const reducer = combineReducers({
-  users: users, //* login form
-  parents: parents,
-  babysitters: babysitters,
+  //users: users, //* login form
+  //parents: parents,
+  //babysitters: babysitters,
   currentUser: currentUser,
-  booking: booking,
-  review: review,
+  //booking: booking,
+  //review: review,
   form: formReducer,
   search: search
 })
