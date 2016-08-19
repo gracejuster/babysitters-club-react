@@ -17,14 +17,13 @@ let PublicBabysitterProfile = class extends Component{
 }
 
 const mapStateToProps = ({state}) => {
-	debugger
-	return(
+	return {
 		name: state.viewableUser.viewableUser.name,
 		age: state.viewableUser.account.babysitter.age,
 		location: state.viewableUser.account.babysitter.location,
 		bio: state.viewableUser.account.babysitter.bio,
 		skills: state.viewableUser.account.babysitter.skills
-	)
+	}
 }
 
 PublicBabysitterProfile = connect(mapStateToProps)(PublicBabysitterProfile)
