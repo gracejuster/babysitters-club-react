@@ -1,6 +1,6 @@
 // var babysittersCounter = 0
 
-const Babysitters = (state = {babysitters: []}, action) => {
+const Babysitter = (state = {babysitters: []}, action) => {
   switch(action.type){
     case 'EDIT_BABYSITTER':
       return Object.assign({}, state, {
@@ -12,4 +12,4 @@ const Babysitters = (state = {babysitters: []}, action) => {
 
 }
 
-export default Babysitters
+export default Babysitter

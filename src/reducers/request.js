@@ -1,10 +1,9 @@
-const Requests = (state = {requests: []}, action) => {
+const Request = (state = {requests: []}, action) => {
   switch(action.type){
 
     default:
       return state
   }
-
 }
 
-export default Requests
+export default Request

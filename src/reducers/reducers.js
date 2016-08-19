@@ -1,16 +1,21 @@
 import { combineReducers } from 'redux'
-import users from './users'
-import parents from './parents'
+import parents from './parent'
 import search from './search'
-import babysitters from './babysitters'
+import babysitters from './babysitter'
 import currentUser from './currentuser'
 import booking from './booking'
+import request from './request'
 import review from './review'
+import { reducer as formReducer } from 'redux-form';
 
-export default const reducer = combineReducers({
+const Reducer = combineReducers({
   currentUser: currentUser,
   viewableUser: viewableUser,
-  form: formReducer,
   search: search,
-  review: review
+  review: review,
+  booking: booking,
+  request: request,
+  form: formReducer
 })
+
+export default Reducer

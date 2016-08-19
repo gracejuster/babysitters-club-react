@@ -8,7 +8,6 @@ import ReactDOM from 'react-dom';
 // Redux & Redux-Form
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux'
-import { reducer as formReducer } from 'redux-form';
 
 // Middleware
 import ReduxPromise from 'redux-promise'
