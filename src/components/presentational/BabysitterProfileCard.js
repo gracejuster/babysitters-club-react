@@ -1,7 +1,6 @@
 import React from 'react';
 
 const BabysitterProfileCard = ({image, name, age, location, rating}) => {
-	debugger
   return(
   	<div className="ProfileCard">
 	<img src={image} alt="Babysitter"/>

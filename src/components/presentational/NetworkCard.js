@@ -9,7 +9,6 @@ let NetworkCard = class extends Component {
     this.props.dispatch(getPublicViewableProfile(
       this.props.user_id,
       this.props.currentUser)).then((resp) => {
-        debugger
         let type = resp.payload.type.toLowerCase()
         let username = resp.payload.viewable_user.username.toLowerCase()
         browserHistory.push(`/user/${type}/${username}`)
