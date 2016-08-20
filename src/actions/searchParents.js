@@ -1,6 +1,6 @@
 import $ from 'jquery'
 
-export default function search(props, currentUser) {
+export default function searchParents(props, currentUser) {
   const URL = `http://localhost:3000/api/v1/parents/`
   const request = $.ajax({
     url:URL,
