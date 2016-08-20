@@ -1,10 +1,23 @@
 import React from 'react';
 // import {Link} from 'react-router'
 
-const BookingsTable = ({title, bookings}) => {
-  let bookingsList = bookings.map((booking) => {
-    return <tr><td>{booking.name}</td><td>{booking.time}</td><td>{booking.duration}</td></tr>
-  })
+const BookingsTable = ({title, bookings, type}) => {
+  let bookingsList
+  if (type=="Babysitter"){
+     bookingsList = bookings.map((booking) => {
+      return (
+        <div>
+          <tr><td>{booking.name}</td><td>{booking.time}</td><td>{booking.duration}</td></tr>
+          <button>Confirm Request</button>
+        </div>
+      )
+    })
+  }
+  else {
+     bookingsList = bookings.map((booking) => {
+      return <tr><td>{booking.name}</td><td>{booking.time}</td><td>{booking.duration}</td></tr>
+    })
+  }
   return(
     <div id="form" className="BookingsTable">
       <h6>{title}</h6>
