@@ -11,4 +11,4 @@ const Parent = (state = {parents: []}, action) => {
   }
 }
 
-export default Babysitter
+export default Parent
