@@ -6,13 +6,17 @@ import { browserHistory } from 'react-router'
 let NetworkCard = class extends Component {
 
   handleClick(){
+    // event.preventDefault()
     this.props.dispatch(getPublicViewableProfile(
       this.props.user_id,
       this.props.currentUser)).then((resp) => {
+        debugger
         let type = resp.payload.type.toLowerCase()
         let username = resp.payload.viewable_user.username.toLowerCase()
-        debugger
         browserHistory.push(`/user/${type}/${username}`)
+    },(err) => {
+      console.log("its broke")
+      debugger
     })
   }
 
