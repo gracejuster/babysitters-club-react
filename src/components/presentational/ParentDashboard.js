@@ -11,7 +11,7 @@ let ParentDashboard = class extends Component{
         <SearchBar />
         <Bookings />
       </div>
-    );
+    )
   }
 }
 

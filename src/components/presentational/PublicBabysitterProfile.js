@@ -10,7 +10,7 @@ let PublicBabysitterProfile = class extends Component{
         <BabysitterProfileCard img="" name={this.props.name} age={this.props.age} location={this.props.location} rating="5" bio={this.props.bio} skills={this.props.skills}/>
         <ReviewHolder />
     	</div>
-    	)
+    )
 	}
 }
 
