@@ -1,8 +1,7 @@
-import { browserHistory } from 'react-router'
 const INITIAL_STATE = {jwt: "", currentUser: {}, account: {}, type: "", authentication: false}
 
 const CurrentUser = (state = INITIAL_STATE, action) => {
-  switch(action.type){
+  switch(action.type) {
     case 'LOG_IN':
       return Object.assign({}, state, {
       	jwt: action.payload.jwt,
@@ -10,19 +9,15 @@ const CurrentUser = (state = INITIAL_STATE, action) => {
       	account: action.payload.account,
       	type: action.payload.type,
       	authentication: true
-      }
-    )
-
+      })
     case 'EDIT_ACCOUNT':
-    
-    return Object.assign({}, state, {
-      jwt: state.jwt,
-      currentUser: state.currentUser,
-      account: action.payload.data,
-      type: state.type,
-      authentication: true
-    })
-
+      return Object.assign({}, state, {
+        jwt: state.jwt,
+        currentUser: state.currentUser,
+        account: action.payload.data,
+        type: state.type,
+        authentication: true
+      })
     case 'LOG_OUT':
       return INITIAL_STATE
     default:

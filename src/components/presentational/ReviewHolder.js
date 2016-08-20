@@ -1,7 +1,7 @@
-import React, { Component } from 'react'
+import React from 'react'
 import Review from './Review.js'
 
-const ReviewHolder = () => {
+const ReviewHolder = ({reviews}) => {
   return(
     <div className="ReviewHolder">
     	"These are my reviews"

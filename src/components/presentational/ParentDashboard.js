@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import SearchBar from '../container/SearchBar'
 import Bookings from './Bookings'
-import auth from '../container/AuthenticationResource'
+// import auth from '../container/AuthenticationResource'
 import {connect} from 'react-redux'
 
 let ParentDashboard = class extends Component{

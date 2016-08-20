@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import ParentCard from './ParentCard';
-import Network from './Network';
 import {connect} from 'react-redux'
 
 let PublicParentProfile = class extends Component{
@@ -18,6 +17,7 @@ const mapStateToProps = (state) => {
 		name: state.viewableUser.viewableUser.name,
 		kid_count: state.viewableUser.account.parent.kid_count,
 		address: state.viewableUser.account.parent.address
+
 	}
 }
 

@@ -1,4 +1,4 @@
-import React, { PropTypes, Component } from 'react';
+import React, { Component } from 'react';
 import getPublicViewableProfile from '../../actions/getPublicViewableProfile'
 import { connect } from 'react-redux';
 import { browserHistory } from 'react-router'
@@ -20,7 +20,7 @@ let ParentCard = class extends Component  {
     return(
       <div className="ProfileCard">
       <h6>Parent Profile Card </h6>
-      <img />
+      <img alt="Parent"/>
       <br/>
       <p>Name: {this.props.name}</p>
       <p>Kids: {this.props.kid_count}</p>
@@ -31,8 +31,6 @@ let ParentCard = class extends Component  {
   }
 }
 
-
 ParentCard = connect()(ParentCard)
-
 
 export default ParentCard

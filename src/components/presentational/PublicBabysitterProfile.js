@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import ReviewHolder from './ReviewHolder';
-import Requests from './Requests';
 import BabysitterProfileCard from './BabysitterProfileCard';
 import {connect} from 'react-redux'
 

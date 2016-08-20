@@ -1,10 +1,9 @@
-import React, { PropTypes, Component } from 'react';
+import React, { Component } from 'react';
 import getPublicViewableProfile from '../../actions/getPublicViewableProfile'
 import { connect } from 'react-redux';
 import { browserHistory } from 'react-router'
 
 let NetworkCard = class extends Component {
-
   handleClick(){
     // event.preventDefault()
     this.props.dispatch(getPublicViewableProfile(
@@ -23,7 +22,7 @@ let NetworkCard = class extends Component {
   render(){
     return (
       <div className="NetworkCard">
-        <img src=""/>
+        <img src="" alt="User"/>
         <br/>
         <p>{this.props.name}</p>
         <p>{this.props.location}</p>
@@ -33,8 +32,6 @@ let NetworkCard = class extends Component {
   }
 }
 
-
- NetworkCard = connect()(NetworkCard)
-
+NetworkCard = connect()(NetworkCard)
 
 export default NetworkCard
