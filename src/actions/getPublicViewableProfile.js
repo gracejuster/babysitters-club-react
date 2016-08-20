@@ -1,8 +1,7 @@
 import $ from 'jquery'
 
 export default function getPublicUser(userId, currentUser) {
-   const URL = `http://localhost:3000/api/v1/users/${userId}`
-debugger
+  const URL = `http://localhost:3000/api/v1/users/${userId}`
   const request = $.ajax({
      url:URL,
      type:"GET",

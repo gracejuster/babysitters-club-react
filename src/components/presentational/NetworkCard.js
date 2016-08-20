@@ -13,9 +13,6 @@ let NetworkCard = class extends Component {
         let type = resp.payload.type.toLowerCase()
         let username = resp.payload.viewable_user.username.toLowerCase()
         browserHistory.push(`/user/${type}/${username}`)
-    },(err) => {
-      console.log("its broke")
-      debugger
     })
   }
 
