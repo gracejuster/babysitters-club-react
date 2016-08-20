@@ -1,13 +1,17 @@
-import React from 'react'
-import Review from './Review.js'
+import Review from './Review.js';
+import React, { Component } from 'react';
 
-const ReviewHolder = ({reviews}) => {
-  return(
-    <div className="ReviewHolder">
-    	"These are my reviews"
-      <Review />
-    </div>
-  )
-}
+let ReviewHolder = ( {reviews} ) => {
+		let finalreviews =  reviews.map( (review) => {
+			 return <Review title={review.title} description={review.description} rating={review.rating} />
+  	})
+  	return(
+			<div className='reviews'>
+				{finalreviews}
+			</div>
+		)
+  }
 
-export default ReviewHolder
+  
+
+	export default ReviewHolder

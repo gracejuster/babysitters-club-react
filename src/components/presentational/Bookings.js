@@ -5,13 +5,14 @@ import BookingsTable from './BookingsTable'
 let Bookings = ({confirmedBookings, pendingBookings}) => {
   return(
     <div className="Bookings">
-      <BookingsTable title='Pending' bookings={confirmedBookings}/>
-      <BookingsTable title='Confirmed' bookings={pendingBookings}/>
+      <BookingsTable title='Confirmed' bookings={confirmedBookings}/>
+
+      <BookingsTable title='Pending' bookings={pendingBookings}/>
     </div>
   )
 }
 
-const mapStateToProps = (state) => {
+const mapStateToProps = (state) => { 
   return {
     confirmedBookings: state.currentUser.account.confirmed_bookings,
     pendingBookings: state.currentUser.account.requested_bookings

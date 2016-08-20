@@ -5,7 +5,8 @@ import createBooking from '../../actions/createBooking'
 const CreateBookingForm = class extends Component {
   handleCreateBookingSubmit(props) {
     let currentUser = this.props.currentUser
-    this.props.createBooking(props, currentUser)
+    let viewableUser = this.props.viewableUser
+    this.props.createBooking(props, currentUser, viewableUser)
 
   }
 
@@ -27,7 +28,8 @@ const CreateBookingForm = class extends Component {
 
 function mapStateToProps(state){
   return{
-    currentUser: state.currentUser
+    currentUser: state.currentUser,
+    viewableUser: state.viewableUser
   }
 }
 

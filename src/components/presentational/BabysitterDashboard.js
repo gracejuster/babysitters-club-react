@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Bookings from './Bookings'
 import Requests from './Requests'
-import auth from '../container/AuthenticationResource'
 import {connect} from 'react-redux'
 
 const BabysitterDashboard = class extends Component{
