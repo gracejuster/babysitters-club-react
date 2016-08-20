@@ -3,7 +3,7 @@ import React from 'react';
 
 const BookingsTable = ({title, bookings}) => {
   let bookingsList = bookings.map((booking) => {
-    return <tr><td>{booking.name}</td><td>{booking.time}</td><td>{booking.duration}</td></tr>
+    return <tr key={booking.id}><td>{booking.name}</td><td>{booking.time}</td><td>{booking.duration}</td></tr>
   })
   return(
     <div id="form" className="BookingsTable">

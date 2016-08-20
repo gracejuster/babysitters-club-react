@@ -17,7 +17,7 @@ let NetworkCard = class extends Component {
 
   render(){
     return (
-      <div className="NetworkCard">
+      <div className="NetworkCard" style={{borderStyle: 'dotted'}}>
         <img src="" alt="User"/>
         <br/>
         <p>{this.props.name}</p>
