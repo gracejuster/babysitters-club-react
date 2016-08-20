@@ -1,14 +1,16 @@
 import React from 'react';
-// import {Link} from 'react-router'
+// import {connect} from 'react-redux';
+// import confirmBookings from '../..actions/confirmBookings'
 
-const BookingsTable = ({title, bookings, type}) => {
+const BookingsTable = ({title, bookings, type, handleClick}) => {
   let bookingsList
-  if (type=="Babysitter"){
+
+  if (type==="Babysitter"){
      bookingsList = bookings.map((booking) => {
       return (
         <div>
           <tr><td>{booking.name}</td><td>{booking.time}</td><td>{booking.duration}</td></tr>
-          <button>Confirm Request</button>
+          <button onClick={ ()=>{handleClick(booking.id)} }>Confirm Request</button>
         </div>
       )
     })
@@ -36,5 +38,7 @@ const BookingsTable = ({title, bookings, type}) => {
     </div>
   )
 }
+
+// BookingsTable = connect()(BookingsTable)
 
 export default BookingsTable
