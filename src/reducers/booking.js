@@ -1,6 +1,6 @@
 // var bookingCounter = 0
 
-const Bookings = (state = {bookings: {}, currentUser: {}}, action) => {
+const Booking = (state = {bookings: {}, currentUser: {}}, action) => {
   switch(action.type){
     case 'CREATE_BOOKING':
       return Object.assign({}, state, {
@@ -15,4 +15,4 @@ const Bookings = (state = {bookings: {}, currentUser: {}}, action) => {
 
 }
 
-export default Bookings
+export default Booking

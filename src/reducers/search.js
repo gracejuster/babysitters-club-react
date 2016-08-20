@@ -1,4 +1,3 @@
-
 const Search = (state = {parents: {}}, action) => {
   switch(action.type){
     case 'SEARCH_PARENTS':

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { reduxForm } from 'redux-form'
 export const fields = [ 'searchValue' ]
 import { browserHistory } from 'react-router'
-import search from '../../actions/search'
+import search from '../../actions/searchParents'
 
 class SearchBar extends Component {
   SearchFormSubmit(props){

@@ -1,4 +1,3 @@
-
 const Review = (state = {reviews: {}}, action) => {
   switch(action.type){
     case 'CREATE_REVIEW':
