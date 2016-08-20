@@ -1,17 +1,14 @@
 import React, { Component } from 'react';
 import ReviewHolder from './ReviewHolder';
-import Requests from './Requests';
 import BabysitterProfileCard from './BabysitterProfileCard';
 import {connect} from 'react-redux'
 
 let PublicBabysitterProfile = class extends Component{
   render() {
-
     return(
     	<div className="ProfileCard">
-            <BabysitterProfileCard img="" name={this.props.name} age={this.props.age} location={this.props.location} rating="5" bio={this.props.bio} skills={this.props.skills}/>
-            <ReviewHolder />
-
+        <BabysitterProfileCard img="" name={this.props.name} age={this.props.age} location={this.props.location} rating="5" bio={this.props.bio} skills={this.props.skills}/>
+        <ReviewHolder />
     	</div>
     	)
 	}

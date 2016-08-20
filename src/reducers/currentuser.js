@@ -1,4 +1,3 @@
-import { browserHistory } from 'react-router'
 const INITIAL_STATE = {jwt: "", currentUser: {}, account: {}, type: "", authentication: false}
 
 const CurrentUser = (state = INITIAL_STATE, action) => {

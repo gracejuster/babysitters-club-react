@@ -1,8 +1,9 @@
 import { combineReducers } from 'redux'
-import parents from './parent'
-import search from './search'
-import babysitters from './babysitter'
 import currentUser from './currentuser'
+import viewableUser from './viewableUser'
+import search from './search'
+import parent from './parent'
+import babysitter from './babysitter'
 import booking from './booking'
 import request from './request'
 import review from './review'
@@ -12,6 +13,8 @@ const Reducer = combineReducers({
   currentUser: currentUser,
   viewableUser: viewableUser,
   search: search,
+  parent: parent,
+  babysitter: babysitter,
   review: review,
   booking: booking,
   request: request,
