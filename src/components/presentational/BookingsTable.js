@@ -9,7 +9,12 @@ const BookingsTable = ({title, bookings, type, handleClick}) => {
      bookingsList = bookings.map((booking) => {
       return (
         <div>
-          <tr><td>{booking.name}</td><td>{booking.time}</td><td>{booking.duration}</td></tr>
+          <tr>
+            <td>{booking.name}</td>
+            <td>{booking.date}</td>
+            <td>{booking.time}</td>
+            <td>{booking.duration}</td>
+          </tr>
           <button onClick={ ()=>{handleClick(booking.id)} }>Confirm Request</button>
         </div>
       )
@@ -17,7 +22,14 @@ const BookingsTable = ({title, bookings, type, handleClick}) => {
   }
   else {
      bookingsList = bookings.map((booking) => {
-      return <tr><td>{booking.name}</td><td>{booking.time}</td><td>{booking.duration}</td></tr>
+      return (
+        <tr>
+          <td>{booking.name}</td>
+          <td>{booking.date}</td>
+          <td>{booking.time}</td>
+          <td>{booking.duration}</td>
+        </tr>
+      )
     })
   }
   return(
@@ -28,6 +40,7 @@ const BookingsTable = ({title, bookings, type, handleClick}) => {
           <tr>
             <th>Who:</th>
             <th>When:</th>
+            <th>What Time:</th>
             <th>Duration:</th>
           </tr>
         </thead>
