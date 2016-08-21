@@ -16,7 +16,7 @@ let ParentCard = class extends Component  {
   }
 
   render() {
-    debugger
+    
     return(
       <div className="ProfileCard">
       <h6>Parent Profile Card </h6>

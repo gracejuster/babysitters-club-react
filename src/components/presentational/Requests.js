@@ -5,6 +5,7 @@ const Requests = class extends Component {
 	render(){
   return(
     <div className='Requests'>
+
     </div>
     )}
 }
