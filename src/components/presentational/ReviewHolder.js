@@ -1,9 +1,9 @@
 import Review from './Review.js';
-import React, { Component } from 'react';
+import React from 'react';
 
-let ReviewHolder = ( {reviews} ) => {
-		let finalreviews =  reviews.map( (review) => {
-			 return <Review title={review.title} description={review.description} rating={review.rating} />
+let ReviewHolder = ({reviews}) => {
+		let finalreviews =  reviews.map((review) => {
+			 return <Review key={review.id} title={review.title} description={review.description} rating={review.rating} />
   	})
   	return(
 			<div className='reviews'>
@@ -12,6 +12,4 @@ let ReviewHolder = ( {reviews} ) => {
 		)
   }
 
-  
-
-	export default ReviewHolder
+export default ReviewHolder

@@ -18,6 +18,14 @@ const CurrentUser = (state = INITIAL_STATE, action) => {
         type: state.type,
         authentication: true
       })
+    case 'RETRIEVE_USER':
+      return Object.assign({}, state, {
+        jwt: state.jwt,
+        currentUser: action.payload.current_user,
+        account: action.payload.account,
+        type: state.type,
+        authentication: true
+      })
     case 'LOG_OUT':
       return INITIAL_STATE
     default:

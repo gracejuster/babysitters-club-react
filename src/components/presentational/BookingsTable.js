@@ -8,7 +8,7 @@ const BookingsTable = ({title, bookings, type, handleClick}) => {
   if (type==="Babysitter"){
      bookingsList = bookings.map((booking) => {
       return (
-        <div>
+        <div key={booking.id}>
           <tr>
             <td>{booking.name}</td>
             <td>{booking.date}</td>
@@ -23,7 +23,7 @@ const BookingsTable = ({title, bookings, type, handleClick}) => {
   else {
      bookingsList = bookings.map((booking) => {
       return (
-        <tr>
+        <tr key={booking.id}>
           <td>{booking.name}</td>
           <td>{booking.date}</td>
           <td>{booking.time}</td>
@@ -32,6 +32,7 @@ const BookingsTable = ({title, bookings, type, handleClick}) => {
       )
     })
   }
+
   return(
     <div id="form" className="BookingsTable">
       <h6>{title}</h6>
