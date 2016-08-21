@@ -1,3 +1,5 @@
+import $ from 'jquery'
+
 export default function editBabysitter(currentUser) {
   const URL = `http://localhost:3000/api/v1/sessions/show`
   const request = $.ajax({
