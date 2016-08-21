@@ -7,7 +7,6 @@ import {connect} from 'react-redux';
 let RequestsContainer = class extends Component {
 
 	confirmNetworkRequest(NetworkRequestId){
-		debugger
 		this.props.handleClick(NetworkRequestId, this.props.currentUser)
 	}
 

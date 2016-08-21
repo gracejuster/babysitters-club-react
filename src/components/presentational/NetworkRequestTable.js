@@ -19,7 +19,7 @@ const NetworkRequestTable = ({currentUser, networkRequestArray, type, confirmNet
      networkRequests = networkRequestArray.map((networkRequest) => {
       return (
         <tr>
-          <td>{networkRequest.parent_name}</td>
+          <td>{networkRequest.baby_name}</td>
         </tr>
       )
     })
