@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
 import Bookings from './Bookings'
-import Requests from './Requests'
+import Requests from '../container/RequestsContainer'
 import {connect} from 'react-redux'
 
 const BabysitterDashboard = class extends Component{
   render() {
     return(
       <div className='Dashboard'>
+        Bookings
         <Bookings />
+        Network Requests
         <Requests />
       </div>
       )

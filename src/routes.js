@@ -2,7 +2,7 @@ import React from 'react';
 import { Route, IndexRedirect } from 'react-router'
 import App from './App'
 import NavBar from './components/presentational/NavBar'
-import NetworkContainer from './components/container/NetworkContainer'
+import PrivateNetworkContainer from './components/container/PrivateNetworkContainer'
 import PublicNetworkContainer from './components/container/PublicNetworkContainer'
 import SearchResultsContainer from './components/container/SearchResultsContainer'
 import CreateAccountForm from './components/container/CreateAccountForm'
@@ -30,8 +30,8 @@ export default (
     <Route path="parents" component={{main: SearchResultsContainer, navbar: NavBar}} />
     <Route path="/user/babysitter/:username" component={{main: PrivateBabysitterProfile, navbar: NavBar}} />
     <Route path="/user/parent/:username" component={{main: PublicParentProfile, navbar: NavBar, footer: PublicNetworkContainer}} />
-    <Route path="babysitter/:username" component={{main: BabysitterDashboard, navbar: NavBar, footer: NetworkContainer}}/>
-    <Route path="parent/:username" component={{main: ParentDashboard, navbar: NavBar, footer: NetworkContainer}}/>
+    <Route path="babysitter/:username" component={{main: BabysitterDashboard, navbar: NavBar, footer: PrivateNetworkContainer}}/>
+    <Route path="parent/:username" component={{main: ParentDashboard, navbar: NavBar, footer: PrivateNetworkContainer}}/>
     {/* <Route path="privatebabysitter" component={{main: PrivateBabysitterProfile}} /> */}
     {/* becomes a prop in profile - this.props.params --> :username */}
   </Route>

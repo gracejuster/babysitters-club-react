@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import Network from '../presentational/Network'
+import PrivateNetwork from '../presentational/PrivateNetwork'
 import getPublicUser from '../../actions/getPublicViewableProfile'
 
 const mapStateToProps = (state) => {
@@ -15,6 +15,6 @@ const mapDispatchToProps = (dispatch) => {
 	}
 }
 
-const NetworkContainer = connect(mapStateToProps, mapDispatchToProps)(Network)
+const PrivateNetworkContainer = connect(mapStateToProps, mapDispatchToProps)(PrivateNetwork)
 
-export default NetworkContainer
+export default PrivateNetworkContainer

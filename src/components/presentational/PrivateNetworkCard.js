@@ -3,7 +3,7 @@ import getPublicViewableProfile from '../../actions/getPublicViewableProfile'
 import { connect } from 'react-redux';
 import { browserHistory } from 'react-router'
 
-let NetworkCard = class extends Component {
+let PrivateNetworkCard = class extends Component {
   handleClick(){
     // event.preventDefault()
     this.props.dispatch(getPublicViewableProfile(
@@ -15,19 +15,20 @@ let NetworkCard = class extends Component {
     })
   }
 
+
   render(){
     return (
-      <div className="NetworkCard" style={{borderStyle: 'dotted'}}>
+      <div className="PrivateNetworkCard">
         <img src="" alt="User"/>
         <br/>
         <p>{this.props.name}</p>
         <p>{this.props.location}</p>
-        <button onClick={this.handleClick.bind(this)}>Get Full Profile</button>
+        <button onClick={this.handleClick.bind(this)}>GET FULL PROFILE</button>
       </div>
     )
   }
 }
 
-NetworkCard = connect()(NetworkCard)
+let SmartPrivateNetworkCard = connect()(PrivateNetworkCard)
 
-export default NetworkCard
+export default SmartPrivateNetworkCard
