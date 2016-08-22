@@ -1,15 +1,18 @@
 import React, { Component } from 'react';
 import { reduxForm } from 'redux-form'
 import createReview from '../../actions/createReview'
-export const fields = [ 'title', 'description', 'rating' ]
-
-// import { browserHistory } from 'react-router'
+import retrieveUser from '../../actions/retrieveUser'
+import { browserHistory } from 'react-router'
 
 const CreateReviewForm = class extends Component {
 
   handleCreateReviewSubmit(props) {
     let currentUser = this.props.currentUser
-    this.props.createReview(props, currentUser)
+    this.props.createReview(props, currentUser).then(() => {
+      this.props.retrieveUser(currentUser)
+    }).then(() => {
+      browserHistory.push(`/${currentUser.type.toLowerCase()}/${currentUser.currentUser.username}`)
+    })
   }
 
   render(){
@@ -40,4 +43,4 @@ export default reduxForm({
     'description',
     'rating'
   ],
-}, mapStateToProps, { createReview })(CreateReviewForm);
+}, mapStateToProps, { createReview, retrieveUser })(CreateReviewForm);

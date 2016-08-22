@@ -5,7 +5,7 @@ import './index.css';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-// Import Redux & Redux-Form
+// Import Redux
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux'
 
