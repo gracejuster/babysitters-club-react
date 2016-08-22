@@ -15,7 +15,6 @@ let PrivateNetwork = ({networksArray, currentUser}) => {
 PrivateNetworkCard.propTypes = {
 	networksArray: PropTypes.array.isRequired,
 	onClick: PropTypes.func.isRequired
-
 }
 
 export default PrivateNetwork
