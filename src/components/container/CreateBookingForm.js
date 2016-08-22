@@ -1,13 +1,18 @@
 import React, { Component } from 'react';
 import { reduxForm } from 'redux-form'
+import { browserHistory } from 'react-router'
 import createBooking from '../../actions/createBooking'
+import retrieveUser from '../../actions/retrieveUser'
 
 const CreateBookingForm = class extends Component {
   handleCreateBookingSubmit(props) {
     let currentUser = this.props.currentUser
     let viewableUser = this.props.viewableUser
-    this.props.createBooking(props, currentUser, viewableUser)
-
+    this.props.createBooking(props, currentUser, viewableUser).then(() => {
+      this.props.retrieveUser(currentUser)
+    }).then(() => {
+      browserHistory.push(`/${currentUser.type.toLowerCase()}/${currentUser.currentUser.username}`)
+    })
   }
 
   render(){
@@ -42,4 +47,4 @@ export default reduxForm({
     'desired_time',
     'desired_date'
   ],
-}, mapStateToProps, { createBooking })(CreateBookingForm);
+}, mapStateToProps, { createBooking, retrieveUser })(CreateBookingForm);
