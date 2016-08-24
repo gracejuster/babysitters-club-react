@@ -18,12 +18,13 @@ let PrivateNetworkCard = class extends Component {
 
   render(){
     return (
-      <div className="PrivateNetworkCard NetworkCard">
-        <img src="" alt="User"/>
-        <br/>
-        <p>{this.props.name}</p>
-        <p>{this.props.location}</p>
-        <button onClick={this.handleClick.bind(this)}>GET FULL PROFILE</button>
+      <div className="PrivateNetworkCard NetworkCard card">
+        <img className="card-img-top" src="" alt="User"/>
+        <div className="card-block">
+          <h4 className="card-title">{this.props.name}</h4>
+          <p className="card-text">{this.props.location}</p>
+          <button className="btn btn-primary" onClick={this.handleClick.bind(this)}>GET FULL PROFILE</button>
+        </div>
       </div>
     )
   }

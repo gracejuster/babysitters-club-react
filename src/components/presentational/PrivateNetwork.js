@@ -1,4 +1,5 @@
 import React, { PropTypes } from 'react';
+import { Carousel } from 'react-bootstrap'
 import PrivateNetworkCard from './PrivateNetworkCard'
 
 let PrivateNetwork = ({networksArray, currentUser}) => {

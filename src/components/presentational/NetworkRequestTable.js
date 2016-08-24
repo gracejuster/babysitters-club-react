@@ -1,4 +1,5 @@
 import React from 'react';
+import { Table } from 'react-bootstrap'
 
 const NetworkRequestTable = ({currentUser, networkRequestArray, type, confirmNetworkRequest}) => {
   let networkRequests
@@ -27,7 +28,7 @@ const NetworkRequestTable = ({currentUser, networkRequestArray, type, confirmNet
   return(
     <div id="form" className="NetworkRequestTable">
       <h6>Pending Network Requests</h6>
-      <table className="NetworkRequestTable">
+      <Table className="NetworkRequestTable">
         <thead>
           <tr>
             <th>Who:</th>
@@ -36,7 +37,7 @@ const NetworkRequestTable = ({currentUser, networkRequestArray, type, confirmNet
         <tbody>
           {networkRequests}
         </tbody>
-      </table>
+      </Table>
     </div>
   )
 }
