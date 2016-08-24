@@ -4,7 +4,6 @@ import BookingsTable from './BookingsTable'
 import confirmBookings from '../../actions/confirmBookings'
 
 let Bookings = class extends Component {
-
   sendConfirmation(bookingId){
     this.props.handleClick(bookingId, this.props.currentUser)
   }
@@ -20,8 +19,6 @@ let Bookings = class extends Component {
   }
 }
 
-
-
 const mapDispatchToProps = (dispatch) => {
   return {
     handleClick:(bookingId, currentUser) => {dispatch(confirmBookings(bookingId, currentUser))}
@@ -29,7 +26,6 @@ const mapDispatchToProps = (dispatch) => {
 }
 
 const mapStateToProps = (state) => {
-
   return {
     confirmedBookings: state.currentUser.account.confirmed_bookings,
     pendingBookings: state.currentUser.account.requested_bookings,
@@ -37,7 +33,6 @@ const mapStateToProps = (state) => {
     type: state.currentUser.type
   }
 }
-
 
 Bookings = connect(mapStateToProps, mapDispatchToProps)(Bookings)
 
