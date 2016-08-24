@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { FormGroup, FormControl } from 'react-bootstrap'
 import { reduxForm } from 'redux-form'
 import editBabysitter from '../../actions/editBabysitter'
 import { browserHistory } from 'react-router'
@@ -15,19 +16,15 @@ const EditBabysitterProfilePage = class extends Component {
   render(){
      const { fields: {age, location, bio, skills}, handleSubmit } = this.props;
     return(
-      <div className='EditBabysitterProfilePage'>
-        <form id='form' onSubmit={handleSubmit(this.handleEditFormSubmit.bind(this))}>
-          {/* <label>Age: </label> */}
-          <input type='text' placeholder='AGE' className="form-control" {...age}/>
-          {/* <label>Location: </label> */}
-          <input type='text' placeholder='LOCATION' className="form-control" {...location}/>
-          {/* <label>Bio: </label> */}
-          <input type='textarea' placeholder='BIO' className="form-control" {...bio}/>
-          {/* <label>Skills: </label> */}
-          <input type='textarea' placeholder='SKILLS' className="form-control" {...skills}/>
-          <input id='submit' type='submit' className="btn btn-primary" value='SAVE CHANGES' />
-        </form>
-      </div>
+      <form className='EditBabysitterProfilePage' id='form' onSubmit={handleSubmit(this.handleEditFormSubmit.bind(this))}>
+        <FormGroup>
+          <FormControl type='text' placeholder='AGE' className="form-control" {...age}/>
+          <FormControl type='text' placeholder='LOCATION' className="form-control" {...location}/>
+          <FormControl type='textarea' placeholder='BIO' className="form-control" {...bio}/>
+          <FormControl type='textarea' placeholder='SKILLS' className="form-control" {...skills}/>
+          <FormControl id='submit' type='submit' className="btn btn-primary" value='SAVE CHANGES' />
+        </FormGroup>
+      </form>
     )
   }
 }

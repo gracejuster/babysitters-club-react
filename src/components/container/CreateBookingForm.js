@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { FormGroup, FormControl } from 'react-bootstrap'
 import { reduxForm } from 'redux-form'
 import { browserHistory } from 'react-router'
 import createBooking from '../../actions/createBooking'
@@ -18,17 +19,14 @@ const CreateBookingForm = class extends Component {
   render(){
     const { fields: {duration, desired_time, desired_date}, handleSubmit } = this.props;
     return(
-      <div className='CreateBookingForm'>
-      <form id='form' onSubmit={handleSubmit(this.handleCreateBookingSubmit.bind(this))}>
-        {/* <label>Duration: </label> */}
-        <input type='text' placeholder='DURATION' className="form-control" {...duration}/>
-        {/* <label>Desired Time: </label> */}
-        <input type='text' placeholder='DESIRED TIME' className="form-control" {...desired_time}/>
-        <input type='text' placeholder='DESIRED DATE' className="form-control" {...desired_date}/>
-
-        <input id='submit' type='submit' className="btn btn-primary" value='REQUEST BOOKING' />
+      <form className='CreateBookingForm' id='form' onSubmit={handleSubmit(this.handleCreateBookingSubmit.bind(this))}>
+        <FormGroup>
+          <FormControl type='text' placeholder='DURATION' className="form-control" {...duration}/>
+          <FormControl type='text' placeholder='DESIRED TIME' className="form-control" {...desired_time}/>
+          <FormControl type='text' placeholder='DESIRED DATE' className="form-control" {...desired_date}/>
+          <FormControl id='submit' type='submit' className="btn btn-primary" value='REQUEST BOOKING' />
+        </FormGroup>
       </form>
-      </div>
     )
   }
 }

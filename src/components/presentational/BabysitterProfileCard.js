@@ -3,11 +3,11 @@ import React from 'react';
 const BabysitterProfileCard = ({image, name, age, location, rating}) => {
   return(
   	<div className="ProfileCard">
-	<img src={image} alt="Babysitter"/>
-    <p>{name}</p>
-    <p>{age}</p>
-    <p>{location}</p>
-    <p>{rating}</p>
+      <img src={image} alt="Babysitter"/>
+      <p>{name}</p>
+      <p>{age}</p>
+      <p>{location}</p>
+      <p>{rating}</p>
     </div>
   )
 }

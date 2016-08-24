@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { FormGroup, FormControl } from 'react-bootstrap'
 import { reduxForm } from 'redux-form'
 import loginUser from '../../actions/loginUser'
 import { browserHistory } from 'react-router'
@@ -15,12 +16,16 @@ const LogInForm = class extends Component {
       <div className='LogInForm'>
       <header>WELCOME BACK</header>
         <form id="form" onSubmit={handleSubmit(this.pressButton.bind(this))}>
-          <input id="name" type='text' placeholder='E-MAIL' className="form-control" {...email}/>
-          <input id="email" type='text' placeholder='PASSWORD' className="form-control" {...password}/>
-          <input id="submit" type='submit' className="btn btn-primary" value="GO!" />
+          <FormGroup>
+            <FormControl id="name" type='text' placeholder='E-MAIL' className="form-control" {...email}/>
+            <FormControl id="email" type='text' placeholder='PASSWORD' className="form-control" {...password}/>
+            <FormControl id="submit" type='submit' className="btn btn-primary" value="GO!" />
+          </FormGroup>
         </form>
         <form id="form" action="/newuser">
-          <input id="submit" type="submit" className="btn btn-primary" value="Create New Account" />
+          <FormGroup>
+            <FormControl id="submit" type="submit" className="btn btn-primary" value="Create New Account" />
+          </FormGroup>
         </form>
         {/* <Link to='/newuser'>Create New Account</Link> */}
       </div>

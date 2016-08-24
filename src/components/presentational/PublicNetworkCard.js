@@ -23,8 +23,6 @@ let PublicNetworkCard = class extends Component {
        this.props.currentUser))
    }
 
-
-
   render(){
     return (
       <div className="PublicNetworkCard NetworkCard">

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { FormGroup, FormControl } from 'react-bootstrap'
 import { reduxForm } from 'redux-form'
 import createReview from '../../actions/createReview'
 import retrieveUser from '../../actions/retrieveUser'
@@ -19,14 +20,14 @@ const CreateReviewForm = class extends Component {
   render(){
     const { fields: {title, description, rating }, handleSubmit } = this.props;
     return(
-      <div className='CreateReviewForm'>
-      <form id='form' onSubmit={handleSubmit(this.handleCreateReviewSubmit.bind(this))}>
-        <input type='text' placeholder='TITLE' className="form-control" {...title}/>
-        <input type='text' placeholder='DESCRIPTION' className="form-control" {...description}/>
-        <input type='text' placeholder='RATING' className="form-control" {...rating}/>
-        <input id='submit' type='submit' className="btn btn-primary" value="CREATE REVIEW" />
+      <form className='CreateReviewForm' id='form' onSubmit={handleSubmit(this.handleCreateReviewSubmit.bind(this))}>
+        <FormGroup>
+          <FormControl type='text' placeholder='TITLE' className="form-control" {...title}/>
+          <FormControl type='text' placeholder='DESCRIPTION' className="form-control" {...description}/>
+          <FormControl type='text' placeholder='RATING' className="form-control" {...rating}/>
+          <FormControl id='submit' type='submit' className="btn btn-primary" value="CREATE REVIEW" />
+        </FormGroup>
       </form>
-      </div>
     )
   }
 }
