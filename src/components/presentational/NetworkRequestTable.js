@@ -1,5 +1,5 @@
 import React from 'react';
-import { Table } from 'react-bootstrap'
+import { Grid, Row, Col, Panel } from 'react-bootstrap'
 
 const NetworkRequestTable = ({currentUser, networkRequestArray, type, confirmNetworkRequest}) => {
   let networkRequests
@@ -7,37 +7,29 @@ const NetworkRequestTable = ({currentUser, networkRequestArray, type, confirmNet
   if (type==="Babysitter"){
      networkRequests = networkRequestArray.map((networkRequest) => {
       return (
-        <div>
-          <tr>
-            <td>{networkRequest.parent_name}</td>
-          </tr>
-          <button onClick={ ()=>{confirmNetworkRequest(networkRequest.id)} }>Confirm Network Request</button>
-        </div>
+        <Col xs={6} md={4}>
+        <Panel header={networkRequest.parent_name} >
+          <button className={"btn btn-primary"} onClick={ ()=>{confirmNetworkRequest(networkRequest.id)} }>Confirm Network Request</button>
+        </Panel>
+        </Col>
       )
     })
   }
   else {
      networkRequests = networkRequestArray.map((networkRequest) => {
       return (
-        <tr>
-          <td>{networkRequest.baby_name}</td>
-        </tr>
+        <Col xs={6} md={4}>
+          <Panel header={networkRequest.baby_name} />
+        </Col>
       )
     })
   }
   return(
-    <div id="form" className="NetworkRequestTable">
-      <h6>Pending Network Requests</h6>
-      <Table className="NetworkRequestTable">
-        <thead>
-          <tr>
-            <th>Who:</th>
-          </tr>
-        </thead>
-        <tbody>
-          {networkRequests}
-        </tbody>
-      </Table>
+    <div className="NetworkRequestTable">
+      <header>Pending Network Requests</header>
+      <Grid className="NetworkRequestTable">
+        <Row>{networkRequests}</Row>
+      </Grid>
     </div>
   )
 }

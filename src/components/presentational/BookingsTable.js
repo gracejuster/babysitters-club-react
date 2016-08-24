@@ -15,8 +15,11 @@ const BookingsTable = ({title, bookings, type, handleClick}) => {
             <td>{booking.date}</td>
             <td>{booking.time}</td>
             <td>{booking.duration}</td>
+            <td><button
+                  className={"btn btn-primary"}
+                  onClick={ ()=>{handleClick(booking.id)} }
+                >Confirm Request</button></td>
           </tr>
-          <button onClick={ ()=>{handleClick(booking.id)} }>Confirm Request</button>
         </div>
       )
     })
