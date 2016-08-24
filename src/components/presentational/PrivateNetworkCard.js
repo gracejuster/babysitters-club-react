@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Carousel } from 'react-bootstrap'
+import { Carousel, Panel } from 'react-bootstrap'
 import getPublicViewableProfile from '../../actions/getPublicViewableProfile'
 import { connect } from 'react-redux';
 import { browserHistory } from 'react-router'
@@ -19,14 +19,14 @@ let PrivateNetworkCard = class extends Component {
 
   render(){
     return (
-      <div className="PrivateNetworkCard NetworkCard card">
-        <img className="card-img-top" width={30} height={30} src="" alt="User" />
+      <Panel className="PrivateNetworkCard NetworkCard card">
+        <img className="card-img-top" width={100} height={100} src="" alt="User" />
         <div className="card-block">
           <h4 className="card-title">{this.props.name}</h4>
           <p className="card-text">{this.props.location}</p>
           <button className="btn btn-primary" onClick={this.handleClick.bind(this)}>GET FULL PROFILE</button>
         </div>
-      </div>
+      </Panel>
     )
   }
 }

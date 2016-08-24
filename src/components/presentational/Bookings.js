@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import { Tabs, Tab } from 'react-bootstrap'
+import { Tabs, Tab, Panel, Grid, Row, Col } from 'react-bootstrap'
 import { connect } from 'react-redux'
 import BookingsTable from './BookingsTable'
 import confirmBookings from '../../actions/confirmBookings'
@@ -11,14 +11,34 @@ let Bookings = class extends Component {
 
   render(){
     return(
-      <Tabs className="Bookings">
-        <Tab eventKey={1} title="Confirmed">
-          <BookingsTable title='Confirmed' bookings={this.props.confirmedBookings} type="confirmed" handleClick={this.sendConfirmation.bind(this)}/>
-        </Tab>
-        <Tab eventKey={2} title="Pending">
-          <BookingsTable title='Pending' bookings={this.props.pendingBookings} type={this.props.type} handleClick={this.sendConfirmation.bind(this)}/>
-        </Tab>
-      </Tabs>
+      <Grid>
+      <Row>
+      <Col xs={0} md={2} />
+      <Col xs={12} md={8} center>
+        <Panel>
+          <Tabs className="Bookings">
+            <Tab eventKey={1} title="Confirmed">
+              <BookingsTable
+                title='Confirmed'
+                bookings={this.props.confirmedBookings}
+                type="confirmed"
+                handleClick={this.sendConfirmation.bind(this)}
+              />
+            </Tab>
+            <Tab eventKey={2} title="Pending">
+              <BookingsTable
+                title='Pending'
+                bookings={this.props.pendingBookings}
+                type={this.props.type}
+                handleClick={this.sendConfirmation.bind(this)}
+              />
+            </Tab>
+          </Tabs>
+        </Panel>
+      </Col>
+      <Col xs={0} md={2} />
+      </Row>
+      </Grid>
     )
 
   }
