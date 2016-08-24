@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Carousel } from 'react-bootstrap'
 import getPublicViewableProfile from '../../actions/getPublicViewableProfile'
 import { connect } from 'react-redux';
 import { browserHistory } from 'react-router'
@@ -19,7 +20,7 @@ let PrivateNetworkCard = class extends Component {
   render(){
     return (
       <div className="PrivateNetworkCard NetworkCard card">
-        <img className="card-img-top" src="" alt="User"/>
+        <img className="card-img-top" width={30} height={30} src="" alt="User" />
         <div className="card-block">
           <h4 className="card-title">{this.props.name}</h4>
           <p className="card-text">{this.props.location}</p>
