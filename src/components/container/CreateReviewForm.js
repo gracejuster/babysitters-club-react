@@ -20,7 +20,7 @@ const CreateReviewForm = class extends Component {
   render(){
     const { fields: {title, description, rating }, handleSubmit } = this.props;
     return(
-      <form className='CreateReviewForm' id='form' onSubmit={handleSubmit(this.handleCreateReviewSubmit.bind(this))}>
+      <form className='CreateReviewForm' onSubmit={handleSubmit(this.handleCreateReviewSubmit.bind(this))}>
         <FormGroup>
           <FormControl type='text' placeholder='TITLE' className="form-control" {...title}/>
           <FormControl type='text' placeholder='DESCRIPTION' className="form-control" {...description}/>
