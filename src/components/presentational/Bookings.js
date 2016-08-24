@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import { Tabs, Tab } from 'react-bootstrap'
 import { connect } from 'react-redux'
 import BookingsTable from './BookingsTable'
 import confirmBookings from '../../actions/confirmBookings'
@@ -10,10 +11,14 @@ let Bookings = class extends Component {
 
   render(){
     return(
-      <div className="Bookings">
-        <BookingsTable title='Confirmed' bookings={this.props.confirmedBookings} type="confirmed" handleClick={this.sendConfirmation.bind(this)}/>
-        <BookingsTable title='Pending' bookings={this.props.pendingBookings} type={this.props.type} handleClick={this.sendConfirmation.bind(this)}/>
-      </div>
+      <Tabs className="Bookings">
+        <Tab eventKey={1} title="Confirmed">
+          <BookingsTable title='Confirmed' bookings={this.props.confirmedBookings} type="confirmed" handleClick={this.sendConfirmation.bind(this)}/>
+        </Tab>
+        <Tab eventKey={2} title="Pending">
+          <BookingsTable title='Pending' bookings={this.props.pendingBookings} type={this.props.type} handleClick={this.sendConfirmation.bind(this)}/>
+        </Tab>
+      </Tabs>
     )
 
   }

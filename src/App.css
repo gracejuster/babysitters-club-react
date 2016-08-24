@@ -188,21 +188,21 @@ textarea:hover {
   text-align: center;
 }
 
-.Bookings {
+/*.Bookings {
   text-align: center;
 }
 
 .BookingsTable {
 
   text-align: center;
-}
+}*/
 
 .Dashboard {
   text-align: center;
 }
 
 .NetworkCard {
-  
+
 }
 /*RADIO BUTTON STYLING STARTS*/
 
@@ -311,7 +311,7 @@ input[type=radio]:checked ~ label{
 /*table styling*/
 
 table {
-    border: 1px solid black;
+    /*border: 1px solid black;*/
     width: 100%;
 }
 
@@ -321,5 +321,5 @@ th, td {
     padding: 15px;
     text-align: center;
     vertical-align: bottom;
-    border-bottom: 1px solid #ddd;
+    /*border-bottom: 1px solid #ddd;*/
 }
