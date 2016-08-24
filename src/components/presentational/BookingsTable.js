@@ -9,18 +9,16 @@ const BookingsTable = ({title, bookings, type, handleClick}) => {
   if (type==="Babysitter"){
      bookingsList = bookings.map((booking) => {
       return (
-        <div key={booking.id}>
-          <tr>
-            <td>{booking.name}</td>
-            <td>{booking.date}</td>
-            <td>{booking.time}</td>
-            <td>{booking.duration}</td>
-            <td><button
-                  className={"btn btn-primary"}
-                  onClick={ ()=>{handleClick(booking.id)} }
-                >Confirm Request</button></td>
-          </tr>
-        </div>
+        <tr key={booking.id}>
+          <td>{booking.name}</td>
+          <td>{booking.date}</td>
+          <td>{booking.time}</td>
+          <td>{booking.duration}</td>
+          <td><button
+                className={"btn btn-primary"}
+                onClick={ ()=>{handleClick(booking.id)} }
+              >Confirm Request</button></td>
+        </tr>
       )
     })
   }
@@ -40,13 +38,13 @@ const BookingsTable = ({title, bookings, type, handleClick}) => {
   return(
     <div id="form" className="BookingsTable">
       <h6>{title}</h6>
-      <Table responsive className="BookingsTable">
+      <Table responsive striped bordered condensed className="BookingsTable">
         <thead>
           <tr>
-            <th>Who:</th>
-            <th>When:</th>
-            <th>What Time:</th>
-            <th>Duration:</th>
+            <th>Who</th>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Duration</th>
           </tr>
         </thead>
         <tbody>

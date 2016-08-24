@@ -8,7 +8,7 @@ const CreateAccountForm = class extends Component {
   handleFormSubmit(props) {
     this.props.createUser(props).then(() => {
       browserHistory.push('/login')
-  })
+    })
   }
 
   render(){
