@@ -1,4 +1,5 @@
 import React from 'react';
+import { Table } from 'react-bootstrap'
 // import {connect} from 'react-redux';
 // import confirmBookings from '../..actions/confirmBookings'
 
@@ -36,7 +37,7 @@ const BookingsTable = ({title, bookings, type, handleClick}) => {
   return(
     <div id="form" className="BookingsTable">
       <h6>{title}</h6>
-      <table className="BookingsTable">
+      <Table responsive className="BookingsTable">
         <thead>
           <tr>
             <th>Who:</th>
@@ -48,7 +49,7 @@ const BookingsTable = ({title, bookings, type, handleClick}) => {
         <tbody>
           {bookingsList}
         </tbody>
-      </table>
+      </Table>
     </div>
   )
 }

@@ -18,7 +18,7 @@ let PrivateNetworkCard = class extends Component {
 
   render(){
     return (
-      <div className="PrivateNetworkCard">
+      <div className="PrivateNetworkCard NetworkCard">
         <img src="" alt="User"/>
         <br/>
         <p>{this.props.name}</p>
