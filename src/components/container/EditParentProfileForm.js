@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Grid, Panel, Row, Col } from 'react-bootstrap'
 import { FormGroup, FormControl } from 'react-bootstrap'
 import { reduxForm } from 'redux-form'
 import editParent from '../../actions/editParent'
@@ -15,9 +16,13 @@ const EditParentsProfilePage = class extends Component {
   render(){
     const { fields: {kid_count, address, specific_needs, extra_requests }, handleSubmit } = this.props;
     return(
-      <div className="ParentInfo">
+      <Grid className="ParentInfo">
+      <Row>
+      <Col xs={3} md={4} />
+      <Col xs={6} md={4}>
+      <Panel>
       <ParentInfoOnEditPage currentUser={this.props.currentUser}/>
-      <form className='EditParentsProfilePage' id="form" onSubmit={handleSubmit(this.handleEditFormSubmit.bind(this))}>
+      <form className='EditParentsProfilePage' onSubmit={handleSubmit(this.handleEditFormSubmit.bind(this))}>
         <FormGroup>
           <FormControl type='text' placeholder='KID COUNT' className="form-control" {...kid_count}/>
           <FormControl type='text' placeholder='ADDRESS' className="form-control" {...address}/>
@@ -26,7 +31,11 @@ const EditParentsProfilePage = class extends Component {
           <FormControl id='submit' type='submit' className="btn" value="SAVE CHANGES" />
         </FormGroup>
       </form>
-      </div>
+      </Panel>
+      </Col>
+      <Col xs={3} md={4} />
+      </Row>
+      </Grid>
     )
   }
 }

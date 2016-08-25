@@ -9,9 +9,9 @@ let ParentDashboard = class extends Component{
   render() {
     return(
       <Grid className='Dashboard'>
-        <Row><SearchBar /></Row>
+        <SearchBar />
         <Row><header>BOOKINGS</header></Row>
-        <Row><Bookings /></Row>
+        <Bookings />
         <Row><header>BABYSITTERS</header></Row>
       </Grid>
     )
