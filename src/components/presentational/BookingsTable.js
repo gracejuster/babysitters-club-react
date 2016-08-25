@@ -1,5 +1,5 @@
 import React from 'react';
-import { Table } from 'react-bootstrap'
+import { Panel, Table } from 'react-bootstrap'
 // import {connect} from 'react-redux';
 // import confirmBookings from '../..actions/confirmBookings'
 
@@ -35,23 +35,29 @@ const BookingsTable = ({title, bookings, type, handleClick}) => {
     })
   }
 
+  let table
+
+  if (bookingsList.length === 0) {
+    table = <Panel><header>No current bookings</header></Panel>
+  } else {
+    table = (<Table responsive striped bordered condensed className="BookingsTable">
+      <thead>
+        <tr>
+          <th>Who</th>
+          <th>Date</th>
+          <th>Time</th>
+          <th>Duration</th>
+        </tr>
+      </thead>
+      <tbody>
+        {bookingsList}
+      </tbody>
+    </Table>)
+  }
+
   return(
-    <div id="form" className="BookingsTable">
-      {/* <h6>{title}</h6> */}
-      <Table responsive striped bordered condensed className="BookingsTable">
-        <thead>
-          <tr>
-            <th>Who</th>
-            <th>Date</th>
-            <th>Time</th>
-            <th>Duration</th>
-          </tr>
-        </thead>
-        <tbody>
-          {bookingsList}
-        </tbody>
-      </Table>
-    </div>
+    <div>{ table }</div>
+
   )
 }
 

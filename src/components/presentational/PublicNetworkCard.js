@@ -16,12 +16,12 @@ let PublicNetworkCard = class extends Component {
   render(){
     let button_state
     if (this.props.button_value === "SHOW BUTTON") {
-      button_state = <Button onClick={this.handleNetworkRequest.bind(this)}>ADD TO NETWORK</Button>
+      button_state = <Button onClick={this.handleNetworkRequest.bind(this)}>ADD BABYSITTER</Button>
     } else if (this.props.button_value === "PENDING NETWORK REQUEST"){
-      button_state = <Button>PENDING NETWORK REQUEST</Button>
+      button_state = <h4 className="card-title">REQUEST PENDING</h4>
     }
       else {
-        button_state = <Button>ALREADY IN YOUR NETWORK</Button>
+        button_state = <h4 className="card-title">IN NETWORK</h4>
       }
 
 
