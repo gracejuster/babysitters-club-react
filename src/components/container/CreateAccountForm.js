@@ -25,7 +25,7 @@ const CreateAccountForm = class extends Component {
           <Radio type='radio' {...user_type} value='PARENT' checked={user_type.value === 'PARENT'}/> <br/>
           <ControlLabel className="radioLabel">BABYSITTER</ControlLabel>
           <Radio type='radio' {...user_type} value='BABYSITTER' checked={user_type.value === 'BABYSITTER'}/> <br/>
-          <FormControl id='submit' type='submit' className="btn btn-primary" value="CREATE ACCOUNT"/>
+          <FormControl id='submit' type='submit' className="btn" value="CREATE ACCOUNT"/>
           </FormGroup>
         </form>
       </div>

@@ -19,12 +19,12 @@ const LogInForm = class extends Component {
           <FormGroup>
             <FormControl id="name" type='text' placeholder='E-MAIL' className="form-control" {...email}/>
             <FormControl id="email" type='password' placeholder='PASSWORD' className="form-control" {...password}/>
-            <FormControl id="submit" type='submit' className="btn btn-primary" value="GO!" />
+            <FormControl id="submit" type='submit' className="btn" value="GO!" />
           </FormGroup>
         </form>
         <form id="form" action="/newuser">
           <FormGroup>
-            <FormControl id="submit" type="submit" className="btn btn-primary" value="Create New Account" />
+            <FormControl id="submit" type="submit" className="btn" value="Create New Account" />
           </FormGroup>
         </form>
         {/* <Link to='/newuser'>Create New Account</Link> */}
