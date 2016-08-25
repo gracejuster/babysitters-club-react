@@ -4,13 +4,13 @@ import createNetworkRequest from '../../actions/createNetworkRequest'
 import ProfilePicture from '../../images/ProfilePicture'
 import { connect } from 'react-redux';
 import { browserHistory } from 'react-router'
+import getPublicViewableProfile from '../../actions/getPublicViewableProfile'
 
 let PublicNetworkCard = class extends Component {
   handleNetworkRequest() {
     event.preventDefault()
-     this.props.dispatch(createNetworkRequest(
-       this.props.babysitter_id,
-       this.props.currentUser))
+    this.props.dispatch(createNetworkRequest(this.props.babysitter_id,this.props.currentUser))
+    this.props.dispatch(getPublicViewableProfile(this.props.viewableUser.viewableUser.id, this.props.currentUser))
    }
 
   render(){
