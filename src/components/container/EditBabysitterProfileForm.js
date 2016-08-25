@@ -9,7 +9,7 @@ const EditBabysitterProfilePage = class extends Component {
   handleEditFormSubmit(props){
     let currentUser = this.props.currentUser
     this.props.editBabysitter(props, currentUser).then((resp)=>{
-      browserHistory.push(`/${resp.payload.type}/${resp.payload.current_user.username}`)
+    browserHistory.push(`/${resp.payload.type}/${resp.payload.current_user.username}`)
     })
   }
 
