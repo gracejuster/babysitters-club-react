@@ -12,6 +12,7 @@ let PublicNetwork = ({networksArray, viewableUser,currentUser}) => {
 					babysitter_id={networkItem.id}
 					name={networkItem.name}
 					location={networkItem.location}
+					button_value={networkItem.button_value}
 				/>
 			</Col>
 		)
