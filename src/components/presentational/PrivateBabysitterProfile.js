@@ -3,6 +3,7 @@ import { Grid, Row, Col, Panel, Tabs, Tab } from 'react-bootstrap'
 import CreateBookingForm from '../container/CreateBookingForm';
 import CreateReviewForm from '../container/CreateReviewForm';
 import BabysitterProfileCard from './BabysitterProfileCard';
+import PigImage from '../../images/PigImage'
 import ReviewHolder from './ReviewHolder';
 import {connect} from 'react-redux'
 
@@ -13,7 +14,6 @@ let PrivateBabysitterProfile = class extends Component{
         <Row>
           <Col xs={6} md={6}>
           <BabysitterProfileCard
-            img=""
             name={this.props.name}
             age={this.props.age}
             location={this.props.location}

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import createNetworkRequest from '../../actions/createNetworkRequest'
+import PigImage from '../../images/PigImage'
 import { connect } from 'react-redux';
 import { browserHistory } from 'react-router'
 
@@ -26,7 +27,7 @@ let PublicNetworkCard = class extends Component {
   render(){
     return (
       <div className="PublicNetworkCard NetworkCard">
-        <img src="" alt="User"/>
+        <PigImage />
         <br/>
         <p>{this.props.name}</p>
         <p>{this.props.location}</p>

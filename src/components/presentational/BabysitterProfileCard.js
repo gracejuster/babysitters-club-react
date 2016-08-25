@@ -1,10 +1,11 @@
 import React from 'react'
 import { Panel, Col } from 'react-bootstrap'
+import PigImage from '../../images/PigImage'
 
 const BabysitterProfileCard = ({image, name, age, location, rating}) => {
   return(
   	<Panel className="ProfileCard card">
-      <img className="card-img-top" width={100} height={100} src={image} alt="Babysitter"/>
+      <PigImage />
       <div className="card-block">
         <h4 className="card-title">{name}</h4>
         <p className="card-text">{age}</p>

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { Carousel, Panel } from 'react-bootstrap'
+import { Carousel, Panel} from 'react-bootstrap'
 import getPublicViewableProfile from '../../actions/getPublicViewableProfile'
+import PigImage from '../../images/PigImage'
 import { connect } from 'react-redux';
 import { browserHistory } from 'react-router'
 
@@ -20,7 +21,7 @@ let PrivateNetworkCard = class extends Component {
   render(){
     return (
       <Panel className="PrivateNetworkCard NetworkCard card">
-        <img className="card-img-top" width={100} height={100} src="" alt="User" />
+        <PigImage />
         <div className="card-block">
           <h4 className="card-title">{this.props.name}</h4>
           <p className="card-text">{this.props.location}</p>

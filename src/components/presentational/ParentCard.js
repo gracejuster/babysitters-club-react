@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import getPublicViewableProfile from '../../actions/getPublicViewableProfile'
 import { connect } from 'react-redux';
 import { browserHistory } from 'react-router'
+import PigImage from '../../images/PigImage'
 
 
 let ParentCard = class extends Component  {
@@ -20,7 +21,7 @@ let ParentCard = class extends Component  {
     return(
       <div className="ProfileCard">
       <h6>Parent Profile Card </h6>
-      <img alt="Parent"/>
+      <PigImage />
       <br/>
       <p>Name: {this.props.name}</p>
       <p>Kids: {this.props.kid_count}</p>
