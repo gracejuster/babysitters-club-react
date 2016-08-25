@@ -14,7 +14,7 @@ const LogInForm = class extends Component {
     const { fields: { email, password }, handleSubmit} = this.props;
     return(
       <div className='LogInForm'>
-        <header>WELCOME BACK</header>
+        <header>WELCOME</header>
         <form id="form" onSubmit={handleSubmit(this.pressButton.bind(this))}>
           <FormGroup>
             <FormControl id="name" type='text' placeholder='E-MAIL' className="form-control" {...email}/>

@@ -7,11 +7,11 @@ const BabysitterDashboard = class extends Component{
   render() {
     return(
       <div className='Dashboard'>
-        <h3>WELCOME!</h3>
-        Bookings
+        <h3>BOOKINGS</h3>
         <Bookings />
-        Network Requests
+        <h3>REQUESTS </h3>
         <Requests />
+        <h3>NETWORK </h3>
       </div>
       )
     }
