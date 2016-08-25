@@ -2,11 +2,14 @@ import React, {Component} from 'react'
 import { Tabs, Tab, Panel, Grid, Row, Col } from 'react-bootstrap'
 import { connect } from 'react-redux'
 import BookingsTable from './BookingsTable'
+import retrieveUser from '../../actions/retrieveUser'
 import confirmBookings from '../../actions/confirmBookings'
+
 
 let Bookings = class extends Component {
   sendConfirmation(bookingId){
     this.props.handleClick(bookingId, this.props.currentUser)
+    this.props.retrieveUser(this.props.currentUser)
   }
 
   render(){
@@ -46,7 +49,8 @@ let Bookings = class extends Component {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    handleClick:(bookingId, currentUser) => {dispatch(confirmBookings(bookingId, currentUser))}
+    handleClick:(bookingId, currentUser) => {dispatch(confirmBookings(bookingId, currentUser))},
+    retrieveUser:(currentUser) => {dispatch(retrieveUser(currentUser))}
   }
 }
 

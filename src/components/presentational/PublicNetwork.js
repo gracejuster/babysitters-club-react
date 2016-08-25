@@ -1,4 +1,5 @@
 import React, { PropTypes } from 'react';
+import { Carousel, Grid, Row, Col } from 'react-bootstrap'
 import PublicNetworkCard from './PublicNetworkCard'
 
 let PublicNetwork = ({networksArray, viewableUser,currentUser}) => {
@@ -17,7 +18,7 @@ let PublicNetwork = ({networksArray, viewableUser,currentUser}) => {
 	})
 	let networksList = []
 	for (let i=0; i < publicNetworksList.length; i+=3) {
-		if (networksArray[i+2]) {
+		if (publicNetworksList[i+2]) {
 			networksList.push(
 			<Carousel.Item>
 				<Grid><Row className="show-grid">
@@ -26,7 +27,7 @@ let PublicNetwork = ({networksArray, viewableUser,currentUser}) => {
 						{publicNetworksList[i+2]}
 				</Row></Grid>
    		</Carousel.Item>
-		)} else if (networksArray[i+2]) {
+		)} else if (publicNetworksList[i+2]) {
 				networksList.push(
 				<Carousel.Item>
 					<Grid><Row className="show-grid">
@@ -44,9 +45,9 @@ let PublicNetwork = ({networksArray, viewableUser,currentUser}) => {
 		)}
 	}
 	return (
-		<div className='Public Network'>
+		<Carousel className='PublicNetwork' interval={false}>
   		{networksList}
-		</div>
+		</Carousel>
 	)
 }
 

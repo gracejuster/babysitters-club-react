@@ -188,6 +188,11 @@ textarea:hover {
   text-align: center;
 }
 
+.ProfilePicture {
+   width: 150px;
+  height: 150px;
+}
+
 /*.Bookings {
   text-align: center;
 }
@@ -221,4 +226,8 @@ th, td {
     text-align: center;
     vertical-align: bottom;
     /*border-bottom: 1px solid #ddd;*/
+}
+
+.carousel-control.left, .carousel-control.right {
+    background-image: none
 }

@@ -5,7 +5,7 @@ import PrivateNetworkCard from './PrivateNetworkCard'
 let PrivateNetwork = ({networksArray, currentUser}) => {
 	let privateNetworksList = networksArray.map((networkItem) => {
 		return (
-			<Col xs={4} md= {4}>
+			<Col xs={4} md={4}>
 				<PrivateNetworkCard
 					currentUser={currentUser}
 					user_id={networkItem.user_id}
@@ -17,7 +17,7 @@ let PrivateNetwork = ({networksArray, currentUser}) => {
 	})
 	let networksList = []
 	for (let i=0; i < privateNetworksList.length; i+=3) {
-		if (networksArray[i+2]) {
+		if (privateNetworksList[i+2]) {
 			networksList.push(
 			<Carousel.Item>
 				<Grid><Row className="show-grid">
@@ -26,7 +26,7 @@ let PrivateNetwork = ({networksArray, currentUser}) => {
 					{privateNetworksList[i+2]}
 				</Row></Grid>
    		</Carousel.Item>
-		)} else if (networksArray[i+2]) {
+		)} else if (privateNetworksList[i+2]) {
 			networksList.push(
 			<Carousel.Item>
 				<Grid><Row className="show-grid">
@@ -38,13 +38,13 @@ let PrivateNetwork = ({networksArray, currentUser}) => {
 			networksList.push(
 			<Carousel.Item>
 				<Grid><Row className="show-grid">
-						{privateNetworksList[i]}
+					{privateNetworksList[i]}
 				</Row></Grid>
 			</Carousel.Item>
 		)}
 	}
 	return (
-		<Carousel className='Network'>
+		<Carousel className='PrivateNetwork' interval={false}>
   		{networksList}
 		</Carousel>
 	)

@@ -25,7 +25,7 @@ const CreateReviewForm = class extends Component {
           <FormControl type='text' placeholder='TITLE' className="form-control" {...title}/>
           <FormControl type='text' placeholder='DESCRIPTION' className="form-control" {...description}/>
           <FormControl type='text' placeholder='RATING' className="form-control" {...rating}/>
-          <FormControl id='submit' type='submit' className="btn btn-primary" value="CREATE REVIEW" />
+          <FormControl id='submit' type='submit' className="btn" value="CREATE REVIEW" />
         </FormGroup>
       </form>
     )
