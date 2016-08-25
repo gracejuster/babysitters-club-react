@@ -37,7 +37,7 @@ const BookingsTable = ({title, bookings, type, handleClick}) => {
 
   return(
     <div id="form" className="BookingsTable">
-      <h6>{title}</h6>
+      {/* <h6>{title}</h6> */}
       <Table responsive striped bordered condensed className="BookingsTable">
         <thead>
           <tr>

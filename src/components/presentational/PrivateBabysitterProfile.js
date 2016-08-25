@@ -13,7 +13,6 @@ let PrivateBabysitterProfile = class extends Component{
         <Row>
           <Col xs={6} md={6}>
           <BabysitterProfileCard
-            img=""
             name={this.props.name}
             age={this.props.age}
             location={this.props.location}
@@ -23,7 +22,7 @@ let PrivateBabysitterProfile = class extends Component{
           />
           </Col>
           <Col xs={6} md={6}>
-          <Panel style={{overflow: "scroll"}}>
+          <Panel >
             <Tabs>
               <Tab eventKey={1} title="Book A Babysitter">
                 <header>REQUEST BOOKING</header>

@@ -24,7 +24,7 @@ const CreateBookingForm = class extends Component {
           <FormControl type='text' placeholder='DURATION' className="form-control" {...duration}/>
           <FormControl type='text' placeholder='DESIRED TIME' className="form-control" {...desired_time}/>
           <FormControl type='text' placeholder='DESIRED DATE' className="form-control" {...desired_date}/>
-          <FormControl id='submit' type='submit' className="btn btn-primary" value='REQUEST BOOKING' />
+          <FormControl block id='submit' type='submit' className="btn" value='REQUEST BOOKING' />
         </FormGroup>
       </form>
     )
