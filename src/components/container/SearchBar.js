@@ -16,7 +16,7 @@ class SearchBar extends Component {
     return(
         <form id='form' onSubmit={handleSubmit(this.SearchFormSubmit.bind(this))}>
           <FormGroup>
-            <FormControl type='text' placeholder='SEARCH' {...searchValue}/>
+            <FormControl type='text' placeholder='SEARCH PARENTS' {...searchValue}/>
             <FormControl id="submit" type='submit' value='SUBMIT' />
           </FormGroup>
         </form>
