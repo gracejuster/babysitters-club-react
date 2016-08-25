@@ -16,17 +16,17 @@ let ParentCard = class extends Component  {
   }
 
   render() {
-    
+
     return(
-      <div className="ProfileCard">
-      <h6>Parent Profile Card </h6>
-      <img alt="Parent"/>
-      <br/>
-      <p>Name: {this.props.name}</p>
-      <p>Kids: {this.props.kid_count}</p>
-      <p>Email: {this.props.email}</p>
-      <button onClick={this.handleClick.bind(this)}>Get Full Profile</button>
+      <Panel className="ProfileCard card">
+      <img className="card-img-top" width={100} height={100} src="" alt="Parent"/>
+      <div className="card-block"
+        <h4 className="card-title">{this.props.name}</p>
+        <p className="card-text">Kids: {this.props.kid_count}</p>
+        <p className="card-text">Email: {this.props.email}</p>
+        <button onClick={this.handleClick.bind(this)}>Get Full Profile</button>
       </div>
+      </Panel>
     )
   }
 }
