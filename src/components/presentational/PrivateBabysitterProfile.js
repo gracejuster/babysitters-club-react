@@ -3,7 +3,6 @@ import { Grid, Row, Col, Panel, Tabs, Tab } from 'react-bootstrap'
 import CreateBookingForm from '../container/CreateBookingForm';
 import CreateReviewForm from '../container/CreateReviewForm';
 import BabysitterProfileCard from './BabysitterProfileCard';
-import PigImage from '../../images/PigImage'
 import ReviewHolder from './ReviewHolder';
 import {connect} from 'react-redux'
 

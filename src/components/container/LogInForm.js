@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { FormGroup, FormControl } from 'react-bootstrap'
 import { reduxForm } from 'redux-form'
 import loginUser from '../../actions/loginUser'
-import PigImage from '../../images/PigImage'
 import { browserHistory } from 'react-router'
 
 const LogInForm = class extends Component {
@@ -15,7 +14,6 @@ const LogInForm = class extends Component {
     const { fields: { email, password }, handleSubmit} = this.props;
     return(
       <div className='LogInForm'>
-      <PigImage />
       <header>WELCOME BACK</header>
         <form id="form" onSubmit={handleSubmit(this.pressButton.bind(this))}>
           <FormGroup>
