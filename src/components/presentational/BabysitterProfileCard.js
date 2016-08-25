@@ -5,7 +5,7 @@ import ProfilePicture from '../../images/ProfilePicture'
 const BabysitterProfileCard = ({image, name, age, location, rating}) => {
   return(
   	<Panel className="ProfileCard card">
-      <ProfilePicture />
+      <ProfilePicture responsive className="card-img-top center-block"/>
       <div className="card-block">
         <h4 className="card-title text-center">{name}</h4>
         <p className="card-text text-center">{age}</p>
