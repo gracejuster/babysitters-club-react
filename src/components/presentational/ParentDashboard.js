@@ -8,6 +8,7 @@ let ParentDashboard = class extends Component{
   render() {
     return(
       <div className='Dashboard'>
+        <h3>WELCOME!</h3>
         <SearchBar />
         <Bookings />
       </div>
