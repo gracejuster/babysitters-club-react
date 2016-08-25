@@ -1,21 +1,10 @@
 import React, { Component } from 'react';
+import { Panel } from 'react-bootstrap'
 import createNetworkRequest from '../../actions/createNetworkRequest'
 import { connect } from 'react-redux';
 import { browserHistory } from 'react-router'
 
 let PublicNetworkCard = class extends Component {
-  // handleClick(){
-  //
-  //   // event.preventDefault()
-  //   this.props.dispatch(getPublicViewableProfile(
-  //     this.props.user_id,
-  //     this.props.currentUser)).then((resp) => {
-  //       let type = resp.payload.type.toLowerCase()
-  //       let username = resp.payload.viewable_user.username.toLowerCase()
-  //       browserHistory.push(`/user/${type}/${username}`)
-  //   })
-  // }
-
   handleNetworkRequest() {
     event.preventDefault()
      this.props.dispatch(createNetworkRequest(
@@ -25,14 +14,15 @@ let PublicNetworkCard = class extends Component {
 
   render(){
     return (
-      <div className="PublicNetworkCard NetworkCard">
-        <img src="" alt="User"/>
-        <br/>
-        <p>{this.props.name}</p>
-        <p>{this.props.location}</p>
-        {/* <button onClick={this.handleClick.bind(this)}>GET FULL PROFILE</button> */}
-        <button onClick={this.handleNetworkRequest.bind(this)}>ADD TO NETWORK</button>
-      </div>
+      <Panel className="PublicNetworkCard NetworkCard card">
+        <img className="card-img-top" width={100} height={100} src="" alt="User"/>
+        <div className="card-block">
+          <h4 className="card-title">{this.props.name}</h4>
+          <p className="card-text">{this.props.location}</p>
+          {/* <button onClick={this.handleClick.bind(this)}>GET FULL PROFILE</button> */}
+          <button className="btn btn-primary" onClick={this.handleNetworkRequest.bind(this)}>ADD TO NETWORK</button>
+        </div>
+      </Panel>
     )
   }
 }
