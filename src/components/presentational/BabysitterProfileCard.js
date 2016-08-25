@@ -7,10 +7,10 @@ const BabysitterProfileCard = ({image, name, age, location, rating}) => {
   	<Panel className="ProfileCard card">
       <ProfilePicture />
       <div className="card-block">
-        <h4 className="card-title">{name}</h4>
-        <p className="card-text">{age}</p>
-        <p className="card-text">{location}</p>
-        <p className="card-text">{rating}</p>
+        <h4 className="card-title text-center">{name}</h4>
+        <p className="card-text text-center">{age}</p>
+        <p className="card-text text-center">{location}</p>
+        <p className="card-text text-center">{rating}</p>
       </div>
     </Panel>
   )

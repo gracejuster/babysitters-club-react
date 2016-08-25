@@ -21,7 +21,7 @@ const EditParentsProfilePage = class extends Component {
           <FormControl type='text' placeholder='ADDRESS' className="form-control" {...address}/>
           <FormControl type='textarea' placeholder='SPECIFIC NEEDS' className="form-control" {...specific_needs}/>
           <FormControl type='textarea' placeholder='EXTRA REQUESTS' className="form-control" {...extra_requests}/>
-          <FormControl id='submit' type='submit' className="btn btn-primary" value="SAVE CHANGES" />
+          <FormControl id='submit' type='submit' className="btn" value="SAVE CHANGES" />
         </FormGroup>
       </form>
     )

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Carousel, Panel} from 'react-bootstrap'
+import { Panel, Button } from 'react-bootstrap'
 import getPublicViewableProfile from '../../actions/getPublicViewableProfile'
 import ProfilePicture from '../../images/ProfilePicture'
 import { connect } from 'react-redux';
@@ -17,15 +17,14 @@ let PrivateNetworkCard = class extends Component {
     })
   }
 
-
   render(){
     return (
       <Panel className="PrivateNetworkCard NetworkCard card">
-        <ProfilePicture />
+        <ProfilePicture className="card-img-top" width={100} height={100} src="" alt="User" />
         <div className="card-block">
-          <h4 className="card-title">{this.props.name}</h4>
-          <p className="card-text">{this.props.location}</p>
-          <button className="btn btn-primary" onClick={this.handleClick.bind(this)}>GET FULL PROFILE</button>
+          <h4 className="card-title text-center">{this.props.name}</h4>
+          <p className="card-text text-center">{this.props.location}</p>
+          <Button block className="center-block" onClick={this.handleClick.bind(this)}>GET FULL PROFILE</Button>
         </div>
       </Panel>
     )

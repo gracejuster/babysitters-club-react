@@ -22,7 +22,7 @@ const EditBabysitterProfilePage = class extends Component {
           <FormControl type='text' placeholder='LOCATION' className="form-control" {...location}/>
           <FormControl type='textarea' placeholder='BIO' className="form-control" {...bio}/>
           <FormControl type='textarea' placeholder='SKILLS' className="form-control" {...skills}/>
-          <FormControl id='submit' type='submit' className="btn btn-primary" value='SAVE CHANGES' />
+          <FormControl id='submit' type='submit' className="btn" value='SAVE CHANGES' />
         </FormGroup>
       </form>
     )
