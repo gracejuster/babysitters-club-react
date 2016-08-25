@@ -21,7 +21,7 @@ let ParentCard = class extends Component  {
       <Panel className="ProfileCard card">
       <img className="card-img-top" width={100} height={100} src="" alt="Parent"/>
       <div className="card-block"
-        <h4 className="card-title">{this.props.name}</p>
+        <h4 className="card-title">{this.props.name}</h4>
         <p className="card-text">Kids: {this.props.kid_count}</p>
         <p className="card-text">Email: {this.props.email}</p>
         <button onClick={this.handleClick.bind(this)}>Get Full Profile</button>

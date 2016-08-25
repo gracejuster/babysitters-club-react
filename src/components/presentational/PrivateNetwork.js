@@ -17,7 +17,7 @@ let PrivateNetwork = ({networksArray, currentUser}) => {
 	})
 	let networksList = []
 	for (let i=0; i < privateNetworksList.length; i+=3) {
-		if (networksArray[i+2]) {
+		if (privateNetworksList[i+2]) {
 			networksList.push(
 			<Carousel.Item>
 				<Grid><Row className="show-grid">
@@ -26,7 +26,7 @@ let PrivateNetwork = ({networksArray, currentUser}) => {
 					{privateNetworksList[i+2]}
 				</Row></Grid>
    		</Carousel.Item>
-		)} else if (networksArray[i+2]) {
+		)} else if (privateNetworksList[i+2]) {
 			networksList.push(
 			<Carousel.Item>
 				<Grid><Row className="show-grid">
@@ -44,7 +44,7 @@ let PrivateNetwork = ({networksArray, currentUser}) => {
 		)}
 	}
 	return (
-		<Carousel className='Network'>
+		<Carousel className='PrivateNetwork'>
   		{networksList}
 		</Carousel>
 	)
