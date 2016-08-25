@@ -1,9 +1,10 @@
 import React, { PropTypes } from 'react';
+import { Grid } from 'react-bootstrap'
 import ParentCard from './ParentCard'
 
 let SearchResults = ({searchResultsObject, currentUser}) => {
 	let SearchResultsList = searchResultsObject.map((searchResultItem) => {
-		return <ParentCard currentUser={currentUser} name={searchResultItem.attributes.name} kid_count={searchResultItem.attributes['kid-count']} email={searchResultItem.attributes.email} userId={searchResultItem.attributes['user-id']}/>
+		return <ParentCard loc={"search"} currentUser={currentUser} name={searchResultItem.attributes.name} kid_count={searchResultItem.attributes['kid-count']} email={searchResultItem.attributes.email} userId={searchResultItem.attributes['user-id']}/>
 	})
 	if (SearchResultsList.length===0){
 		return (
@@ -14,9 +15,9 @@ let SearchResults = ({searchResultsObject, currentUser}) => {
 	}
 	else{
 		return (
-			<div className='SearchResults'>
+			<Grid className='SearchResults'>
 	  		{SearchResultsList}
-			</div>
+			</Grid>
 		)
 	}
 }
