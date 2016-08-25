@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 
-let EditParentCard = ({currentUser}) => {
+let ParentInfoOnEditPage = ({currentUser}) => {
     return(
       <div className="ProfileCard">
       <h6>Profile</h6>
@@ -15,4 +15,4 @@ let EditParentCard = ({currentUser}) => {
     )
 }
 
-export default EditParentCard
+export default ParentInfoOnEditPage
