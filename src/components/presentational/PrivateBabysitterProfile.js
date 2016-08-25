@@ -40,6 +40,7 @@ let PrivateBabysitterProfile = class extends Component{
           </Panel>
           </Col>
         </Row>
+        {/* <Row><header>PARENTS</header></Row> */}
     	</Grid>
     	)
 	}

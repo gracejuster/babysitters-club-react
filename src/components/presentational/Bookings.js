@@ -14,7 +14,6 @@ let Bookings = class extends Component {
 
   render(){
     return(
-      <Grid>
       <Row>
       <Col xs={0} md={2} />
       <Col xs={12} md={8} center>
@@ -41,7 +40,6 @@ let Bookings = class extends Component {
       </Col>
       <Col xs={0} md={2} />
       </Row>
-      </Grid>
     )
 
   }

@@ -1,18 +1,19 @@
 import React, { Component } from 'react';
+import { Grid, Row, Col } from 'react-bootstrap'
 import Bookings from './Bookings'
 import Requests from '../container/RequestsContainer'
 import {connect} from 'react-redux'
 
-const BabysitterDashboard = class extends Component{
+const BabysitterDashboard = class extends Component {
   render() {
     return(
-      <div className='Dashboard'>
-        <h3>BOOKINGS</h3>
+      <Grid className='Dashboard'>
+        <Row><h3>BOOKINGS</h3></Row>
         <Bookings />
-        <h3>REQUESTS </h3>
+        <Row><h3>REQUESTS </h3></Row>
         <Requests />
-        <h3>NETWORK </h3>
-      </div>
+        <Row><h3>PARENTS</h3></Row>
+      </Grid>
       )
     }
   }

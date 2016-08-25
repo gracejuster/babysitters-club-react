@@ -6,7 +6,7 @@ const ReviewThumbnail = () => {
 	var source = `/src/images/png/${x}.png`
 
 	return (
-  	<Thumbnail className='ReviewThumbnail' src={source} responsive />
+  	<Thumbnail className='ReviewThumbnail' src={source} />
   )
 }
 

@@ -14,8 +14,7 @@ class SearchBar extends Component {
   render() {
     const { fields: { searchValue }, handleSubmit} = this.props
     return(
-        <Grid>
-        <Row>
+      <Row>
         <Col xs={0} md={2} />
         <Col xs={12} md={8}>
         <form  onSubmit={handleSubmit(this.SearchFormSubmit.bind(this))}>
@@ -26,8 +25,7 @@ class SearchBar extends Component {
         </form>
         </Col>
         <Col xs={0} md={2} />
-        </Row>
-        </Grid>
+      </Row>
     )
   }
 }

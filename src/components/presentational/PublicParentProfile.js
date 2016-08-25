@@ -18,6 +18,7 @@ let PublicParentProfile = class extends Component{
               userId={this.props.user_id}/>
           <Col xs={3} md={4} />
         </Row>
+        <Row><header>BABYSITTERS</header></Row>
       </Grid>
     )
 	}
