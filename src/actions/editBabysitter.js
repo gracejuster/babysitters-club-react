@@ -1,7 +1,7 @@
 import $ from 'jquery'
 
 export default function editBabysitter(props, currentUser) {
-  const URL = `http://localhost:3000/api/v1/babysitters/${currentUser.currentUser.id}`
+  const URL = `http://localhost:3000/api/v1/users/${currentUser.currentUser.id}`
   const request = $.ajax({
      url:URL,
      headers: {'AUTHORIZATION': "Bearer" + currentUser.jwt},
