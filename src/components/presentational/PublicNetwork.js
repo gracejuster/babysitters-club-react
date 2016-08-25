@@ -45,9 +45,9 @@ let PublicNetwork = ({networksArray, viewableUser,currentUser}) => {
 		)}
 	}
 	return (
-		<div className='Public Network'>
+		<Carousel className='PublicNetwork'>
   		{networksList}
-		</div>
+		</Carousel>
 	)
 }
 

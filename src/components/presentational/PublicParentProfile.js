@@ -1,13 +1,20 @@
 import React, { Component } from 'react';
+import { Grid, Row, Col } from 'react-bootstrap'
 import ParentCard from './ParentCard';
 import {connect} from 'react-redux'
 
 let PublicParentProfile = class extends Component{
   render() {
     return(
-    	<div className="PublicParentProfile">
-        <ParentCard img="" name={this.props.name} kid_count={this.props.kid_count} location={this.props.location}/>
-    	</div>
+      <Grid className="PublicParentProfile">
+        <Row>
+          <Col xs={0} md={2} />
+          <Col xs={12} md={8} center>
+            <ParentCard img="" name={this.props.name} kid_count={this.props.kid_count} location={this.props.location}/>
+          </Col>
+          <Col xs={0} md={2} />
+        </Row>
+      </Grid>
     )
 	}
 }
