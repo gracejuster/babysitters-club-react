@@ -5,6 +5,7 @@ import Requests from '../container/RequestsContainer'
 import {connect} from 'react-redux'
 
 let ParentDashboard = class extends Component{
+  debugger
   render() {
     return(
       <div className='Dashboard'>
