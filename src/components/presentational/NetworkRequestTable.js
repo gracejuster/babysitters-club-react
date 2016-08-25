@@ -9,7 +9,7 @@ const NetworkRequestTable = ({currentUser, networkRequestArray, type, confirmNet
       return (
         <Col xs={6} md={4}>
         <Panel header={networkRequest.parent_name} >
-          <button className={"btn btn-primary"} onClick={ ()=>{confirmNetworkRequest(networkRequest.id)}}>Confirm Network Request</button>
+          <button className={"btn"} onClick={ ()=>{confirmNetworkRequest(networkRequest.id)}}>Confirm Network Request</button>
         </Panel>
         </Col>
       )
@@ -26,7 +26,6 @@ const NetworkRequestTable = ({currentUser, networkRequestArray, type, confirmNet
   }
   return(
     <div className="NetworkRequestTable">
-      <header>Pending Network Requests</header>
       <Grid className="NetworkRequestTable">
         <Row>{networkRequests}</Row>
       </Grid>

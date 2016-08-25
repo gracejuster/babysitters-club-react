@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Media, Thumbnail } from 'react-bootstrap'
+import ProfilePicture from '../../images/ProfilePicture'
 
 const Review = class extends Component {
 
@@ -8,7 +9,7 @@ const Review = class extends Component {
 	    <div className="Review">
         <Media>
           <Media.Left>
-            <Thumbnail width={64} height={64} src="" alt="thumbnail" />
+            <ProfilePicture />
           </Media.Left>
           <Media.Body>
     	      <Media.Heading>{this.props.title}</Media.Heading>
