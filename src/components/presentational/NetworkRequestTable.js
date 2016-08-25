@@ -26,7 +26,6 @@ const NetworkRequestTable = ({currentUser, networkRequestArray, type, confirmNet
   }
   return(
     <div className="NetworkRequestTable">
-      <header>Pending Network Requests</header>
       <Grid className="NetworkRequestTable">
         <Row>{networkRequests}</Row>
       </Grid>
