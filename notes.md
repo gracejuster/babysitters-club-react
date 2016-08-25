@@ -13,3 +13,4 @@ Babysitter:
 
 Change network requests on babysitter pages to be 3 x 3 panels
   - once clicked, it will disappear, and it will now be added to network carousel
+Have flash message saying incorrect password! if wrong
