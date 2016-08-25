@@ -23,7 +23,7 @@ let PrivateBabysitterProfile = class extends Component{
           />
           </Col>
           <Col xs={6} md={6}>
-          <Panel style={{overflow: "scroll"}}>
+          <Panel >
             <Tabs>
               <Tab eventKey={1} title="Book A Babysitter">
                 <header>REQUEST BOOKING</header>
