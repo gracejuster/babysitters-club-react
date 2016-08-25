@@ -18,7 +18,7 @@ const LogInForm = class extends Component {
         <form id="form" onSubmit={handleSubmit(this.pressButton.bind(this))}>
           <FormGroup>
             <FormControl id="name" type='text' placeholder='E-MAIL' className="form-control" {...email}/>
-            <FormControl id="email" type='text' placeholder='PASSWORD' className="form-control" {...password}/>
+            <FormControl id="email" type='password' placeholder='PASSWORD' className="form-control" {...password}/>
             <FormControl id="submit" type='submit' className="btn btn-primary" value="GO!" />
           </FormGroup>
         </form>

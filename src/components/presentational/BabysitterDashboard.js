@@ -7,6 +7,7 @@ const BabysitterDashboard = class extends Component{
   render() {
     return(
       <div className='Dashboard'>
+        <h3>WELCOME!</h3>
         Bookings
         <Bookings />
         Network Requests

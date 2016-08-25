@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { FormGroup, FormControl, ControlLabel } from 'react-bootstrap'
+import { FormGroup, FormControl, ControlLabel, Radio } from 'react-bootstrap'
 import { reduxForm } from 'redux-form'
 import createUser from '../../actions/createUser'
 import { browserHistory } from 'react-router'
@@ -22,9 +22,9 @@ const CreateAccountForm = class extends Component {
           <FormControl type='text' placeholder='USERNAME' className="form-control" {...username}/>
           <FormControl type='text' placeholder='PASSWORD' className="form-control" {...password}/>
           <ControlLabel className="radioLabel">PARENT</ControlLabel>
-          <FormControl type='radio' {...user_type} value='PARENT' checked={user_type.value === 'PARENT'}/>
+          <Radio type='radio' {...user_type} value='PARENT' checked={user_type.value === 'PARENT'}/> <br/>
           <ControlLabel className="radioLabel">BABYSITTER</ControlLabel>
-          <FormControl type='radio' {...user_type} value='BABYSITTER' checked={user_type.value === 'BABYSITTER'}/>
+          <Radio type='radio' {...user_type} value='BABYSITTER' checked={user_type.value === 'BABYSITTER'}/> <br/>
           <FormControl id='submit' type='submit' className="btn btn-primary" value="CREATE ACCOUNT"/>
           </FormGroup>
         </form>
