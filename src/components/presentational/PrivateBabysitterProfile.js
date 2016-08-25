@@ -25,15 +25,16 @@ let PrivateBabysitterProfile = class extends Component{
           <Col xs={6} md={6}>
           <Panel style={{overflow: "scroll"}}>
             <Tabs>
-              <Tab eventKey={1} title="Book">
+              <Tab eventKey={1} title="Book A Babysitter">
                 <header>REQUEST BOOKING</header>
                 <CreateBookingForm />
               </Tab>
-              <Tab eventKey={2} title="Review">
+              <Tab eventKey={2} title="Leave A Review">
                 <header>LEAVE A REVIEW</header>
                 <CreateReviewForm />
               </Tab>
-              <Tab eventKey={3} title="Reviews">
+              <Tab eventKey={3} title="All Reviews">
+                <header>REVIEWS</header>
                 <ReviewHolder reviews={this.props.reviews}/>
               </Tab>
             </Tabs>
