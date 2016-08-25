@@ -8,9 +8,9 @@ const BabysitterProfileCard = ({image, name, age, location, rating}) => {
       <ProfilePicture responsive className="card-img-top center-block"/>
       <div className="card-block">
         <h4 className="card-title text-center">{name}</h4>
-        <p className="card-text text-center">{age}</p>
-        <p className="card-text text-center">{location}</p>
-        <p className="card-text text-center">{rating}</p>
+        <p className="card-text text-center">Age: {age}</p>
+        <p className="card-text text-center">Location: {location}</p>
+        <p className="card-text text-center">Rating: {rating}</p>
       </div>
     </Panel>
   )
