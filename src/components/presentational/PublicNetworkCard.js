@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Panel } from 'react-bootstrap'
+import { Panel, Button } from 'react-bootstrap'
 import createNetworkRequest from '../../actions/createNetworkRequest'
 import { connect } from 'react-redux';
 import { browserHistory } from 'react-router'
@@ -20,7 +20,7 @@ let PublicNetworkCard = class extends Component {
           <h4 className="card-title">{this.props.name}</h4>
           <p className="card-text">{this.props.location}</p>
           {/* <button onClick={this.handleClick.bind(this)}>GET FULL PROFILE</button> */}
-          <button className="btn btn-primary" onClick={this.handleNetworkRequest.bind(this)}>ADD TO NETWORK</button>
+          <Button onClick={this.handleNetworkRequest.bind(this)}>ADD TO NETWORK</Button>
         </div>
       </Panel>
     )

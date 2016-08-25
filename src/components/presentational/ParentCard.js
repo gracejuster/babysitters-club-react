@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Panel } from 'react-bootstrap'
+import { Panel, Button } from 'react-bootstrap'
 import getPublicViewableProfile from '../../actions/getPublicViewableProfile'
 import { connect } from 'react-redux';
 import { browserHistory } from 'react-router'
@@ -22,10 +22,10 @@ let ParentCard = class extends Component  {
       <Panel className="ProfileCard card">
       <img className="card-img-top" width={100} height={100} src="" alt="Parent"/>
       <div className="card-block">
-        <h4 className="card-title">{this.props.name}</h4>
-        <p className="card-text">Kids: {this.props.kid_count}</p>
-        <p className="card-text">Email: {this.props.email}</p>
-        <button onClick={this.handleClick.bind(this)}>Get Full Profile</button>
+        <h4 className="card-title text-center">{this.props.name}</h4>
+        <p className="card-text text-center">Kids: {this.props.kid_count}</p>
+        <p className="card-text text-center">Email: {this.props.email}</p>
+        <Button block className="center-block" onClick={this.handleClick.bind(this)}>Get Full Profile</Button>
       </div>
       </Panel>
     )
