@@ -4,22 +4,23 @@ import { reduxForm } from 'redux-form'
 import editBabysitter from '../../actions/editBabysitter'
 import { browserHistory } from 'react-router'
 import BabysitterInfoOnEditPage from '../presentational/BabysitterInfoOnEditPage'
+import retrieveUser from '../../actions/retrieveUser'
 
 const EditBabysitterProfilePage = class extends Component {
 
   handleEditFormSubmit(props){
+    
     let currentUser = this.props.currentUser
-    this.props.editBabysitter(props, currentUser).then((resp)=>{
-    let username = resp.payload.data.attributes.username
-    browserHistory.push(`/babysitter/${username}`)
-    })
+    this.props.editBabysitter(props, currentUser)
+
+    this.props.retrieveUser(currentUser)
   }
 
   render(){
      const { fields: {age, location, bio, skills}, handleSubmit } = this.props;
     return(
       <div className="BabysitterInfo">
-      <BabysitterInfoOnEditPage />
+      <BabysitterInfoOnEditPage currentUser={this.props.currentUser}/>
       <form className='EditBabysitterProfilePage' id='form' onSubmit={handleSubmit(this.handleEditFormSubmit.bind(this))}>
         <FormGroup>
           <FormControl type='text' placeholder='AGE' className="form-control" {...age}/>
@@ -48,4 +49,4 @@ export default reduxForm({
     'bio',
     'skills'
   ],
-}, mapStateToProps, { editBabysitter })(EditBabysitterProfilePage);
+}, mapStateToProps, { editBabysitter, retrieveUser })(EditBabysitterProfilePage);
