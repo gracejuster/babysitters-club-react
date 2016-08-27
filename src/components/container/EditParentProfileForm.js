@@ -9,9 +9,11 @@ import { browserHistory } from 'react-router'
 
 const EditParentsProfilePage = class extends Component {
   handleEditFormSubmit(props){
-    this.props.editParent(props, this.props.currentUser)
-    this.props.retrieveUser(this.props.currentUser)
-  }
+    this.props.editParent(props, this.props.currentUser).then((resp)=>{
+         this.props.retrieveUser(this.props.currentUser)
+    }
+  )}
+
 
   render(){
     const { fields: {kid_count, address, specific_needs, extra_requests }, handleSubmit } = this.props;
@@ -21,7 +23,7 @@ const EditParentsProfilePage = class extends Component {
       <Col xs={3} md={4} />
       <Col xs={6} md={4}>
       <Panel>
-      <ParentInfoOnEditPage currentUser={this.props.currentUser}/>
+
       <form className='EditParentsProfilePage' onSubmit={handleSubmit(this.handleEditFormSubmit.bind(this))}>
         <FormGroup>
           <FormControl type='text' placeholder='KID COUNT' className="form-control" {...kid_count}/>
@@ -31,6 +33,7 @@ const EditParentsProfilePage = class extends Component {
           <FormControl id='submit' type='submit' className="btn" value="SAVE CHANGES" />
         </FormGroup>
       </form>
+      <ParentInfoOnEditPage/> 
       </Panel>
       </Col>
       <Col xs={3} md={4} />

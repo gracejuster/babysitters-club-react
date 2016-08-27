@@ -9,7 +9,7 @@ import retrieveUser from '../../actions/retrieveUser'
 const EditBabysitterProfilePage = class extends Component {
 
   handleEditFormSubmit(props){
-    
+
     let currentUser = this.props.currentUser
     this.props.editBabysitter(props, currentUser)
 
