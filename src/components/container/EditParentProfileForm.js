@@ -25,6 +25,7 @@ const EditParentsProfilePage = class extends Component {
       <Panel>
 
       <form className='EditParentsProfilePage' onSubmit={handleSubmit(this.handleEditFormSubmit.bind(this))}>
+        <ParentInfoOnEditPage currentUser={this.props.currentUser}/> 
         <FormGroup>
           <FormControl type='text' placeholder='KID COUNT' className="form-control" {...kid_count}/>
           <FormControl type='text' placeholder='ADDRESS' className="form-control" {...address}/>
@@ -33,7 +34,7 @@ const EditParentsProfilePage = class extends Component {
           <FormControl id='submit' type='submit' className="btn" value="SAVE CHANGES" />
         </FormGroup>
       </form>
-      <ParentInfoOnEditPage/> 
+
       </Panel>
       </Col>
       <Col xs={3} md={4} />
