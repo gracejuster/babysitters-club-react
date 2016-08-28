@@ -7,7 +7,6 @@ import { browserHistory } from 'react-router'
 
 let PrivateNetworkCard = class extends Component {
   handleClick(){
-    // event.preventDefault()
     this.props.dispatch(getPublicViewableProfile(
       this.props.user_id,
       this.props.currentUser)).then((resp) => {
