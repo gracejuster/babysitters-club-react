@@ -9,11 +9,9 @@ import retrieveUser from '../../actions/retrieveUser'
 const EditBabysitterProfilePage = class extends Component {
 
   handleEditFormSubmit(props){
-
-    let currentUser = this.props.currentUser
-    this.props.editBabysitter(props, currentUser)
-
-    this.props.retrieveUser(currentUser)
+    this.props.editBabysitter(props, this.props.currentUser).then((resp)=>{
+      this.props.retrieveUser(this.props.currentUser)
+    })
   }
 
   render(){
