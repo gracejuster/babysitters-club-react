@@ -9,8 +9,11 @@ import {connect} from 'react-redux';
 let RequestsContainer = class extends Component {
 
 	confirmNetworkRequest(NetworkRequestId){
-		this.props.handleClick(NetworkRequestId, this.props.currentUser)
-		this.props.retrieveUser(this.props.currentUser)
+		let currentUser = this.props.currentUser
+		this.props.confirmNetworkRequest(NetworkRequestId, currentUser).then((resp)=>{
+			this.props.retrieveUser(currentUser)
+    })
+
 	}
 
 
@@ -22,13 +25,13 @@ let RequestsContainer = class extends Component {
     )}
 }
 
-
-const mapDispatchToProps = (dispatch) => {
-  return {
-    handleClick:(requestId, currentUser) => {dispatch(confirmNetworkRequest(requestId, currentUser))},
-		retrieveUser:(currentUser) => {dispatch(retrieveUser(currentUser))}
-  }
-}
+//
+// const mapDispatchToProps = (dispatch) => {
+//   return {
+//     handleClick:(requestId, currentUser) => {dispatch()},
+// 		retrieveUser:(currentUser) => {dispatch(retrieveUser(currentUser))}
+//   }
+// }
 
 const mapStateToProps = (state) => {
   return {
@@ -39,6 +42,6 @@ const mapStateToProps = (state) => {
 }
 
 
-RequestsContainer = connect(mapStateToProps, mapDispatchToProps)(RequestsContainer)
+RequestsContainer = connect(mapStateToProps, { confirmNetworkRequest, retrieveUser })(RequestsContainer)
 
 export default RequestsContainer
