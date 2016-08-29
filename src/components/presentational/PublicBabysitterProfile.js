@@ -3,17 +3,17 @@ import ReviewHolder from './ReviewHolder';
 import BabysitterProfileCard from './BabysitterProfileCard';
 import {connect} from 'react-redux'
 
-let PublicBabysitterProfile = class extends Component{
+const PublicBabysitterProfile = ({name, age, location, bio, skills}) => {
   render() {
     return (
     	<div className="ProfileCard">
-        <BabysitterProfileCard 
-          name={this.props.name}
-          age={this.props.age}
-          location={this.props.location}
+        <BabysitterProfileCard
+          name={name}
+          age={age}
+          location={location}
           rating="5"
-          bio={this.props.bio}
-          skills={this.props.skills}
+          bio={bio}
+          skills={skills}
         />
         <ReviewHolder />
     	</div>
@@ -31,6 +31,4 @@ const mapStateToProps = (state) => {
 	}
 }
 
-PublicBabysitterProfile = connect(mapStateToProps)(PublicBabysitterProfile)
-
-export default PublicBabysitterProfile
+export default connect(mapStateToProps)(PublicBabysitterProfile)
