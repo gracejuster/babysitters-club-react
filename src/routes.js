@@ -5,14 +5,14 @@ import { Route, IndexRedirect } from 'react-router'
 // Primary Component
 import App from './App'
 
-// Header
+// Navbar
 import NavBar from './components/presentational/NavBar'
 
-// Footer
+// Network components
 import PrivateNetworkContainer from './components/container/PrivateNetworkContainer'
 import PublicNetworkContainer from './components/container/PublicNetworkContainer'
 
-// Main
+// Main components
 import SearchResultsContainer from './components/container/SearchResultsContainer'
 import CreateAccountForm from './components/container/CreateAccountForm'
 import LogInForm from './components/container/LogInForm'
@@ -26,8 +26,6 @@ import PublicParentProfile from './components/presentational/PublicParentProfile
 
 export default (
   <Route path="/" component={App} >
-    {/* <Route path="logout" component={LogOut}/> */}
-    {/* put this back soon! */}
     <IndexRedirect to="/login" />
     <Route path="login" component={{main: LogInForm}}/>
     <Route path="newuser" component={{main: CreateAccountForm}}/>
@@ -39,8 +37,5 @@ export default (
     <Route path="/user/parent/:username" component={{main: PublicParentProfile, navbar: NavBar, footer: PublicNetworkContainer}} />
     <Route path="babysitter/:username" component={{main: BabysitterDashboard, navbar: NavBar, footer: PrivateNetworkContainer}}/>
     <Route path="parent/:username" component={{main: ParentDashboard, navbar: NavBar, footer: PrivateNetworkContainer}}/>
-    {/* <Route path="privatebabysitter" component={{main: PrivateBabysitterProfile}} /> */}
-    {/* becomes a prop in profile - this.props.params --> :username */}
   </Route>
 )
-;
