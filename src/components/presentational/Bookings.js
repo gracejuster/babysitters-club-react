@@ -8,8 +8,9 @@ import confirmBookings from '../../actions/confirmBookings'
 
 let Bookings = class extends Component {
   sendConfirmation(bookingId){
-    this.props.handleClick(bookingId, this.props.currentUser)
-    this.props.retrieveUser(this.props.currentUser)
+    this.props.confirmBookings(bookingId, this.props.currentUser).then(() => {
+      this.props.retrieveUser(this.props.currentUser)
+    })
   }
 
   render(){
@@ -45,12 +46,12 @@ let Bookings = class extends Component {
   }
 }
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-    handleClick:(bookingId, currentUser) => {dispatch(confirmBookings(bookingId, currentUser))},
-    retrieveUser:(currentUser) => {dispatch(retrieveUser(currentUser))}
-  }
-}
+// const mapDispatchToProps = (dispatch) => {
+//   return {
+//     handleClick:(bookingId, currentUser) => {dispatch(confirmBookings(bookingId, currentUser))},
+//     retrieveUser:(currentUser) => {dispatch(retrieveUser(currentUser))}
+//   }
+// }
 
 const mapStateToProps = (state) => {
   return {
@@ -61,6 +62,6 @@ const mapStateToProps = (state) => {
   }
 }
 
-Bookings = connect(mapStateToProps, mapDispatchToProps)(Bookings)
+Bookings = connect(mapStateToProps, {confirmBookings, retrieveUser})(Bookings)
 
 export default Bookings

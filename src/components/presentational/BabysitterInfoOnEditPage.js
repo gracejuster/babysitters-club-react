@@ -3,15 +3,33 @@ import { Panel } from 'react-bootstrap'
 
 
 let BabysitterInfoOnEditPage = ({currentUser}) => {
-    title = <h3>currentUser.currentUser.name</h3>
+  let attributes
+      if (currentUser.account.babysitter) {
+        attributes = (
+          <div>
+            <p>Age: {currentUser.account.babysitter.age}</p>
+            <p>Address: {currentUser.account.babysitter.location}</p>
+            <p>Bio: {currentUser.account.babysitter.bio}</p>
+            <p>Skills: {currentUser.account.babysitter.skills}</p>
+          </div>
+
+        )
+      } else {
+        attributes = (
+          <div>
+            <p>Age: {currentUser.account.attributes.age}</p>
+            <p>Address: {currentUser.account.attributes.location}</p>
+            <p>Bio: {currentUser.account.attributes.bio}</p>
+            <p>Skills: {currentUser.account.attributes.skills}</p>
+          </div>
+
+        )
+      }
     return(
-      <Panel className="ProfileCard" header={title}>
-      <img alt="Babysitter"/>
-      <br/>
-      <p>KID COUNT: {currentUser.account.babysitter.age}</p>
-      <p>ADDRESS: {currentUser.account.babysitter.location}</p>
-      <p>BIO: {currentUser.account.babysitter.bio}</p>
-      <p>SKILLS: {currentUser.account.babysitter.skills}</p>
+      <Panel className="ProfileCard" header={currentUser.currentUser.name}>
+        <img alt="Babysitter"/>
+        <br/>
+          {attributes}
       </Panel>
     )
 }

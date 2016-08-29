@@ -18,7 +18,6 @@ let ParentCard = class extends Component  {
 
   render() {
     let get_full_profile
-    console.log(this.props.loc)
     if (this.props.loc === "search") {
       get_full_profile = <Button block className="center-block" onClick={this.handleClick.bind(this)}>Get Full Profile</Button>
     } else {
