@@ -1,9 +1,18 @@
+// Modules
 import React from 'react';
 import { Route, IndexRedirect } from 'react-router'
+
+// Primary Component
 import App from './App'
+
+// Header
 import NavBar from './components/presentational/NavBar'
+
+// Footer
 import PrivateNetworkContainer from './components/container/PrivateNetworkContainer'
 import PublicNetworkContainer from './components/container/PublicNetworkContainer'
+
+// Main
 import SearchResultsContainer from './components/container/SearchResultsContainer'
 import CreateAccountForm from './components/container/CreateAccountForm'
 import LogInForm from './components/container/LogInForm'
@@ -12,7 +21,6 @@ import ParentDashboard from './components/presentational/ParentDashboard'
 import EditParentProfileForm from './components/container/EditParentProfileForm'
 import EditBabysitterProfileForm from './components/container/EditBabysitterProfileForm'
 import CreateBookingForm from './components/container/CreateBookingForm'
-// import PublicBabysitterProfile from './components/presentational/PublicBabysitterProfile'
 import PrivateBabysitterProfile from './components/presentational/PrivateBabysitterProfile'
 import PublicParentProfile from './components/presentational/PublicParentProfile'
 
