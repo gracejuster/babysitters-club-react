@@ -2,7 +2,7 @@ import React from 'react';
 import { Carousel, Grid, Row, Col } from 'react-bootstrap'
 import PublicNetworkCard from './PublicNetworkCard'
 
-let PublicNetwork = ({networksArray, viewableUser,currentUser}) => {
+let PublicNetwork = ({networksArray, viewableUser, currentUser}) => {
 	let publicNetworksList = networksArray.map((networkItem) => {
 		return (
 			<Col xs={4} md={4}>
@@ -13,6 +13,7 @@ let PublicNetwork = ({networksArray, viewableUser,currentUser}) => {
 					name={networkItem.name}
 					location={networkItem.location}
 					buttonValue={networkItem.button_value}
+					src={networkItem.profile_pic}
 				/>
 			</Col>
 		)

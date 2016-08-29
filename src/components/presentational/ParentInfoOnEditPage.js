@@ -26,7 +26,7 @@ const ParentInfoOnEditPage = ({currentUser}) => {
 
   return (
     <Panel className="ProfileCard card">
-      <ProfilePicture alt="Parent"/>
+      <ProfilePicture src={currentUser.currentUser.profile_pic} alt="Parent"/>
       {parent}
     </Panel>
   )

@@ -19,7 +19,7 @@ let PrivateNetworkCard = class extends Component {
   render() {
     return (
       <Panel className="PrivateNetworkCard NetworkCard card">
-        <ProfilePicture className="card-img-top center-block" src="" alt="User" />
+        <ProfilePicture className="card-img-top center-block" src={this.props.src} alt="User" />
         <div className="card-block">
           <h4 className="card-title text-center">{this.props.name}</h4>
           <p className="card-text text-center">{this.props.location}</p>

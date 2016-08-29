@@ -11,6 +11,7 @@ let PrivateNetwork = ({networksArray, currentUser}) => {
 					user_id={networkItem.user_id}
 					name={networkItem.name}
 					location={networkItem.location}
+					src={networkItem.profile_pic}
 				/>
 			</Col>
 		)
