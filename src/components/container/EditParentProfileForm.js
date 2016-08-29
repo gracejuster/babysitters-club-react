@@ -8,6 +8,7 @@ import retrieveUser from '../../actions/retrieveUser'
 import { browserHistory } from 'react-router'
 
 const EditParentsProfilePage = class extends Component {
+
   handleEditFormSubmit(props){
     this.props.editParent(props, this.props.currentUser)
     this.props.retrieveUser(this.props.currentUser)
@@ -42,7 +43,7 @@ const EditParentsProfilePage = class extends Component {
 
 function mapStateToProps(state){
   return{
-    currentUser: state.currentUser,
+    currentUser: state.currentUser
   }
 }
 
