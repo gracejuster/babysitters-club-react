@@ -19,6 +19,7 @@ let PrivateBabysitterProfile = class extends Component{
             rating="5" bio={this.props.bio}
             skills={this.props.skills}
             reviews={this.props.reviews}
+            src={this.props.src}
           />
           </Col>
           <Col xs={6} md={6}>
@@ -52,7 +53,8 @@ const mapStateToProps = (state) => {
     location: state.viewableUser.account.babysitter.location,
     bio: state.viewableUser.account.babysitter.bio,
     skills: state.viewableUser.account.babysitter.skills,
-    reviews: state.viewableUser.account.reviews
+    reviews: state.viewableUser.account.reviews,
+    src: state.viewableUser.viewableUser.profile_pic
   }
 }
 

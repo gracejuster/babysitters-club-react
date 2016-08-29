@@ -27,7 +27,7 @@ let PublicNetworkCard = class extends Component {
 
     return (
       <Panel className="PublicNetworkCard NetworkCard card">
-        <ProfilePicture responsive className="card-img-top center-block" width={100} height={100} src="" alt="User"/>
+        <ProfilePicture responsive className="card-img-top center-block" width={100} height={100} src={this.props.src} alt="User"/>
         <div className="card-block">
           <h4 className="card-title">{this.props.name}</h4>
           <p className="card-text">{this.props.location}</p>
