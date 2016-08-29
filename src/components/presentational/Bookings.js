@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import { Tabs, Tab, Panel, Grid, Row, Col } from 'react-bootstrap'
+import { Tabs, Tab, Panel, Row, Col } from 'react-bootstrap'
 import { connect } from 'react-redux'
 import BookingsTable from './BookingsTable'
 import retrieveUser from '../../actions/retrieveUser'
@@ -13,8 +13,8 @@ let Bookings = class extends Component {
     })
   }
 
-  render(){
-    return(
+  render() {
+    return (
       <Row>
       <Col xs={0} md={2} />
       <Col xs={12} md={8} center>
@@ -45,13 +45,6 @@ let Bookings = class extends Component {
 
   }
 }
-
-// const mapDispatchToProps = (dispatch) => {
-//   return {
-//     handleClick:(bookingId, currentUser) => {dispatch(confirmBookings(bookingId, currentUser))},
-//     retrieveUser:(currentUser) => {dispatch(retrieveUser(currentUser))}
-//   }
-// }
 
 const mapStateToProps = (state) => {
   return {

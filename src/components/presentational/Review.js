@@ -3,9 +3,8 @@ import { Media } from 'react-bootstrap'
 import ReviewThumbnail from '../../images/ReviewThumbnail'
 
 const Review = class extends Component {
-
-  render(){
-  	return(
+  render() {
+  	return (
       <Media className="Review">
         <Media.Left>
           <ReviewThumbnail />
@@ -16,7 +15,7 @@ const Review = class extends Component {
   	      <p>{this.props.rating}!</p>
         </Media.Body>
       </Media>
-	   )
+	  )
   }
 }
 

@@ -6,7 +6,7 @@ import { connect } from 'react-redux';
 import { browserHistory } from 'react-router'
 
 let PrivateNetworkCard = class extends Component {
-  handleClick(){
+  handleClick() {
     this.props.dispatch(getPublicViewableProfile(
       this.props.user_id,
       this.props.currentUser)).then((resp) => {
@@ -16,7 +16,7 @@ let PrivateNetworkCard = class extends Component {
     })
   }
 
-  render(){
+  render() {
     return (
       <Panel className="PrivateNetworkCard NetworkCard card">
         <ProfilePicture className="card-img-top center-block" src="" alt="User" />

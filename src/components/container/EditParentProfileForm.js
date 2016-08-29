@@ -5,39 +5,35 @@ import { reduxForm } from 'redux-form'
 import editParent from '../../actions/editParent'
 import ParentInfoOnEditPage from '../presentational/ParentInfoOnEditPage'
 import retrieveUser from '../../actions/retrieveUser'
-import { browserHistory } from 'react-router'
 
 const EditParentsProfilePage = class extends Component {
   handleEditFormSubmit(props){
     this.props.editParent(props, this.props.currentUser).then((resp)=>{
          this.props.retrieveUser(this.props.currentUser)
-    }
-  )}
-
+    })
+  }
 
   render(){
     const { fields: {kid_count, address, specific_needs, extra_requests }, handleSubmit } = this.props;
-    return(
+    return (
       <Grid className="ParentInfo">
       <Row>
-      <Col xs={3} md={4} />
-      <Col xs={6} md={4}>
-      <Panel>
-
-      <form className='EditParentsProfilePage' onSubmit={handleSubmit(this.handleEditFormSubmit.bind(this))}>
-        <ParentInfoOnEditPage currentUser={this.props.currentUser}/> 
-        <FormGroup>
-          <FormControl type='text' placeholder='KID COUNT' className="form-control" {...kid_count}/>
-          <FormControl type='text' placeholder='ADDRESS' className="form-control" {...address}/>
-          <FormControl type='textarea' placeholder='SPECIFIC NEEDS' className="form-control" {...specific_needs}/>
-          <FormControl type='textarea' placeholder='EXTRA REQUESTS' className="form-control" {...extra_requests}/>
-          <FormControl id='submit' type='submit' className="btn" value="SAVE CHANGES" />
-        </FormGroup>
-      </form>
-
-      </Panel>
-      </Col>
-      <Col xs={3} md={4} />
+        <Col xs={3} md={4} />
+        <Col xs={6} md={4}>
+          <Panel>
+          ` <ParentInfoOnEditPage currentUser={this.props.currentUser}/>`
+            <form className='EditParentsProfilePage' onSubmit={handleSubmit(this.handleEditFormSubmit.bind(this))}>
+              <FormGroup>
+                <FormControl type='text' placeholder='KID COUNT' className="form-control" {...kid_count}/>
+                <FormControl type='text' placeholder='ADDRESS' className="form-control" {...address}/>
+                <FormControl type='textarea' placeholder='SPECIFIC NEEDS' className="form-control" {...specific_needs}/>
+                <FormControl type='textarea' placeholder='EXTRA REQUESTS' className="form-control" {...extra_requests}/>
+                <FormControl id='submit' type='submit' className="btn" value="SAVE CHANGES" />
+              </FormGroup>
+            </form>
+          </Panel>
+        </Col>
+        <Col xs={3} md={4} />
       </Row>
       </Grid>
     )
@@ -46,7 +42,7 @@ const EditParentsProfilePage = class extends Component {
 
 function mapStateToProps(state){
   return{
-    currentUser: state.currentUser,
+    currentUser: state.currentUser
   }
 }
 

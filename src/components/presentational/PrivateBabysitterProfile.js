@@ -8,7 +8,7 @@ import {connect} from 'react-redux'
 
 let PrivateBabysitterProfile = class extends Component{
   render() {
-    return(
+    return (
     	<Grid className="ProfileCard">
         <Row>
           <Col xs={6} md={6}>
@@ -22,30 +22,28 @@ let PrivateBabysitterProfile = class extends Component{
           />
           </Col>
           <Col xs={6} md={6}>
-          <Panel >
-            <Tabs>
-              <Tab eventKey={1} title="Book A Babysitter">
-                <header>REQUEST BOOKING</header>
-                <CreateBookingForm />
-              </Tab>
-              <Tab eventKey={2} title="Leave A Review">
-                <header>LEAVE A REVIEW</header>
-                <CreateReviewForm />
-              </Tab>
-              <Tab eventKey={3} title="All Reviews">
-                <header>REVIEWS</header>
-                <ReviewHolder reviews={this.props.reviews}/>
-              </Tab>
-            </Tabs>
-          </Panel>
+            <Panel >
+              <Tabs>
+                <Tab eventKey={1} title="Book A Babysitter">
+                  <header>REQUEST BOOKING</header>
+                  <CreateBookingForm />
+                </Tab>
+                <Tab eventKey={2} title="Leave A Review">
+                  <header>LEAVE A REVIEW</header>
+                  <CreateReviewForm />
+                </Tab>
+                <Tab eventKey={3} title="All Reviews">
+                  <header>REVIEWS</header>
+                  <ReviewHolder reviews={this.props.reviews}/>
+                </Tab>
+              </Tabs>
+            </Panel>
           </Col>
         </Row>
-        {/* <Row><header>PARENTS</header></Row> */}
     	</Grid>
     	)
 	}
 }
-
 
 const mapStateToProps = (state) => {
   return {
