@@ -18,7 +18,7 @@ const CreateBookingForm = class extends Component {
 
   render(){
     const { fields: {duration, desired_time, desired_date}, handleSubmit } = this.props;
-    return(
+    return (
       <form className='CreateBookingForm' onSubmit={handleSubmit(this.handleCreateBookingSubmit.bind(this))}>
         <FormGroup>
           <FormControl type='text' placeholder='DURATION' className="form-control" {...duration}/>

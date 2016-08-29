@@ -15,17 +15,16 @@ let PublicNetworkCard = class extends Component {
 
    }
 
-  render(){
+  render() {
     let button_state
+
     if (this.props.button_value === "SHOW BUTTON") {
       button_state = <Button onClick={this.handleNetworkRequest.bind(this)}>ADD BABYSITTER</Button>
     } else if (this.props.button_value === "PENDING NETWORK REQUEST"){
       button_state = <h4 className="card-title">REQUEST PENDING</h4>
+    } else {
+      button_state = <h4 className="card-title">IN NETWORK</h4>
     }
-      else {
-        button_state = <h4 className="card-title">IN NETWORK</h4>
-      }
-
 
     return (
       <Panel className="PublicNetworkCard NetworkCard card">
@@ -33,9 +32,7 @@ let PublicNetworkCard = class extends Component {
         <div className="card-block">
           <h4 className="card-title">{this.props.name}</h4>
           <p className="card-text">{this.props.location}</p>
-          {/* <button onClick={this.handleClick.bind(this)}>GET FULL PROFILE</button> */}
           {button_state}
-
         </div>
       </Panel>
     )

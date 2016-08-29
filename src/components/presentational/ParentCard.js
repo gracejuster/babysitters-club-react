@@ -18,13 +18,14 @@ let ParentCard = class extends Component  {
 
   render() {
     let get_full_profile
+
     if (this.props.loc === "search") {
       get_full_profile = <Button block className="center-block" onClick={this.handleClick.bind(this)}>Get Full Profile</Button>
     } else {
       get_full_profile = <div />
     }
 
-    return(
+    return (
       <Col xs={6} md={4}>
       <Panel className="ProfileCard card">
         <ProfilePicture className="card-img-top" width={150} height={150} alt="Parent"/>

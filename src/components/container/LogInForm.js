@@ -10,9 +10,10 @@ const LogInForm = class extends Component {
       browserHistory.push(`/${resp.payload.type.toLowerCase()}/${resp.payload.current_user.username}`)
     })
   }
+
   render(){
     const { fields: { email, password }, handleSubmit} = this.props;
-    return(
+    return (
       <div className='LogInForm'>
         <header>WELCOME</header>
         <form id="form" onSubmit={handleSubmit(this.pressButton.bind(this))}>

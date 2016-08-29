@@ -11,9 +11,10 @@ class SearchBar extends Component {
       browserHistory.push(`/parents`)
     })
   }
+
   render() {
     const { fields: { searchValue }, handleSubmit} = this.props
-    return(
+    return (
       <Row>
         <Col xs={0} md={2} />
         <Col xs={12} md={8}>

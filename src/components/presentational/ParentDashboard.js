@@ -5,23 +5,15 @@ import Bookings from './Bookings'
 import Requests from '../container/RequestsContainer'
 import {connect} from 'react-redux'
 
-let ParentDashboard = class extends Component{
-  render() {
-    return(
-      <Grid className='Dashboard'>
-        <SearchBar />
-        <Row><header>BOOKINGS</header></Row>
-        <Bookings />
-        <Row><header>BABYSITTERS</header></Row>
-      </Grid>
-    )
-  }
+const ParentDashboard = () => {
+  return (
+    <Grid className='Dashboard'>
+      <SearchBar />
+      <Row><header>BOOKINGS</header></Row>
+      <Bookings />
+      <Row><header>BABYSITTERS</header></Row>
+    </Grid>
+  )
 }
 
-function mapStateToProps(state){
-  return {
-    currentUser: state.currentUser
-  }
-}
-
-export default connect(mapStateToProps)(ParentDashboard)
+export default ParentDashboard

@@ -17,7 +17,9 @@ let PublicNetwork = ({networksArray, viewableUser,currentUser}) => {
 			</Col>
 		)
 	})
+
 	let networksList = []
+
 	for (let i=0; i < publicNetworksList.length; i+=3) {
 		if (publicNetworksList[i+2]) {
 			networksList.push(
@@ -45,6 +47,7 @@ let PublicNetwork = ({networksArray, viewableUser,currentUser}) => {
 			</Carousel.Item>
 		)}
 	}
+	
 	return (
 		<Carousel className='PublicNetwork' interval={false}>
   		{networksList}

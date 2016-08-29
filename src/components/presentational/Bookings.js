@@ -14,7 +14,7 @@ let Bookings = class extends Component {
   }
 
   render(){
-    return(
+    return (
       <Row>
       <Col xs={0} md={2} />
       <Col xs={12} md={8} center>
@@ -45,13 +45,6 @@ let Bookings = class extends Component {
 
   }
 }
-
-// const mapDispatchToProps = (dispatch) => {
-//   return {
-//     handleClick:(bookingId, currentUser) => {dispatch(confirmBookings(bookingId, currentUser))},
-//     retrieveUser:(currentUser) => {dispatch(retrieveUser(currentUser))}
-//   }
-// }
 
 const mapStateToProps = (state) => {
   return {

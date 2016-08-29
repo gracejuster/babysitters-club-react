@@ -24,7 +24,8 @@ const NetworkRequestTable = ({currentUser, networkRequestArray, type, confirmNet
       )
     })
   }
-  return(
+
+  return (
     <div className="NetworkRequestTable">
       <Grid className="NetworkRequestTable">
         <Row>{networkRequests}</Row>
