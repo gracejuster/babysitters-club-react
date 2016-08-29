@@ -1,8 +1,7 @@
 import React from 'react';
-import { Grid, Row, Col } from 'react-bootstrap'
+import { Grid, Row } from 'react-bootstrap'
 import Bookings from './Bookings'
 import RequestsContainer from '../container/RequestsContainer'
-import {connect} from 'react-redux'
 
 const BabysitterDashboard = () => {
   return (

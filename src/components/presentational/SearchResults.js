@@ -1,4 +1,4 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
 import { Grid } from 'react-bootstrap'
 import ParentCard from './ParentCard'
 

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { FormGroup, FormControl, Grid, Row, Col } from 'react-bootstrap'
+import { FormGroup, FormControl, Row, Col } from 'react-bootstrap'
 import { reduxForm } from 'redux-form'
 import { browserHistory } from 'react-router'
 import search from '../../actions/searchParents'

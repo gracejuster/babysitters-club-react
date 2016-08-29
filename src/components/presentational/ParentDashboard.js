@@ -1,9 +1,7 @@
-import React, { Component } from 'react';
-import { Grid, Col, Row } from 'react-bootstrap'
+import React from 'react';
+import { Grid, Row } from 'react-bootstrap'
 import SearchBar from '../container/SearchBar'
 import Bookings from './Bookings'
-import Requests from '../container/RequestsContainer'
-import {connect} from 'react-redux'
 
 const ParentDashboard = () => {
   return (

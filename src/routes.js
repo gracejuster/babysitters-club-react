@@ -12,10 +12,9 @@ import ParentDashboard from './components/presentational/ParentDashboard'
 import EditParentProfileForm from './components/container/EditParentProfileForm'
 import EditBabysitterProfileForm from './components/container/EditBabysitterProfileForm'
 import CreateBookingForm from './components/container/CreateBookingForm'
-import PublicBabysitterProfile from './components/presentational/PublicBabysitterProfile'
+// import PublicBabysitterProfile from './components/presentational/PublicBabysitterProfile'
 import PrivateBabysitterProfile from './components/presentational/PrivateBabysitterProfile'
 import PublicParentProfile from './components/presentational/PublicParentProfile'
-// import PrivateBabysitterProfile from './components/presentational/PrivateBabysitterProfile'
 
 export default (
   <Route path="/" component={App} >

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Panel, Button, Grid, Row, Col } from 'react-bootstrap'
+import { Panel, Button, Col } from 'react-bootstrap'
 import getPublicViewableProfile from '../../actions/getPublicViewableProfile'
 import { connect } from 'react-redux';
 import { browserHistory } from 'react-router'

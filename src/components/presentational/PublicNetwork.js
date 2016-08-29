@@ -1,18 +1,18 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
 import { Carousel, Grid, Row, Col } from 'react-bootstrap'
 import PublicNetworkCard from './PublicNetworkCard'
 
 let PublicNetwork = ({networksArray, viewableUser,currentUser}) => {
 	let publicNetworksList = networksArray.map((networkItem) => {
 		return (
-			<Col xs={4} md= {4}>
+			<Col xs={4} md={4}>
 				<PublicNetworkCard
 					currentUser={currentUser}
 					viewableUser={viewableUser}
-					babysitter_id={networkItem.id}
+					babysitterId={networkItem.id}
 					name={networkItem.name}
 					location={networkItem.location}
-					button_value={networkItem.button_value}
+					buttonValue={networkItem.button_value}
 				/>
 			</Col>
 		)
@@ -24,7 +24,7 @@ let PublicNetwork = ({networksArray, viewableUser,currentUser}) => {
 		if (publicNetworksList[i+2]) {
 			networksList.push(
 			<Carousel.Item>
-				<Grid><Row className="show-grid">
+				<Grid><Row>
 						{publicNetworksList[i]}
 						{publicNetworksList[i+1]}
 						{publicNetworksList[i+2]}
@@ -33,7 +33,7 @@ let PublicNetwork = ({networksArray, viewableUser,currentUser}) => {
 		)} else if (publicNetworksList[i+2]) {
 				networksList.push(
 				<Carousel.Item>
-					<Grid><Row className="show-grid">
+					<Grid><Row>
 						{publicNetworksList[i]}
 						{publicNetworksList[i+1]}
 					</Row></Grid>
@@ -41,13 +41,13 @@ let PublicNetwork = ({networksArray, viewableUser,currentUser}) => {
 		)} else {
 			networksList.push(
 			<Carousel.Item>
-				<Grid><Row className="show-grid">
+				<Grid><Row>
 						{publicNetworksList[i]}
 				</Row></Grid>
 			</Carousel.Item>
 		)}
 	}
-	
+
 	return (
 		<Carousel className='PublicNetwork' interval={false}>
   		{networksList}

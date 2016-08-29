@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { FormGroup, FormControl } from 'react-bootstrap'
 import { reduxForm } from 'redux-form'
 import editBabysitter from '../../actions/editBabysitter'
-import { browserHistory } from 'react-router'
 import BabysitterInfoOnEditPage from '../presentational/BabysitterInfoOnEditPage'
 import retrieveUser from '../../actions/retrieveUser'
 

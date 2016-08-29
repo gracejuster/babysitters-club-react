@@ -5,7 +5,6 @@ import { reduxForm } from 'redux-form'
 import editParent from '../../actions/editParent'
 import ParentInfoOnEditPage from '../presentational/ParentInfoOnEditPage'
 import retrieveUser from '../../actions/retrieveUser'
-import { browserHistory } from 'react-router'
 
 const EditParentsProfilePage = class extends Component {
   handleEditFormSubmit(props){

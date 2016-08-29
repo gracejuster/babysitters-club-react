@@ -1,5 +1,5 @@
 import React from 'react'
-import { Panel, Col } from 'react-bootstrap'
+import { Panel } from 'react-bootstrap'
 import ProfilePicture from '../../images/ProfilePicture'
 
 const BabysitterProfileCard = ({image, name, age, location, rating}) => {

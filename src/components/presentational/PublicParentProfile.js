@@ -1,8 +1,7 @@
-import React, { Component } from 'react';
-import { Grid, Row, Col, Panel } from 'react-bootstrap'
-import ParentCard from './ParentCard';
-import {connect} from 'react-redux';
-import ProfilePicture from '../../images/ProfilePicture'
+import React, { Component } from 'react'
+import { Grid, Row, Col } from 'react-bootstrap'
+import ParentCard from './ParentCard'
+import {connect} from 'react-redux'
 
 let PublicParentProfile = class extends Component{
   render() {
