@@ -4,21 +4,19 @@ import BabysitterProfileCard from './BabysitterProfileCard';
 import {connect} from 'react-redux'
 
 const PublicBabysitterProfile = ({name, age, location, bio, skills}) => {
-  render() {
-    return (
-    	<div className="ProfileCard">
-        <BabysitterProfileCard
-          name={name}
-          age={age}
-          location={location}
-          rating="5"
-          bio={bio}
-          skills={skills}
-        />
-        <ReviewHolder />
-    	</div>
-    )
-	}
+  return (
+  	<div className="ProfileCard">
+      <BabysitterProfileCard
+        name={name}
+        age={age}
+        location={location}
+        rating="5"
+        bio={bio}
+        skills={skills}
+      />
+      <ReviewHolder />
+  	</div>
+  )
 }
 
 const mapStateToProps = (state) => {
