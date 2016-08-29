@@ -14,6 +14,7 @@ let PublicNetworkCard = class extends Component {
   }
 
   render() {
+    
     let buttonState
 
     if (this.props.buttonValue === "SHOW BUTTON") {
@@ -23,12 +24,6 @@ let PublicNetworkCard = class extends Component {
     } else {
       buttonState = <h4 className="card-title">IN NETWORK</h4>
     }
-<<<<<<< HEAD
-      else {
-        button_state = <h4 className="card-title">IN NETWORK</h4>
-      }
-=======
->>>>>>> master
 
     return (
       <Panel className="PublicNetworkCard NetworkCard card">
