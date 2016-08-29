@@ -26,7 +26,6 @@ let PublicNetworkCard = class extends Component {
         button_state = <h4 className="card-title">IN NETWORK</h4>
       }
 
-
     return (
       <Panel className="PublicNetworkCard NetworkCard card">
         <ProfilePicture responsive className="card-img-top center-block" width={100} height={100} src="" alt="User"/>

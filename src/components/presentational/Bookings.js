@@ -46,13 +46,6 @@ let Bookings = class extends Component {
   }
 }
 
-// const mapDispatchToProps = (dispatch) => {
-//   return {
-//     handleClick:(bookingId, currentUser) => {dispatch(confirmBookings(bookingId, currentUser))},
-//     retrieveUser:(currentUser) => {dispatch(retrieveUser(currentUser))}
-//   }
-// }
-
 const mapStateToProps = (state) => {
   return {
     confirmedBookings: state.currentUser.account.confirmed_bookings,
