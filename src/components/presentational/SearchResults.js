@@ -4,7 +4,17 @@ import ParentCard from './ParentCard'
 
 let SearchResults = ({searchResultsObject, currentUser}) => {
 	let SearchResultsList = searchResultsObject.map((searchResultItem) => {
-		return <ParentCard loc={"search"} currentUser={currentUser} name={searchResultItem.attributes.name} kid_count={searchResultItem.attributes['kid-count']} email={searchResultItem.attributes.email} userId={searchResultItem.attributes['user-id']}/>
+		console.log(searchResultItem)
+		return (
+			<ParentCard
+				src={searchResultItem.attributes['profile-pic']}
+				loc={"search"}
+				currentUser={currentUser}
+				name={searchResultItem.attributes.name}
+				kid_count={searchResultItem.attributes['kid-count']}
+				email={searchResultItem.attributes.email}
+				userId={searchResultItem.attributes['user-id']}
+			/>)
 	})
 
 	if (SearchResultsList.length===0){

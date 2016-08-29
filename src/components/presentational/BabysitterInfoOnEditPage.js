@@ -1,5 +1,6 @@
 import React from 'react';
 import { Panel } from 'react-bootstrap'
+import ProfilePicture from '../../images/ProfilePicture'
 
 let BabysitterInfoOnEditPage = ({currentUser}) => {
   let attributes
@@ -28,9 +29,8 @@ let BabysitterInfoOnEditPage = ({currentUser}) => {
 
   return (
     <Panel className="ProfileCard" header={currentUser.currentUser.name}>
-      <img alt="Babysitter"/>
-      <br/>
-        {attributes}
+      <ProfilePicture src={currentUser.currentUser.profile_pic} alt="Babysitter"/>
+      {attributes}
     </Panel>
   )
 }

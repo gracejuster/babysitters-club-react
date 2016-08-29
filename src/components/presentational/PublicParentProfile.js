@@ -11,6 +11,7 @@ let PublicParentProfile = class extends Component{
           <Col xs={3} md={4} />
             <ParentCard
               currentUser={this.props.currentUser}
+              src={this.props.src}
               name={this.props.name}
               kid_count={this.props.kid_count}
               email={this.props.email}
@@ -31,6 +32,7 @@ const mapStateToProps = (state) => {
 		address: state.viewableUser.account.parent.address,
     email: state.viewableUser.viewableUser.email,
     user_id: state.viewableUser.viewableUser.id,
+    src: state.viewableUser.viewableUser.profile_pic,
     currentUser: state.currentUser
 	}
 }

@@ -6,7 +6,7 @@ import { browserHistory } from 'react-router'
 import ProfilePicture from '../../images/ProfilePicture'
 
 let ParentCard = class extends Component  {
-  handleClick(){
+  handleClick() {
     this.props.dispatch(getPublicViewableProfile(
       this.props.userId,
       this.props.currentUser)).then((resp) => {
@@ -28,7 +28,7 @@ let ParentCard = class extends Component  {
     return (
       <Col xs={6} md={4}>
       <Panel className="ProfileCard card">
-        <ProfilePicture className="card-img-top" width={150} height={150} alt="Parent"/>
+        <ProfilePicture className="card-img-top" src={this.props.src} width={150} height={150} alt="Parent"/>
         <div className="card-block">
           <h4 className="card-title text-center">{this.props.name}</h4>
           <p className="card-text text-center">Kids: {this.props.kid_count}</p>
