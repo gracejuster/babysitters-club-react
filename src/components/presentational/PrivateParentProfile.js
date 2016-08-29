@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import ParentCard from './ParentCard';
 
-const PrivateParentProfile = class extends Component{
+const PrivateParentProfile = class extends Component {
   render() {
     return(
     	<div className="ProfileCard">

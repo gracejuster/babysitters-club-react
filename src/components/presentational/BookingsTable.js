@@ -5,6 +5,7 @@ import { Panel, Table } from 'react-bootstrap'
 
 const BookingsTable = ({title, bookings, type, handleClick}) => {
   let bookingsList
+  let table
 
   if (type==="Babysitter"){
      bookingsList = bookings.map((booking) => {
@@ -14,10 +15,9 @@ const BookingsTable = ({title, bookings, type, handleClick}) => {
           <td>{booking.date}</td>
           <td>{booking.time}</td>
           <td>{booking.duration}</td>
-          <td><button
-                className={"btn btn-primary"}
-                onClick={ ()=>{handleClick(booking.id)} }
-              >Confirm Request</button></td>
+          <td><button className={"btn btn-primary"} onClick={ ()=>{handleClick(booking.id)} }>
+            Confirm Request
+          </button></td>
         </tr>
       )
     })
@@ -34,8 +34,6 @@ const BookingsTable = ({title, bookings, type, handleClick}) => {
       )
     })
   }
-
-  let table
 
   if (bookingsList.length === 0) {
     table = <Panel><header>No current bookings</header></Panel>
@@ -55,12 +53,7 @@ const BookingsTable = ({title, bookings, type, handleClick}) => {
     </Table>)
   }
 
-  return(
-    <div>{ table }</div>
-
-  )
+  return <div>{ table }</div>
 }
-
-// BookingsTable = connect()(BookingsTable)
 
 export default BookingsTable

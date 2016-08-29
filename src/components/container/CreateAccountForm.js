@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
+import { browserHistory } from 'react-router'
 import { FormGroup, FormControl, ControlLabel, Radio } from 'react-bootstrap'
 import { reduxForm } from 'redux-form'
 import createUser from '../../actions/createUser'
-import { browserHistory } from 'react-router'
 
 const CreateAccountForm = class extends Component {
   handleFormSubmit(props) {
@@ -13,7 +13,7 @@ const CreateAccountForm = class extends Component {
 
   render(){
     const { fields: {name, email, username, password, user_type }, handleSubmit } = this.props;
-    return(
+    return (
       <div className='CreateAccountForm'>
         <form id='form' onSubmit={handleSubmit(this.handleFormSubmit.bind(this))}>
           <FormGroup>
@@ -32,9 +32,6 @@ const CreateAccountForm = class extends Component {
     )
   }
 }
-
-
-
 
 export default reduxForm({
   form: 'CreateAccountForm',

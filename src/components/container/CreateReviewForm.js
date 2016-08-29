@@ -6,7 +6,6 @@ import retrieveUser from '../../actions/retrieveUser'
 import { browserHistory } from 'react-router'
 
 const CreateReviewForm = class extends Component {
-
   handleCreateReviewSubmit(props) {
     let currentUser = this.props.currentUser
     let viewableUser = this.props.viewableUser
@@ -19,7 +18,7 @@ const CreateReviewForm = class extends Component {
 
   render(){
     const { fields: {title, description, rating }, handleSubmit } = this.props;
-    return(
+    return (
       <form className='CreateReviewForm' onSubmit={handleSubmit(this.handleCreateReviewSubmit.bind(this))}>
         <FormGroup>
           <FormControl type='text' placeholder='TITLE' className="form-control" {...title}/>

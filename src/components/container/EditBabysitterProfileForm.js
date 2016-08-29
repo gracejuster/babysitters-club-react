@@ -2,12 +2,10 @@ import React, { Component } from 'react';
 import { FormGroup, FormControl } from 'react-bootstrap'
 import { reduxForm } from 'redux-form'
 import editBabysitter from '../../actions/editBabysitter'
-import { browserHistory } from 'react-router'
 import BabysitterInfoOnEditPage from '../presentational/BabysitterInfoOnEditPage'
 import retrieveUser from '../../actions/retrieveUser'
 
 const EditBabysitterProfilePage = class extends Component {
-
   handleEditFormSubmit(props){
     this.props.editBabysitter(props, this.props.currentUser).then((resp)=>{
       this.props.retrieveUser(this.props.currentUser)
@@ -15,8 +13,8 @@ const EditBabysitterProfilePage = class extends Component {
   }
 
   render(){
-     const { fields: {age, location, bio, skills}, handleSubmit } = this.props;
-    return(
+    const { fields: {age, location, bio, skills}, handleSubmit } = this.props
+    return (
       <div className="BabysitterInfo">
       <BabysitterInfoOnEditPage currentUser={this.props.currentUser}/>
       <form className='EditBabysitterProfilePage' id='form' onSubmit={handleSubmit(this.handleEditFormSubmit.bind(this))}>

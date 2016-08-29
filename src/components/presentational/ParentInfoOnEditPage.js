@@ -1,8 +1,6 @@
-import React, { Component } from 'react'
-import { Panel, Row, Col } from 'react-bootstrap'
+import React from 'react'
+import { Panel } from 'react-bootstrap'
 import ProfilePicture from '../../images/ProfilePicture'
-import { connect } from 'react-redux'
-
 
 let ParentInfoOnEditPage = ({currentUser}) => {
 
@@ -16,6 +14,5 @@ let ParentInfoOnEditPage = ({currentUser}) => {
       </Panel>
     )
 }
-
 
 export default ParentInfoOnEditPage

@@ -1,4 +1,4 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
 import { Grid, Row, Col, Carousel } from 'react-bootstrap'
 import PrivateNetworkCard from './PrivateNetworkCard'
 
@@ -15,7 +15,9 @@ let PrivateNetwork = ({networksArray, currentUser}) => {
 			</Col>
 		)
 	})
+
 	let networksList = []
+
 	for (let i=0; i < privateNetworksList.length; i+=3) {
 		if (privateNetworksList[i+2]) {
 			networksList.push(
@@ -43,16 +45,12 @@ let PrivateNetwork = ({networksArray, currentUser}) => {
 			</Carousel.Item>
 		)}
 	}
+
 	return (
 		<Carousel className='PrivateNetwork' interval={false}>
   		{networksList}
 		</Carousel>
 	)
-}
-
-PrivateNetworkCard.propTypes = {
-	networksArray: PropTypes.array.isRequired,
-	onClick: PropTypes.func.isRequired
 }
 
 export default PrivateNetwork

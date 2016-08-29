@@ -1,12 +1,11 @@
-import React, { Component } from 'react';
-import { Grid, Row, Col, Panel } from 'react-bootstrap'
-import ParentCard from './ParentCard';
-import {connect} from 'react-redux';
-import ProfilePicture from '../../images/ProfilePicture'
+import React, { Component } from 'react'
+import { Grid, Row, Col } from 'react-bootstrap'
+import ParentCard from './ParentCard'
+import {connect} from 'react-redux'
 
 let PublicParentProfile = class extends Component{
   render() {
-    return(
+    return (
       <Grid className="PublicParentProfile">
         <Row>
           <Col xs={3} md={4} />
@@ -15,7 +14,8 @@ let PublicParentProfile = class extends Component{
               name={this.props.name}
               kid_count={this.props.kid_count}
               email={this.props.email}
-              userId={this.props.user_id}/>
+              userId={this.props.user_id}
+            />
           <Col xs={3} md={4} />
         </Row>
         <Row><header>BABYSITTERS</header></Row>

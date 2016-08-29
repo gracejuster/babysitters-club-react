@@ -2,10 +2,9 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { Nav, NavItem, Navbar } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap'
-import { Link } from 'react-router'
 
 let NavBar = ({type, username}) => {
-  return(
+  return (
     // <Nav bsStyle="pills" activeKey={1} onSelect={handleSelect}>
     <Navbar >
       <Navbar.Header>

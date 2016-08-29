@@ -1,6 +1,5 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Panel } from 'react-bootstrap'
-
 
 let BabysitterInfoOnEditPage = ({currentUser}) => {
 
@@ -15,5 +14,4 @@ let BabysitterInfoOnEditPage = ({currentUser}) => {
       </Panel>
     )
 }
-
 export default BabysitterInfoOnEditPage

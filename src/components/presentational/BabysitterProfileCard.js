@@ -1,9 +1,9 @@
 import React from 'react'
-import { Panel, Col } from 'react-bootstrap'
+import { Panel } from 'react-bootstrap'
 import ProfilePicture from '../../images/ProfilePicture'
 
 const BabysitterProfileCard = ({image, name, age, location, rating}) => {
-  return(
+  return (
   	<Panel className="ProfileCard card">
       <ProfilePicture className="card-img-top center-block"/>
       <div className="card-block">
