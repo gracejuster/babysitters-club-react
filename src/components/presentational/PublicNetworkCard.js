@@ -14,6 +14,7 @@ let PublicNetworkCard = class extends Component {
   }
 
   render() {
+    
     let buttonState
 
     if (this.props.buttonValue === "SHOW BUTTON") {
