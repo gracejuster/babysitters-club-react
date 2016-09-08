@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ParentCard from './ParentCard';
+import ParentCard from '../container/ParentCard';
 
 const PrivateParentProfile = class extends Component {
   render() {

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Grid, Row, Col, Carousel } from 'react-bootstrap'
-import PrivateNetworkCard from './PrivateNetworkCard'
+import PrivateNetworkCard from '../container/PrivateNetworkCard'
 
 let PrivateNetwork = ({networksArray, currentUser}) => {
 	let privateNetworksList = networksArray.map((networkItem) => {

@@ -6,7 +6,7 @@ import { Route, IndexRedirect } from 'react-router'
 import App from './App'
 
 // Navbar
-import NavBar from './components/presentational/NavBar'
+import NavBar from './components/container/NavBar'
 
 // Network components
 import PrivateNetworkContainer from './components/container/PrivateNetworkContainer'
@@ -21,8 +21,8 @@ import ParentDashboard from './components/presentational/ParentDashboard'
 import EditParentProfileForm from './components/container/EditParentProfileForm'
 import EditBabysitterProfileForm from './components/container/EditBabysitterProfileForm'
 import CreateBookingForm from './components/container/CreateBookingForm'
-import PrivateBabysitterProfile from './components/presentational/PrivateBabysitterProfile'
-import PublicParentProfile from './components/presentational/PublicParentProfile'
+import PrivateBabysitterProfile from './components/container/PrivateBabysitterProfile'
+import PublicParentProfile from './components/container/PublicParentProfile'
 
 export default (
   <Route path="/" component={App} >

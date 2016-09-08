@@ -1,6 +1,6 @@
 import React from 'react';
 import { Grid, Row } from 'react-bootstrap'
-import Bookings from './Bookings'
+import Bookings from '../container/Bookings'
 import RequestsContainer from '../container/RequestsContainer'
 
 const BabysitterDashboard = () => {

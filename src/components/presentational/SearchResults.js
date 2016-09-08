@@ -1,6 +1,6 @@
 import React from 'react';
 import { Grid } from 'react-bootstrap'
-import ParentCard from './ParentCard'
+import ParentCard from '../container/ParentCard'
 
 let SearchResults = ({searchResultsObject, currentUser}) => {
 	let SearchResultsList = searchResultsObject.map((searchResultItem) => {
