@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ReviewHolder from './ReviewHolder';
-import BabysitterProfileCard from './BabysitterProfileCard';
+import BabysitterProfileCard from '../presentational/BabysitterProfileCard';
 import {connect} from 'react-redux'
 
 const PublicBabysitterProfile = ({name, age, location, bio, skills}) => {

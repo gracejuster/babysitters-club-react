@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import { Grid, Row, Col, Panel, Tabs, Tab } from 'react-bootstrap'
 import CreateBookingForm from '../container/CreateBookingForm';
 import CreateReviewForm from '../container/CreateReviewForm';
-import BabysitterProfileCard from './BabysitterProfileCard';
-import ReviewHolder from './ReviewHolder';
+import BabysitterProfileCard from '../presentational/BabysitterProfileCard';
+import ReviewHolder from '../presentational/ReviewHolder';
 import {connect} from 'react-redux'
 
 let PrivateBabysitterProfile = class extends Component{

@@ -21,7 +21,7 @@ import ParentDashboard from './components/presentational/ParentDashboard'
 import EditParentProfileForm from './components/container/EditParentProfileForm'
 import EditBabysitterProfileForm from './components/container/EditBabysitterProfileForm'
 import CreateBookingForm from './components/container/CreateBookingForm'
-import PrivateBabysitterProfile from './components/presentational/PrivateBabysitterProfile'
+import PrivateBabysitterProfile from './components/container/PrivateBabysitterProfile'
 import PublicParentProfile from './components/presentational/PublicParentProfile'
 
 export default (
