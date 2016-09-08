@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Grid, Row, Col } from 'react-bootstrap'
-import ParentCard from './ParentCard'
+import ParentCard from '../container/ParentCard'
 import {connect} from 'react-redux'
 
 let PublicParentProfile = class extends Component{

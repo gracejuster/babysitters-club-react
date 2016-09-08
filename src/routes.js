@@ -6,7 +6,7 @@ import { Route, IndexRedirect } from 'react-router'
 import App from './App'
 
 // Navbar
-import NavBar from './components/presentational/NavBar'
+import NavBar from './components/container/NavBar'
 
 // Network components
 import PrivateNetworkContainer from './components/container/PrivateNetworkContainer'

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Grid, Row } from 'react-bootstrap'
 import SearchBar from '../container/SearchBar'
-import Bookings from './Bookings'
+import Bookings from '../container/Bookings'
 
 const ParentDashboard = () => {
   return (

@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import { Tabs, Tab, Panel, Row, Col } from 'react-bootstrap'
 import { connect } from 'react-redux'
-import BookingsTable from './BookingsTable'
+import BookingsTable from '../presentational/BookingsTable'
 import retrieveUser from '../../actions/retrieveUser'
 import confirmBookings from '../../actions/confirmBookings'
 
