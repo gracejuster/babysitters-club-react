@@ -10,14 +10,6 @@ const CurrentUser = (state = INITIAL_STATE, action) => {
       	type: action.payload.type,
       	authentication: true
       })
-    // case 'EDIT_ACCOUNT':
-    //   return Object.assign({}, state, {
-    //     jwt: state.jwt,
-    //     currentUser: state.currentUser,
-    //     account: action.payload.data,
-    //     type: state.type,
-    //     authentication: true
-    //   })
     case 'RETRIEVE_USER':
       return Object.assign({}, state, {
         jwt: state.jwt,
